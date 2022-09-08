@@ -1,0 +1,84 @@
+1. 문자열
+	item = item + i
+	replace("변경할 값", "대체하고 싶은 값")
+	strip() : 양쪽 끝 값 삭제, rstrip() : 오른쪽 끝만, lstrip() : 왼쪽 끝만
+	문자화 : "".join(list)
+
+2. 리스트
+	선언 -> lst = list(문자형)
+	append( ) : 리스트 끝에 추가
+	insert(인덱스, 값) : 원하는 자리에 추가
+	del list[인덱스]
+	remove()
+	pop() : 맨뒤에 있는 값 삭제
+	list[인덱스] = 값  : 값 변경할 때 인덱싱으로 새로운 값 할당
+
+<반복문>
+※ 무한루프 피하는 방법
+1. 특정 조건에서 while문에 걸려 있는 명제가 거짓이 되도록 설계한다
+while True:
+    print(n)
+    n += 1
+    if n>=3:
+        break
+    else:
+        pass
+
+2. break를 사용한다
+
+
+
+* 데이터 분석할 때 data의 개수를 모를때 range(len()) 사용
+import random
+n = 0
+a = [1,2,3,4,5,6,7]
+a1 = [1,2,3,4,5,6,7]
+random.shuffle(a1)
+
+for i in range(len(a)):
+    if a[i] == a1[i]:
+        n += 1
+    else:
+        pass
+
+print(n)
+
+-> 개발자는 range(len())대신 enumerate(a)를 자주 사용
+import random
+n = 0
+a = [1,2,3,4,5,6,7]
+b = [1,2,3,4,5,6,7]
+random.shuffle(b)
+
+for w, i in enumerate(a):      #i는 a 순서대로 입력, w에는 index 번호가 입력
+    if a[w]== b[w]:              #a[w]는 i와 같기 때문에 i를 입력해도 됨
+        n += 1
+    else:
+        pass
+
+print(n)
+
+
+<에러>
+EOF(end of file) : 괄호 제대로 안닫았을때
+indent : 블록 잘못 설정
+구글에 물어보기!!
+사이트 : stackoverflow
+
+
+<data 사이트>
+kaggle.com
+
+<code 사이트>
+github
+1. git 설치 : anaconda prompt -> conda install git -> 설치
+2. github에서 원하는 코드 찾아서 code 클릭 후 주소 복사
+3. jupyter에서 실행 -> !git clone 주소
+	!는 리눅스처럼 jupyter를 사용하겠다는 명령어
+
+<code 공부사이트>
+project euler -> 한국어 사이트 있음, 코드 연습(백준하고 비슷)
+
+
+
+

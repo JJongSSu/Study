@@ -1,0 +1,60 @@
+ERD, 화면정의서 업무 순서
+1. VS code 폴더 만듬 -> class 파일 만듬
+2. MySQL
+	1) connect to database
+		connection method
+		hostname : localhost, port
+		username, password
+		default schema(database 이름)
+		-> database에 연결되었는지 확인 : navigator schemas 확인
+	2) query 열기
+		select * from 한번 실행해보기(명령문 입력 후 ctrl+enter)
+		(insert 했을 때는 action output만 나옴)
+		database - 집합적사고, 프로그래밍 - topdown방식
+		-> database를 프로그래밍할 때는 한줄씩 읽어야 함
+	3) result grid, action output 확인
+: 항목들을 내용까지 디테일하게 적어주는게 좋음
+
+java 프로젝트 생성 방법
+VS code 설정 -> command palette -> create java project -> 프로젝트 이름 입력
+
+java(VS code)랑 github 연결
+java procets - referenced libraries - c드라이브 - program files(86) - MySQL - Connector J 8.0 - 파일클릭
+
+java mysql tutorialspoint 사이트 -> 코드참고
+
+Fuction : args(변수,parameter), return 값 확인
+
+VS code debugging 단축키 : F5, run - start debugging
+
+format document 단축키 : shift + alt + F
+
+insert문
+insert into city(ID, Name, CountryCode, District, Population)
+values (3000, 'Name', 'AFG', 'amaha', 100);	
+-> values에서 data type 맞춰줘야 함
+
+update문
+update city
+set Population = 2000
+where Name = 'Name';
+
+delete문
+delete from city
+where Name = 'Name'; 
+
+오류
+You are using safe update mode and you tried to update a table 
+: edit - preferences - SQL editor - other - safe updates 해제
+
+where 문에서 변수 지정할 때 주의할 점
+String str = "'name'"	// ' ' 붙여줘야됨
+"where name = " + str + " "
+
+VS code에서 SQL문 fuction 사용할 때
+select -> executeQuery
+insert, update, delete -> executeUpdate
+
+
+
+

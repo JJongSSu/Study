@@ -1,0 +1,89 @@
+<문제 1>
+password = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p' ,'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0",  "-", "_", "."]
+
+new_id1 = input("아이디 입력하세요 : ")
+
+# 1단계
+new_id1 = new_id1.lower()
+
+# 2단계
+new_id = ""
+for i in new_id1:
+    if i in password:
+        new_id = new_id + i
+
+# 3단계
+while ".." in new_id:
+    new_id = new_id.replace("..",".")
+#while True:
+    #new_id = new_id.replace("..",".")
+    #if ".." not in new_id
+        #break
+
+# 4단계        
+new_id = new_id.rstrip(".")
+new_id = new_id.lstrip(".")
+
+# 5단계
+if new_id == "":
+    new_id = new_id + "a"
+# while "" in new_id:
+#     new_id = new_id.replace("","a")
+
+# 6단계
+new_id = new_id[:15]
+new_id = new_id.rstrip(".")
+# if len(new_id) >= 16:
+#     while len(new_id) == 15:
+#         new_id = new_id.pop()
+#     c = new_id[-1]
+#     if c == '.':
+#         del new_id[-1]
+
+# 7단계
+if len(new_id) <= 2:
+    d = new_id[-1]
+    while len(new_id) <= 2:       
+        new_id = new_id + d
+
+print(new_id)
+
+-------------------------------------------------------------------------
+다른 분 풀이
+char = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t"," u", "v", "w", "x", "y", "z", "-", "_", "."]
+
+new_id = input("새로운 아이디를 입력하세요.: ")
+
+# 1단계
+new_id = new_id.lower()
+
+# 2단계
+lst = list(new_id)
+word = []
+for i in lst:
+    if i in char:
+        word.append(i)
+
+new_id = "".join(word)
+
+# 3단계
+while ".." in new_id:
+    new_id = new_id.replace("..", ".")
+    
+# 4단계
+new_id = new_id.strip(".")
+
+# 5단계
+if new_id == "":
+    new_id = "a"
+
+# 6단계
+if len(new_id) >= 16:
+    new_id = new_id[:15]
+new_id = new_id.strip(".")
+
+# 7단계
+while len(new_id) <= 2:
+    new_id += new_id[-1]
+
+print(new_id)

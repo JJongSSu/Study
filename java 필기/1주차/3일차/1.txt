@@ -1,0 +1,49 @@
+임의의 숫자 리턴
+start 숫자부터 n개의 정수중에서 1개 가져오기
+int num = (int)(Math.random()*n)+start;
+
+scanner
+next -> 스페이스 즉 공백 전까지 입력받은 문자열을 리턴
+nextLine -> Enter를 치기 전까지 쓴 문자열을 모두 리턴
+nextLine : 문자열
+nextInt : 정수
+nextDouble : 실수
+* 정수를  입력하고 그다음 문자를 입력하려고 할 때 next() 메소드를 사용하여야 한다.
+	-> 정수를 입력하고 enter를 쳤기 때문에
+	    정수를 출력하고 enter에 대한 입력이 남아 nextLine()에 적용되어 그냥 넘어가는 거임
+	-> 그래서 next()를 사용하거나 문자열을 모두 받고 싶다면 nextLine()을 한번더 사용해줘야 함
+
+
+반복문, 조건문에서
+반목 문장을 출력할 때는 printf, 내용이 다를 때는 println이 편함
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

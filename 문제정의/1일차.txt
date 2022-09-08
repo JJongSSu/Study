@@ -1,0 +1,117 @@
+정규편식, 문제정의
+크롤링 -> 원하는 data 수집
+
+true = 1
+false = 0, -1
+
+dataframe에서 boolean 값 sum 활용
+true + true = 2
+엑셀에서 비어있는 값 확인
+비어있는지를 true, false로 확인 
+-> true 값을 sum하면 몇 개가 비어있는지 알 수 있음
+-> 딥러닝 돌릴 때도 사용 가능할 듯??(학습 여부...)
+
+
+문자열
+추가 : +
+upper, lower, find, split, count
+replace 사용해서 변경 가능
+m = "짜장"
+m.replace("장", "왕")
+
+리스트
+append, insert, remove, del
+인덱스 지정해줘서 변경
+list[0] = "짬뽕"
+
+len, reverse, sort : 오름차순, sort(reverse=true) : 내림차순
+
+in / not in : 안에 있는지 확인할 때 사용
+-> true, false로 나옴
+
+while문 -> 크롤링에 사용
+웹에서 data 가져올 때 페이지 수를 모르기 때문에
+data를 다 가져왔을 때 break 걸어서 무한루프에서 나오게 설계
+
+예외처리
+try-except : 크롤링할 때 사용
+for i in range(10):
+    try:
+        print(1/(i-7))
+    except:
+        print("오류")
+
+raise Exception() : 오류 만들기
+a = int(input())
+if a%3 ==0:
+    pass
+else :
+    raise Exception("X")
+print(a)
+
+
+ERD를 파이썬으로 만들 때 dict 사용
+dict{keys : values, keys : values}
+추가
+dict{"keys"} = {"values","values","values"}
+삭제
+del dict["keys"]
+
+for문 사용가능
+csb = {"이름" : {"홍길동","임꺽정","장길산"}, "나이" : {20,35,52}, "키" : {160,200,180}, "발 사이즈" : {260,290,270}}
+1.
+avg = []
+for i in list(csb.keys())[1:]:
+    n=0
+    for j in csb[i]:
+        n = n + j
+    avg.append(n/len(csb[i]))
+csb["평균들"]  = avg
+csb
+
+2.
+avg = []
+for i in csb:
+    try : 
+        n=0
+        for j in csb[i]:
+            n = n + j
+        avg.append(n/len(csb[i]))
+    except:
+        pass
+csb["평균들"]  = avg
+csb
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

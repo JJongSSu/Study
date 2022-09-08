@@ -1,0 +1,141 @@
+라이브러리 : 개발에 필요한 요소들을 모아 놓은 곳
+java API : 상호작용 요소들을 모아 놓은 곳  (= 클래스 라이브러리, (자바 9버전 이후) java moduels)
+	API 도큐먼트로 찾아 이용할 수 있음(java 11 API 검색)
+java moduels : 연관된 package들의 모음
+package : Class, Interface, Enum, Exception, Error, Annotation들의 모음
+
+data 얻을 때 사용하는 사이트
+https://www.data.go.kr/
+
+유지보수성이 좋은 코드를 작성
+연관성 있는 코드들을 모아놔야함 : class, package 사용
+
+Object 클래스
+Wrapper 클래스 (Integer(정수4 실수2), Character, Boolean : 8개 - 기본형)
+
+다른 package에 있는 class 사용할 때 import 해줘야 함
+
+java.lang package에 있는 것들은 import 하지 않아도 자동으로 해줌
+
+컴파일 : 소스프로그램(source code)을 목적프로그램(object code = java byte code)로 번역해주는 행위
+링킹 : 목적코드와 라이브러리를 연결하는 행위
+	정적링킹 : 컴파일 직후 실행 가능한 파일을 생성
+	동적링킹(dynamic linking) : 실행 시점에  링킹을 함, 메모리 아낌, 수정을 실행 직전까지만 해도 괜찮음
+
+프로그램 실행은 해당 목적코드와 라이브러리가 정적 또는 동적링킹 되어 
+메모리에 적재(loading)되어 CPU가 명령을 수행하는 것
+
+Object equals
+동일한 객체인지 비교
+equals와 ==연산자의 결과가 같은 값
+
+map(key, value)	: dict 같은 느낌
+key에 해당하면 key에 저장되어 있는 value를 가져옴
+
+System.exit(); -> 바로 종료
+
+클라이언트 서버 모델(CS 모델)
+웹 브라우저 = 웹 클라이언트
+서버 : 서비스 제공
+
+http/https 프로토콜 : 통신규약 -> TCP/IP 프로토콜 : 통신장비에 대한 이해도 필요
+(웹 상에서 사용하기 위해 만듬)
+
+ftp 프로토콜 : 파일을 주고 받기 위해 만든 프로토콜 
+
+디코딩 : 바이트 배열을 문자열로 변환
+인코딩 : 문자열을 바이트 배열로 변환
+
+주로 Wrapper 클래스에서 사용됨
+박싱 : 기본타입 -> wrapper타입	ex) Integer iRef = 100;
+언박싱 : wrapper타입 -> 기본타입  ex)int j = iRef 
+
+enum : 지정한 값만 사용 가능
+
+중첩 클래스
+상위 클래스 내부에서만 사용하려고 만드는 클래스
+
+익명 객체 -> 1회성 사용
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,63 @@
+while -> 무한히 반복할 때 주로 사용
+	break : 반복루트 빠져나오기
+
+while true : 영원히 반복
+	웹페이지 크롤링에 사용
+
+range(10) : 0~9까지 정수 
+= range(0,10)
+
+for -> 순서가 있는 자료형을 사용할 때 주로 사용
+for 변수 in 자료형(문자형, 리스트, 튜플)
+※ [i**2 for i in range(10)]  => for문 줄여서 사용할때 list로 묶어줌
+
+<1~100까지 소수들 합>
+#나머지들을 구한 후 list화 시켜서 0이 있는지 확인. 없으면 결과에 추가해서 더해줌
+#나눴을 때 0이 나오면 소수가 아님
+result = 0
+for i in range(2, 101):
+    nmj = []
+    for j in range(2,i):
+        nmj.append(i%j)
+    if 0 not in nmj:
+        result = result + i
+result
+
+<업다운 게임>
+import random
+num = random.randint(1,100)  #1~100까지 중 임의의 숫자 선택
+n = 0
+while True:
+    player = int(input("원하는 숫자를 입력하세요 : "))
+    if num == player:
+        print(f"{n}번 만에 맞추셨습니다")
+        break
+    elif num > player:
+        print("up")
+        n += 1
+    else:
+        print("down")
+        n += 1
+
+
+<아이템 강화>
+import random
+ic = int(input("강화 등급을 입력하세요 : "))
+while True:
+    if ic <= 10:
+        b = input("강화를 시도하시겠습니까?(y/n)")
+        a = random.random()
+        a1 = random.random()
+        if b == "y":
+            if a <= 0.7 - (0.05*ic):
+                print("강화 성공")
+                ic = int(input("강화 등급을 입력하세요 : "))
+            else:
+                print("강화 실패")
+                if a1 <= 0.5 :
+                    print("아이템 파괴")
+                    break
+        else:
+            pass
+    else:
+        print("잘못입력하셨습니다")

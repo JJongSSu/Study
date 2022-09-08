@@ -1,0 +1,43 @@
+인터페이스
+객체의 사용 방법을 정의
+메소드 선언부 + 추상 메소드(or default)
+default 메소드를 사용하여 실행블록 작성 가능
+상수 필드 : public static final 생략되어 있음
+
+인터페이스는 구현해야할 것을 알려주는 것이기 때문에 여러 분야들이 종합될 수 있다
+
+OOP 주요 특징
+	- 캡슐화(encapsulation) : 클래스로 필드, 메소드 구성 
+	- 자료 추상화(data abstraction) : 자료를 처리하기 위한 최소한의 정보만을 사용할 수 있도록 함
+	- 정보은닉(information hiding) : 필요한 정보만 접근하게 함, private 사용
+	- 상속성 : 기존 클래스의 유용한 부분을 재사용으로 생산성 증대, 테스트된 코드 사용으로 신뢰성이 향상
+	- 다형성 : 객체를 여러 개의 속성으로 나눠 상황에 따라 다르게 실행되도록 만드는 성질
+
+Java - 모듈 집합 - 패키지 집합 - 인터페이스, 클래스(메소드,필드,생산자,getter/setter), 예외, 에러, 열거형 등의 집합체
+
+
+Timer		Messenger		Phone
+
+	implements↓
+
+		Smartphone		
+
+Timer -> Smartphone : down-casting, 형변환 연산자 사용해서 지정해줘야 함
+				(범위가 큰 곳에서 작은 곳으로)
+Smartphone -> Timer : up-casting, 자동으로 됨
+				(범위가 작은 곳에서 큰 곳으로)
+
+
+java 상속
+클래스 단일 상속 <sub class> extends <super class>
+인터페이스 다중 상속 <sub인터페이스> extends <super인터페이스>, <super인터페이스>
+인터페이스 다중 구현 지원 <class> implements <인터페이스>, <인터페이스>
+
+
+
+클래스 사용목적 : 객체 정의, 상속
+
+중첩 클래스
+상위 클래스 내부에서만 사용하려고 만드는 클래스
+
+

@@ -1,0 +1,105 @@
+condition : operator(=,>,<,!=)가 들어간 문장
+-> 결과는 boolean형으로 나온다(true, false)
+-> 그래서 and, or 연산이 가능한거임
+
+select는 record 단위(=row 단위)로 움직임
+
+group by
+SELECT COUNT(column명), group by하려는 column명 FROM table명
+GROUP BY column명;
+
+group by 뒤에 여러개 column 작성 가능
+-> 순서대로 진행
+query도 넣을 수 있음
+-> 단, record와 column이 하나여야 됨
+
+집계함수(sum, count, avg)를 group by, ORDER BY, where에도 사용할 수 있다
+
+aliases(AS)를 붙이는 이유
+한번 가공한 table은 column이름이 같더라도 기존 table과 다르기 때문에 
+새로 이름 부여해서 사용
+-> 나중에 불러올때 헷갈리지 않게하기 위해 사용
+-> 기존 table과 aliases table 모두 이름을 지어주어야 함
+-> as는 괄호 안의 select문에 사용해서 이름지어줘야 함
+select TB_01.*, TB_10.cnt from(
+SELECT COUNT(CustomerID) as cnt, Country 
+FROM Customers
+GROUP BY Country
+) TB_10
+ORDER BY TB_10.cnt;
+
+
+설문조사할 때 안채워도 되는 질문에 null 사용해서 넘어가게 만듬
+-> column is null / is not null
+
+date type : 분석가 성향에 따라 선택해서 사용
+DATE - format YYYY-MM-DD
+DATETIME - format: YYYY-MM-DD HH:MI:SS
+	-> 출퇴근 시간 : 덜 정밀한 추적이 필요할 때 사용
+	-> 사용기간 from '1000-01-01 00:00:00' to '9999-12-31 23:59:59'
+TIMESTAMP - format: YYYY-MM-DD HH:MI:SS
+	-> 로그성 업무, cash 업무 : 정밀한 추적이 필요할 때 사용
+	-> 사용기간 from '1970-01-01 00:00:01' UTC to '2038-01-09 03:14:07'
+YEAR - format YYYY or YY
+
+
+Having
+group by된 집합에 조건을 걸 때 사용
+
+fuctions
+파라미터가 있는 집합은 from을 써줘야함(column이 있을 경우)
+date functions
+	SELECT NOW(); -> 로그성 data 남길 때 사용
+	SELECT CURDATE();	-> 현재날짜
+	SELECT CURTIME(); -> 현재시간
+	SELECT DATE("2017-06-15"); -> 문자를 date type으로 변경, 연산하기 위해서 변경
+	SELECT DATE_FORMAT("2017-06-15", "%Y-%m"); -> String으로 만들고 싶을 때 사용
+	SELECT DATE_ADD("2017-06-15", INTERVAL 10 DAY); -> date type으로 날짜 계산
+	SELECT HOUR("2017-06-20 09:34:00");
+	SELECT MINUTE("2017-06-20 09:34:00");
+
+Numeric Functions
+	sum, avg, count, max, min
+	SELECT ROUND(135.375, 2); -> 반올림
+
+String Functions
+	SELECT CustomerName, CHAR_LENGTH(CustomerName) AS LengthOfName FROM Customers;
+	-> 문자 길이(공백 포함), character_length와 동일
+	SELECT CustomerName, CONCAT(Address, " ", PostalCode, " ", City) AS Address FROM Customers;
+	-> 문자 합치기, column으로도 합치기 가능
+	SELECT CustomerName, LENGTH(CustomerName) AS LengthOfName FROM Customers;
+	-> byte 단위로 나옴, 한글작성문은 크기가 커짐
+	SELECT TRIM('    SQL Tutorial    ') AS TrimmedString;
+	-> 양쪽 공백 삭제
+	SELECT SUBSTRING("SQL Tutorial", 5, 3) AS ExtractString;
+	-> 글짜 자르기, substr과 동일
+
+case
+select 안에 들어감
+SELECT OrderID, Quantity, (
+  CASE WHEN Quantity > 30 THEN 'The quantity is greater than 30'
+  WHEN Quantity = 30 THEN 'The quantity is 30'
+  ELSE 'The quantity is under 30'
+  END) AS QuantityText
+FROM OrderDetails;
+
+SELECT categoryid, supplierid, (case when price <= 30 then '저렴' 
+						when price >= 60 then '비쌈' 
+                                    		else '적당' end) as price 
+FROM Products
+where categoryid in (3,6)
+order by supplierid desc
+;
+
+
+
+
+
+
+
+
+
+
+
+
+

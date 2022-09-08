@@ -1,0 +1,21 @@
+git에 파일 repositories 하기(저장할 폴더는 c드라이브에 미리 만들어 놓기)
+git 데이터 올리기
+1. git에 있는 repositories 중 저장할 repositories 폴더 VS code에서 열기 
+2. 저장할 파일들을 폴더 안에 넣기
+3. commit 또는 push 하기
+
+github auth -> remote
+git scm auth -> PC
+카카오, 네이버 아이디로 다른 사이트 접속하는 방법 -> auth 사용
+
+commit -> PC에만 저장
+
+clone : 최초에 파일을 가져올 때
+push : PC -> hub 파일 가져올 때
+pull : hub -> PC 파일 가져올 때
+
+
+
+
+
+

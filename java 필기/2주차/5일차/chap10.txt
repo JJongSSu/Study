@@ -1,0 +1,76 @@
+- modules, packages, java API, Exception handling
+- 제너릭(Generics), JCF(java collection framework) 
+- Java I/O ↔ JDBC(java DataBase Connevtivity)
+- Thread(스레드 : 동시에 프로그램을 실행할 수 있게 만들어주는 방식), Swing, AWT
+- java 기반 Servlet, JSP(java server pages), Spring Framework
+- java fundmentals(core)
+	java tokens
+		예약어(식별자 사용 불가), 연산자, 구분자(세미콜론, 공백(스페이스)), 주석 -> 정해진대로 사용해야 함
+		식별자(변수, 상수변수, 메소드명, 클래스명), 리터럴(100, "hi", true, false, null) -> 개발자가 유연하게 사용 가능(true, false, null 제외)
+	java statement(문장) -> 필드 선언, 메소드 정의
+		제어문 : 조건문(if, switch), 반복문(for, while, do while), 점프문(break, continue, return)
+		배정문(assignment) : 변수 = 식(식별자, 리터럴, 연산자, 메소드 호출 모음);
+						ex) i = i +1; sRef = new String("hi");
+-> class 정의, object 생성, instance 간의 상호작용
+java 특성 : 캡슐화, 상속성(abstract class), 다형성(abstract class, interface)
+
+
+언어구성요소
+시스템 정의 : 예약어, 연산자, 구분자, 주석
+사용자 정의 : 식별자(변수, 클래스이름, 메소드(함수) 이름), 리터럴
+함수 = 연관된 문장들의 집합, 모음
+메소드(OOP: object oriented programming) : 클래스, 객체 안에 포함되어 있음
+
+1. 키워드(예약어)
+package, public class, public static void 등등
+53개 정도 있음
+자바에서 이미 약속해놓은 단어들
+키워드는 변수 이름으로 설정할 수 없음
+
+2. 구분자 : 컴파일할 수 있도록 도와주는 역할
+	-> 세미콜론, 공백(스페이스)
+
+
+예외 : 실행시간에 발생한 오류
+	예외(exception) : 프로그램으로 처리 가능한 것, 사용자/개발자 부분
+			처리를 통해서 회피, 지속할 수 있는 오류
+	에러(error) : 처리 불가능한 오류, 시스템 부분
+
+일반 예외(checked exception)
+jvm 체크 안하기 때문에 개발자가 해줘야 함, 확인 안하면 컴파일 자체가 안됨(빨간줄로 확인가능)
+
+실행 예외(runtime exception, uncheck exception)
+jvm 체크해서 알려줌, 컴파일 되는데 실행할 때 문제 발생
+
+-> RuntimeException 기준으로 하위클래스면 실행예외 클래스, 아니면 일반예외 클래스
+-> RuntimeException 일 경우 try, catch문으로 체크하지 않아도 된다
+
+Throwable : 스레드 만들 때 사용하는 class
+
+예외처리 : 예외처리 못하는 경우에는 프로그램 실행이 끝남
+1. try, catch, (finally)
+	catch문은 여러개 작성 가능(예상 예외 모두 작성)
+	다중 catch문을 작성할 경우 하위 예외클래스부터 작성(반드시 체크해야 되는 예외부터 작성)
+2. 전파 : throws
+	메소드 thorws 예외클래스1, 예외클래스2, ...
+
+
+debug 모드
+실행창 숫자 왼쪽 파란색 줄 더블클릭 -> breakpoint 지정 -> 해당 줄까지만 실행 -> debug(F11)로 실행
+ : debug 사용하는 것보다 로직을 보면서 풀어가는게 좋음
+ : 실행이 되야 사용 가능
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

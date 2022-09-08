@@ -1,0 +1,17 @@
+random : 0~1사이 랜덤 숫자
+
+<아이템 강화 코드>
+ic = int(input("강화 등급을 입력하세요 : "))
+a = random.random()
+a1 = random.random()
+b = input("강화를 시도하시겠습니까?(y/n)")
+if b == "y":
+    if a <= 0.7 - (0.05*ic):
+        print("강화 성공")
+    else:
+        print("강화 실패")
+        if a1 <= 0.5 :
+            print("아이템 파괴")
+else:
+    pass
+

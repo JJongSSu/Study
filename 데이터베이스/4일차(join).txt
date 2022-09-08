@@ -1,0 +1,26 @@
+join -> 집합적인 사고로 접근해야 됨
+inner : 둘 다 공유하는 key를 가져올 때 사용
+	기존 table에 aliases 넣어줘야 함
+	-> join하면 column 이름을 그대로 가져오는데 이 때 column 이름이 겹칠 수 있기 때문에
+	-> join한 후에도 aliases를 넣어줘야 함
+left, right : 대상 data 전체를 가져오는 join
+full -> 하지말아야할 join, 컴퓨터에 리소스 부담을 줌, 메모리 터짐
+
+동일관계
+select - where, join - on, group by - having
+
+select table명.column명, table명.column명
+from table명
+inner join table명
+on table명.column명(연결되어 있는 column) = table명.column명(연결되어 있는 column) 
+
+검증방법
+가장 많은 data가 있는 table의 개수 확인
+
+select table명.column명, table명.column명
+from (inner join table명
+	on table명.column명(연결되어 있는 column) = table명.column명(연결되어 있는 column)) Joined_Table
+where;
+
+
+

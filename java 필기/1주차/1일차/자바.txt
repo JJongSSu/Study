@@ -1,0 +1,12 @@
+프로젝트 만들기 : file - new - javap project
+1. 패키지 선언
+	file - new - package
+2. 클래스 선언 -> 보통 함수 이름으로 설정
+	file - new - class
+	* public static void main(string[] args) 체크!!!
+3. 매소드 선언
+	main()
+
+
+preferences - general - editors - text editors - show print margin
+ : 80은 A4기준

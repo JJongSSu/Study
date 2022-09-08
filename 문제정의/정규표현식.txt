@@ -1,0 +1,5 @@
+compile
+match
+ : 있으면 결과 나오고 없으면 결과 안나옴 : 딥러닝에 사용가능 할 듯. 결과유무 파악
+findall
+search

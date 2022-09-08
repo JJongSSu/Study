@@ -1,0 +1,33 @@
+출력스트림
+outputstream : System.out
+Writer(문자 출력스트림) : write()
+
+입력스트림
+inputstream : System.in
+Reader(문자 입력스트림) : read()
+
+FileReader fr = new FileReader(file)	// 문자 단위
+
+ctrl + 코드 = implement, 선언부 이동 창
+
+MVC
+요청 -> Controller -> Service -> Repository
+처리 -> Repository -> Service -> Controller -> View 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,45 @@
+dictionary -> 인덱싱 안됨, for문은 사용 가능
+dic = {key:value, key:value ...}
+	values : 변수, list, tuple
+	keys : 카테고리, 제목 
+		-> 문자, 숫자 중 하나의 자료형만 넣어야함
+		-> 인덱스 역할, 조작이 안됨
+		-> key 순서는 중요하지 않음
+
+추가
+dic[key] = [value]
+
+삭제
+del dic[key]  => 인데스 역할인 key 넣어주면 됨
+
+
+dic를 for문 돌리면 key를 대상으로 돌아감
+
+round() : 반올림 => 소수점 조절가능 round( ,2)
+import math
+math.floor : 버림
+math.ceil : 올림
+int : 버림
+
+
+
+<dic 추가하는 코드>
+scores = {'홍길동':{'수학':99,'영어':80,'국어':75},
+          '김미정':{'영어':67,'국어':87,'수학':55},
+          '정수진':{'수학':67,'국어':41,'영어':23}}
+math = 0 
+eng = 0
+korean = 0
+
+for i in scores:
+    math = math + scores[i]['수학']
+    eng = eng + scores[i]['영어']
+    korean = korean + scores[i]['국어']
+
+scores["평균 점수"] = {"수학 평균":math/len(scores),"영어 평균":eng/len(scores),"국어 평균":korean/len(scores)}
+scores
+
+
+
+
+

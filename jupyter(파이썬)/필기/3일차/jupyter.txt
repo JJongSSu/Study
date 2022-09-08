@@ -1,0 +1,105 @@
+<단축키>
+a : 위 줄 만들기
+b : 아래 줄 만들기
+shift + enter : 실행
+ctrl + / : 전체 주석
+m : 주석줄 만들기(마크다운셀)
+	- 다음 띄어쓰기 해야됨
+x : 줄 삭제
+
+int : 범주형
+float : 연속형
+범주형은 유한한 범위 -> 셀 수 있음
+연속형 -> 무한한 범위, 메모리 많이 사용
+
+자료형 변환
+문자형 "7" -> int("7") : 정수 type
+
+
+\' : 따옴표('',"")안에서 문자로 인식
+
+인덱싱[ ] : 해당 자리에 있는 자료형을 불러오는 것
+	0, -1(뒤부터 시작)
+
+슬라이싱 : 구간을 뽑아내는 것
+	[:] -> 전체 범위
+	[:15], [1:], [5:16]
+
+※ 맨처음과 맨끝 지우기
+슬라이싱 : [1:-1]
+strip(), rstrip(), lstrip()
+-> 양쪽 공백 지울 때 사용
+
+
+해당 자리에 바뀌는 항목을 넣고 싶을때
+1. %함수
+	%s : 문자, %d : 숫자
+2. format 함수
+	"오늘의 메뉴는 {}입니다".format(lunch_menu)
+	-> 인덱싱으로 위치 변경 가능
+	 : print("오늘의 메뉴는 {1}와 {0}입니다.".format(lunch_menu1, lunch_menu2))
+	 : print(f"오늘의 메뉴는 {lunch_menu1}와 {lunch_menu2}입니다.")
+
+
+count, find(해당 단어 첫번째 인덱스 알려줌), upper, lower, title(앞글자만 대문자)
+replace("변경할 단어", "대체할 단어") / replace(list[인덱스], list[인덱스])
+replace("변경할 단어", " ") -> 문자 삭제 시 사용
+전처리 할때 replace 사용
+
+split, join
+문장 단위로 split할 때 = ". " (띄어쓰기 해주면 더 깔끔하게 나눠짐)
+strip(문자 삭제) -> rstrip, lstrip(오른쪽 끝, 왼쪽 끝)
+list[ ] : 조작가능
+tuple( ) : 조작 불가능, 인덱싱과 슬라이싱은 가능
+set
+append( ) : 맨끝에 값 추가 
+insert(인덱스, 추가할 값) : 원하는 곳에 값 추가
+del list[인덱스] : 인덱스 자리에 있는 값 삭제
+remove( ) : 특정값을 삭제, 하나만 삭제
+pop( ) : 맨뒤에 있는 값 하나 삭제
+sort( ) : 오름차순
+sort(reverse = True) : 내림차순
+reverse( ) : 역순으로 변경
+len( ) : 자료형의 길이
+
+
+if, while 등 조건문, 반복문에서 pass(그냥 넘어감), break(거기서 끝냄)
+
+값 in [ list ] : list 안에 값이 있는지 확인
+값 not in [ list ] : list 안에 값이 없는지 확인
+-> list로 묶어서는 안됨
+-> 여러개 확인하고 싶으면 and/or 사용, 괄호로 묶어서 명확하게 만들어주기
+
+
+매소드
+hyper parameter(매개변수) : 메소드 안에 들어가는 변수
+
+
+boolean에 연산을 할 수 있다 -> 귀납적 추론할 때 사용
+데이터를 돌렸을 때 모든 결과값이 0이 나오는 지 확인할 때
+true = 1, false = 0
+=> 딥러닝, 머신러닝에 사용(학습이 잘되었는지 확인할 때)
+
+
+import random
+random.random()
+
+random.choice(list) : list에 있는 항목 랜덤으로 불러오기
+
+
+가위바위보 게임
+rsp = ["가위","바위","보"]
+mo = input("가위, 바위, 보 중 하나 선택하세요: ")
+a = random.choice(rsp)
+if a == mo :
+    print(f"당신은 {mo}를 냈고, 컴퓨터는 {a}를 냈습니다. 비겼습니다")
+elif (a == "가위" and mo == "바위") or (a == "바위" and mo == "보") or (a == "보" and mo == "가위"):
+    print(f"당신은 {mo}를 냈고, 컴퓨터는 {a}를 냈습니다. 이겼습니다")
+elif (a == "가위" and mo == "보") or (a == "바위" and mo == "가위") or (a == "보" and mo == "바위"):
+    print(f"당신은 {mo}를 냈고, 컴퓨터는 {a}를 냈습니다. 졌습니다")
+else:
+    print("잘못된 입력입니다")
+print(a)
+
+
+
