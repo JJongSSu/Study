@@ -2,3 +2,41 @@
 2. 다양한 함수를 이용해서 정제하기(split, replace, 정규편식)
 3. 파일 저장시 인코딩하기
 4. 편의성을 위한 프로세스 바 이용
+
+
+selenium
+    크롤링에 최적화된 라이브러리
+    브라우저 동작을 자동화 할 수 있는 오픈 소스 라이브러리
+    로그인 한 후 data, 특정 버튼을 클릭한 후의 data 등을 수집할 때 사용
+
+BS : 페이지 내에 보여지는 정보만 수집 가능, 속도 빠름, 주소를 통한 단발적 접근, request 라이브러리 사용
+selenium : 속도 느림, 브라우저를 통한 연속적 접근, chrome driver 라이브러리 사용
+-> 2개 혼합해서 사용
+
+크롬 드라이버
+    로그인, 창 열기, 입력값(엔터), 뒤로가기, 앞으로 가기, 마우스 움직임
+
+driver 코드
+    현재 주소 가져오기 : driver.current_url
+    창 최대화 : driver.maximize_window()
+    창 최소화 : driver.minimize_window()
+        -> 최대화, 최소화에 따라 data의 위치가 달라질 경우가 생김(tag 포함)
+    현재 탭 닫기 : driver.close()
+    모든 브라우저 닫기: driver.quit()
+        -> 크롤링 할 때 시간이 많이 걸리기 때문에 돌려놓고 기다리기 때문에 다 크롤링된 창은 종료해서 속도를 높임
+    뒤로가기 : driver.back()
+    앞으로 가져오기 : driver.forward()
+    해당 탭으로 이동 : driver.switch_to.window(driver.window_handles[0])
+        -> 열린 탭 밖에 data를 수집할 수 없기 때문에 탭 이동할 때 사용
+
+selenium elements
+find_elements_by_css_selector("") : tag가 겹치는 경우 사용, 선택자에 해당하는 모든 요소가 선택됨, 속도 느림
+find_element_by_css_selector("") : 선택자에 해당하는 첫번째 하나의 요소가 선택, 속도 빠름
+find_elements_by_xpath("") : 해당 요소 하나만 가짐, 여러개의 tag를 가질 수 없음, 특정 값만 추출할 때 사용
+find_elements_by_name("")
+find_elements_by_id("")
+
+
+
+
+
