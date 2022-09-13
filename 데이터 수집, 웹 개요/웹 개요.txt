@@ -13,7 +13,7 @@ HTTP(hyper text transger protocol) : client와 server 사이에 request/response
 http://
 https:// -> s가 붙는 이유 : 암호화
 HTTP request message : request line(사용자 명령코드), header line, 종료코드 
-    get : 클릭할 때 전달되는 모든 정보 다운로드
+    get : 클릭할 때 전달되는 모든 정보 다운로드, jupyter에서 웹사이트 url 끌고올 때 사용
     post : 클라이언트가 서버로 데이터 전송(로그인)
     put : 클라이언트가 서버에 데이터 업로드(첨부파일), 저장
     delete : 서버에 저장된 데이터 삭제
@@ -29,7 +29,7 @@ URL(uniform resource locator)
 = 인터넷 주소
 
 웹페이지 제작 언어 : HTML, JS(자바 스크립트 : 동적으로 웹사이트 수정할 때 사용), CSS
-    HTML(hyper text markup language) : 웹 브라우저에서 문서 및 웹 페이지가 표시할 때 사용
+    HTML(hyper text markup language) : 웹 브라우저에서 문서 및 웹 페이지 표시할 때 사용
         기본 구성 요소 : tag, attribute
             opening tag - closing transge
             <P>      content      </P> 
@@ -52,7 +52,7 @@ URL(uniform resource locator)
                 </body>
             </html>
 
-    CSS(cascading style sheets) : 구성요소들을 표시할 때 사용, 모양과 느낌 등 디테일한 표현 가능, 시각적 효과
+    CSS(cascading style sheets) : 구성요소들을 표시할 때 사용, 모양과 느낌 등 디테일한 표현 가능, 시각적 효과(색깔, 폰트)
         선택자(selector) : 스타일을 지정할 HTML 요소
         선언부(declaration) : CSS 속성 이름과 값
         h1 {color:red; font-size:15px;}
