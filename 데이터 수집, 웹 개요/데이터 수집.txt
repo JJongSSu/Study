@@ -7,7 +7,7 @@ client : 서버로부터 정보를 제공받는 컴퓨터
 server : 클라이언트에게 네트워크를 통해 서비스를 제공하는 컴퓨터
 client -> server : request
 server -> client : response
-둘 간의 교류는 client만 시작할 수 있다
+둘 간의 교류는 client만 시작할 수 있다, server는 request 메세지를 받지못하면 서비스를 제공할 수 없다
 
 HTTP(hyper text transger protocol) : client와 server 사이에 request/response 메세지를 보내는 방법
 http://
@@ -63,3 +63,7 @@ URL(uniform resource locator)
             외부 스타일 시트 : 외부에서 불러오는 방법(java 클래스 느낌) <link>
                 head 사이에 들어감, href로 사용
             인라인 스타일 시트 : 태그 안에 직접 지정
+
+request 라이브러리
+    접근할 웹 페이지의 데이터를 요청/응답받기 위한 라이브러리
+    파이썬(jupyter)으로 작업 가능
