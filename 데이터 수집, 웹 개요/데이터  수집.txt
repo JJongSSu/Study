@@ -25,7 +25,7 @@ driver 코드
     모든 브라우저 닫기: driver.quit()
         -> 크롤링 할 때 시간이 많이 걸리기 때문에 돌려놓고 기다리기 때문에 다 크롤링된 창은 종료해서 속도를 높임
     뒤로가기 : driver.back()
-    앞으로 가져오기 : driver.forward()
+    앞으로 가기 : driver.forward()
     해당 탭으로 이동 : driver.switch_to.window(driver.window_handles[0])
         -> 열린 탭 밖에 data를 수집할 수 없기 때문에 탭 이동할 때 사용
 
