@@ -1,0 +1,22 @@
+web crawler
+    자동화된 방법으로 웹에서 정보를 수집하는 소프트웨어
+
+빅데이터 : 디지털 환경에서 생성되는 모든 data
+    5V : 규모(volume), 정확성(veracity), 다양성(variety), 가치(value), 속도(velocity)
+    5V를 모두 충족해야 빅데이터라고 함
+
+    수집 data 형태
+        정형 : CSV, 스프레드시트, 관계형 DB(RDB)
+        반정형 : table화 할 수 있는 data
+        비정형 : 모형화 할 수 없는 data
+
+crawling vs scraping
+    crawling : 여러 다른 웹사이트를 탐색하는 작업, 동적
+    scraping : 웹사이트에서 data를 추출하는 작업, 정적
+        -> crawling 후에 scraping를 통해 data 추출
+
+scraping
+    beatifulsoup 라이브러리 사용
+    원하는 정보만 뽑기 위해 request로 가져온 data를 객체화시킴
+    html.parser / lxml.parser
+    
