@@ -3,11 +3,11 @@
 hyper text : 문서 안에 다른 문서로 연결되는 참조
 
 웹 : client, server
-client : 서버로부터 정보를 제공받는 컴퓨터
-server : 클라이언트에게 네트워크를 통해 서비스를 제공하는 컴퓨터
-client -> server : request
-server -> client : response
-둘 간의 교류는 client만 시작할 수 있다, server는 request 메세지를 받지못하면 서비스를 제공할 수 없다
+    client : 서버로부터 정보를 제공받는 컴퓨터
+    server : 클라이언트에게 네트워크를 통해 서비스를 제공하는 컴퓨터
+    client -> server : request
+    server -> client : response
+    둘 간의 교류는 client만 시작할 수 있다, server는 request 메세지를 받지못하면 서비스를 제공할 수 없다
 
 HTTP(hyper text transger protocol) : client와 server 사이에 request/response 메세지를 보내는 방법
 http://
