@@ -7,12 +7,12 @@ web crawler
 
     수집 data 형태
         정형 : CSV, 스프레드시트, 관계형 DB(RDB)
-        반정형 : table화 할 수 있는 data
+        반정형 : table화 할 수 있는 data(지문)
         비정형 : 모형화 할 수 없는 data
 
 crawling vs scraping
     crawling : 여러 다른 웹사이트를 탐색하는 작업, 동적
-    scraping : 웹사이트에서 data를 추출하는 작업, 정적
+    scraping : 하나의 웹사이트에서 data를 추출하는 작업, 정적
         -> crawling 후에 scraping를 통해 data 추출
 
 scraping
