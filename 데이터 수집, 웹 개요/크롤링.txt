@@ -19,4 +19,8 @@ scraping
     beatifulsoup 라이브러리 사용
     원하는 정보만 뽑기 위해 request로 가져온 data를 객체화시킴
     html.parser / lxml.parser
-    
+
+객체화 선행
+soup = bs(res.text, 'html.parser')
+
+<html 태그 & 속성(주로 class) 선택> soup.select(tag.class_name)
