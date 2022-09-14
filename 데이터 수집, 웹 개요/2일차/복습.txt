@@ -1,0 +1,27 @@
+정적
+BeautifulSoup
+request
+.get
+.text
+soup('.text','html parser') # lxml parser도 가능
+soup.select('html tag.class > 하위 html tag.class')
+
+동적
+selenium
+Chrome driver(수동, manager 방법)
+driver.find_element_by_css_selector('css_selecor copy') : 상대적 주소
+driver.find_element_by_xpath('xpath copy') : 절대적 주소
+
+
+시간제어
+selenium은 동적 크롤링이기 때문에 로딩되기 전에 코드가 실행되어 오류가 날 수 있음
+잠시 멈춤으로써 로딩 전 코드 시행 방지
+import time 사용
+
+한 페이지에 하나 가져올 때 : selenium
+여러 개를 가져올 때 : BeautifulSoup
+
+selenium 스크롤링
+해당 element 지정시 body tag에 사용
+END, Page down, Page up
+
