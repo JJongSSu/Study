@@ -3,7 +3,7 @@ BeautifulSoup
 request
 .get
 .text
-soup('.text','html parser') # lxml parser도 가능
+soup(.text,'html parser') # lxml parser도 가능
 soup.select('html tag.class > 하위 html tag.class')
 
 동적
