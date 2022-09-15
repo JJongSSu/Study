@@ -18,3 +18,9 @@
     okt.morphs(text, norm=True) : 문장 정규화
     okt.morphs(text, stem=True) : 어간 추출
     okt.morphs(text, norm=True,stem=True) : 동시 사용
+    
+    불용어 제거
+    의미 없는 단어들 제거
+    리스트를 만들어 사용
+    Adjective, Verb, noun
+    동사 : 있다, 되다, 하다 -> 제거
