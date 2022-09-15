@@ -1,0 +1,12 @@
+hyper text 링크
+href : 다른 문서로 이동하기 위한 주소/url(참조주소)
+    반드시 a 태그와 함께 쓰임
+
+BeautifulSoup
+select_one : 첫번째 태그만 출력
+select : 디테일한 하위태그 선정하기 편리
+find : 첫번째 태그만 출력   (= element와 비슷)
+find_all : 모든 태그 출력   (= elements와 비슷)
+    soup.find('html tag', class_='class name')
+    soup.find_all('html tag', class_='class name')
+

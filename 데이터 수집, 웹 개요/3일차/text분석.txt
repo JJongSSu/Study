@@ -1,0 +1,20 @@
+텍스트 마이닝
+텍스트 수집(크롤링, 스크래핑) - 정제(정규표현식, split, replace, 전처리, 정렬) - 마이닝(빈도분석, 연관어분석) - 인사이트 도출
+
+형태소 분석
+문장을 명사, 조사 등으로 분리 후 필요한 태그만 추출해서 사용
+영어 NLTK 라이브러리
+한국어 Konlpy 라이브러리 
+    Hannanum : 정제된 언어가 아니면 분석 힘듬, 띄어쓰기 없는 문장 어려움
+    Okt : 문장 정규화 가능(과거형, 미래형 -> 현재형), 비정제 언어(인터넷 언어)도 괜찮게 분석
+    Komoran : 오탈자 분석 잘됨, 시간이 오래 걸림, 띄어쓰기 없는 문장 어려움 -> 자소서
+    Kkma : 문장 길어질수록 로딩시간 급격히 증가, 짧은 문장은 분석 빠름
+    Mecab : mac에서만 사용 가능, 속도 빠름, 분석력도 좋음
+
+    okt.morphs(text) : 형태소 단위 분리
+    okt.nouns(text) : 명사만 추출
+    okt.pos(text) : 품사 태깅
+
+    okt.morphs(text, norm=True) : 문장 정규화
+    okt.morphs(text, stem=True) : 어간 추출
+    okt.morphs(text, norm=True,stem=True) : 동시 사용
