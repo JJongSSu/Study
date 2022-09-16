@@ -12,3 +12,18 @@ extract()
 remove = soup.select('tag.class')
 for i in remove:
     i.extract()
+
+브라우저에 보이는데 스크랩핑이 안될 때
+iframe 태그 확인
+html 안에 다른 html 문서가 있다는 태그
+iframe 바깥에서는 프레임 안에 있는 내용들은 볼수가 없다
+iframe을 main frame으로 전환
+iframe 이동
+body에 iframe이 하나인 경우
+    driver.switch_to.frame('mainFrame')
+body에 iframe이 여러 개인 경우
+    element = driver.find_element_by_id('mainFrame')
+    driver.switch_to.frame(element)
+
+iframe 나오기
+    driver.switch_to.default_content()
