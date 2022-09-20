@@ -6,3 +6,7 @@
     확장자가 .py 파일
 
     jupyter : file - download as - python(.py) - 같은 경로로 옮기기
+
+    numpy : 과학계산
+    pandas : 표 형식의 데이터 지원
+    matplotlib : 2D 그래프로 시각화
