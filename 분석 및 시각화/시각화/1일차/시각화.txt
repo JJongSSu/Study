@@ -16,3 +16,17 @@
             동일한 자료형을 가지는 값들이 배열 형태로 존재
             index 부여 가능
             n차원 형태로 구성 가능 -> 같은 차원에서는 숫자의 개수가 같아야 됨
+
+    pandas
+        data를 정리하기 위해 사용
+        data table화
+        SQL database, 엑셀파일 data 가공할 때 사용
+
+        - Series : 1차원 배열 형태
+            인덱스 + 값
+            column 한개
+
+        - DataFrame : 2차원 배열 형태
+            행렬로 이루어짐 (row,column)
+            서로 다른 종류의 자료형을 저장할 수 있음
+            
