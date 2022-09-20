@@ -10,3 +10,9 @@
     numpy : 과학계산
     pandas : 표 형식의 데이터 지원
     matplotlib : 2D 그래프로 시각화
+
+    numpy
+        numpy.ndarray
+            동일한 자료형을 가지는 값들이 배열 형태로 존재
+            index 부여 가능
+            n차원 형태로 구성 가능 -> 같은 차원에서는 숫자의 개수가 같아야 됨

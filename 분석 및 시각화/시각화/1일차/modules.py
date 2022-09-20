@@ -2,72 +2,53 @@
  "cells": [
   {
    "cell_type": "code",
-   "execution_count": 2,
+   "execution_count": 1,
    "metadata": {},
    "outputs": [],
    "source": [
     "def add(x,y):\n",
-    "    return x+y\n",
-    "\n",
+    "    return x+y"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {},
+   "outputs": [],
+   "source": [
     "def minus(x,y):\n",
-    "    return x-y\n",
-    "\n",
-    "def multiply(x,y):\n",
-    "    return x*y\n",
-    "\n",
-    "def divide(x,y):\n",
-    "    return x/y\n",
-    "\n",
-    "def squared(x,y):\n",
-    "    return x**y\n"
+    "    return x-y"
    ]
   },
   {
    "cell_type": "code",
    "execution_count": 3,
    "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/plain": [
-       "11"
-      ]
-     },
-     "execution_count": 3,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
+   "outputs": [],
    "source": [
-    "add(5,6)"
+    "def multiply(x,y):\n",
+    "    return x*y"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def divide(x,y):\n",
+    "    return x/y"
    ]
   },
   {
    "cell_type": "code",
    "execution_count": 5,
    "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/plain": [
-       "-6"
-      ]
-     },
-     "execution_count": 5,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "minus(1,7)"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
    "outputs": [],
-   "source": []
+   "source": [
+    "def squared(x,y):\n",
+    "    return x**y"
+   ]
   }
  ],
  "metadata": {
