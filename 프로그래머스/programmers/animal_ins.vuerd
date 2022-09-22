@@ -1,0 +1,208 @@
+{
+  "canvas": {
+    "version": "2.2.11",
+    "width": 2000,
+    "height": 2000,
+    "scrollTop": 0,
+    "scrollLeft": 0,
+    "zoomLevel": 1,
+    "show": {
+      "tableComment": true,
+      "columnComment": true,
+      "columnDataType": true,
+      "columnDefault": true,
+      "columnAutoIncrement": false,
+      "columnPrimaryKey": true,
+      "columnUnique": false,
+      "columnNotNull": true,
+      "relationship": true
+    },
+    "database": "MySQL",
+    "databaseName": "",
+    "canvasType": "ERD",
+    "language": "GraphQL",
+    "tableCase": "pascalCase",
+    "columnCase": "camelCase",
+    "highlightTheme": "VS2015",
+    "bracketType": "none",
+    "setting": {
+      "relationshipDataTypeSync": true,
+      "relationshipOptimization": false,
+      "columnOrder": [
+        "columnName",
+        "columnDataType",
+        "columnNotNull",
+        "columnUnique",
+        "columnAutoIncrement",
+        "columnDefault",
+        "columnComment"
+      ]
+    },
+    "pluginSerializationMap": {}
+  },
+  "table": {
+    "tables": [
+      {
+        "name": "ANIMAL_INS",
+        "comment": "",
+        "columns": [
+          {
+            "name": "ANIMAL_ID",
+            "comment": "아이디",
+            "dataType": "VARCHAR(N)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 69.10107421875,
+              "widthComment": 60,
+              "widthDataType": 77.75927734375,
+              "widthDefault": 60
+            },
+            "id": "88eb18d7-c2a8-4c7f-81f8-9bfd8c87d4cc"
+          },
+          {
+            "name": "ANIMAL_TYPE",
+            "comment": "생물 종",
+            "dataType": "VARCHAR(N)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 84.86865234375,
+              "widthComment": 60,
+              "widthDataType": 77.75927734375,
+              "widthDefault": 60
+            },
+            "id": "f6e08e66-a53a-497f-b6b2-f93cc4376e73"
+          },
+          {
+            "name": "DATETIME",
+            "comment": "보호 시작일",
+            "dataType": "DATETIME",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 61.42041015625,
+              "widthComment": 71.5703125,
+              "widthDataType": 61.42041015625,
+              "widthDefault": 60
+            },
+            "id": "c1742466-efbe-49fb-b3f1-281c901bdaf7"
+          },
+          {
+            "name": "INTAKE_CONDITION",
+            "comment": "보호 시작 시 상태",
+            "dataType": "VARCHAR(N)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 121.18359375,
+              "widthComment": 106.7109375,
+              "widthDataType": 77.75927734375,
+              "widthDefault": 60
+            },
+            "id": "d83272b5-da48-4215-83b3-68453cb48ea6"
+          },
+          {
+            "name": "NAME",
+            "comment": "이름",
+            "dataType": "VARCHAR(N)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 77.75927734375,
+              "widthDefault": 60
+            },
+            "id": "4b96b8c6-dfe4-4371-a720-4025845e5249"
+          },
+          {
+            "name": "SEX_UPON_INTAKE",
+            "comment": "성별 및 중성화 여부",
+            "dataType": "VARCHAR(N)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 113.57275390625,
+              "widthComment": 119.7109375,
+              "widthDataType": 77.75927734375,
+              "widthDefault": 60
+            },
+            "id": "18f0962c-7d8d-4a44-bbf4-9e1b6459411d"
+          }
+        ],
+        "ui": {
+          "active": true,
+          "left": 389.6,
+          "top": 102.4,
+          "zIndex": 3,
+          "widthName": 76.78173828125,
+          "widthComment": 60
+        },
+        "visible": true,
+        "id": "ceb270d9-1130-4399-b6d1-bb62d5b937a2"
+      }
+    ],
+    "indexes": []
+  },
+  "memo": {
+    "memos": []
+  },
+  "relationship": {
+    "relationships": []
+  }
+}
