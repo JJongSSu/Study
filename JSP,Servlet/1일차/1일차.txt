@@ -1,0 +1,11 @@
+sql
+select, insert, update, delete
+
+자바 웹 개발
+자바 개발도구 : JDK
+통합개발환경(IDE) : 이클립스(standard / enterprise)
+서블릿 컨테이너 : 아파치 톰캣(aptche tomcat) -> 서버/컨테이너 구축
+데이터베이스 : MySQL
+
+JDK : 프로그램 개발, 컴파일러 역할, class file 생성
+jre : 자바 실행
