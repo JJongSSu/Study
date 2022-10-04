@@ -70,3 +70,5 @@ action(값을 어디로 보낼지), name(어떤 값을 보낼지), submit(값을
     pw : <input type = "text" name = param
     <input type = submit calue="login">
 </form>
+
+form 과 action은 1대1로 연결
