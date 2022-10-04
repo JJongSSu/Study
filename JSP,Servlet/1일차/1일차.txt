@@ -50,3 +50,23 @@ CGI
 
 servlet 생명주기
     객체생성(메모리에 올림) -> init(초기화) -> service(요청에 따라 스레드로 실행) : get, post 메서드 호출 -> destroy(종료)
+
+client -> request에 담아서 요청
+server -> response에 담아서 출력
+
+urlPatterns에서 url mapping -> 이름이 길 경우 단순화 시켜줌
+
+url 
+http://localhost:port/servlet/request?num=123
+protocol / host(domain):port / path / query=사용자 입력값
+
+uri
+path / query=사용자 입력값
+
+data 전송 조건
+action(값을 어디로 보낼지), name(어떤 값을 보낼지), submit(값을 보내는 시점)
+<form action = "url">
+    id : <input type = "text" name = param
+    pw : <input type = "text" name = param
+    <input type = submit calue="login">
+</form>
