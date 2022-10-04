@@ -21,4 +21,32 @@ client : 서비스 호출 <-> server : 서비스 제공
 HTML -> TCP/IP로 자료를 한번에 보내는게 어려워서 웹 프로토콜 개발, 정적문서
 JSP, CGI, PHP -> 동적문서, 사용자 요청에 따른 서비스 개선을 위해 필요, 사용자 맞춤형 HTML 문서
 
+servlet = server + applet(작은 모듈)
+    자바 기반 web application 프로그래밍 기술
+    client 요청에 동적으로 작동, 응답은 HTML 형식으로 제공
 
+서블릿 컨테이너(jsp 컨테이너 : 톰켓)
+    서블릿을 실행하기 위한 서버 소프트웨어
+    jsp, 서블릿 실행하기 위한 환경
+
+웹 컨테이너
+    jsp, servlet 구동환경 제공
+    jsp, css로 들어온 문서를 동적콘텐츠로 생성하고 HTML로 변환
+
+servlet 동작 과정
+    client 로그인 요청(id,pw) -> server가 WAS(web applilcation server)에 전달하면 DB에서 id, pw 확인 -> 해당 데이터들로 웹페이지 생성 -> server 응답
+
+servlet 특징
+    java 기반이기 때문에 컴파일과정 필요
+    java multi thread 이용해서 속도와 메모리 효율적으로 사용
+        새로운 요청이 들어오면 이미 진행하고 있는 스레드에서 같이 처리
+    객체지향형 -> 대규모 application 개발에 적합
+    get, post 방식으로 구분해서 처리
+
+CGI 
+    웹서버와 외부 프로그램 사이에 정보를 주고받는 방법이나 규약들
+    새로운 요청이 들어오면 새로운 스레드 생성
+    사용자 요청이 많으면 서버에 부하가 많음
+
+servlet 생명주기
+    객체생성(메모리에 올림) -> init(초기화) -> service(요청에 따라 스레드로 실행) : get, post 메서드 호출 -> destroy(종료)
