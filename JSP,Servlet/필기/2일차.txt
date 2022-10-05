@@ -18,3 +18,15 @@ data 전송방식(get / post)
 	<input type="submit" name="login">
 </form>
     -> submit할 경우 action의 url로 요청이 됨(request)
+
+2000년대 초반 버블닷컴 망함
+2020년도 웹개발자 -> 빅데이터, action
+HTML : 정적 -> java -> 서블릿 : 동적 문서화 -> JSP
+MVC -> MVC2
+
+JSP : HTML내에 java 코드 작성
+    구성요소
+        지시자(directive) : <%@ %>
+        선언문(declaration) : <%! %> -> 메소드, 변수 선언
+        스크립트릿 : <% %>
+        표현식 : <%= %>
