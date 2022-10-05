@@ -36,10 +36,11 @@ public class Gugudan extends HttpServlet {
 		
 		int n1 = Integer.parseInt(request.getParameter("num1"));
 		int n2 = Integer.parseInt(request.getParameter("num2"));
+		String color = request.getParameter("color");
 		
 		out.print("<html><head><title>구구단</title></head>");
 		out.print("<body>");
-		out.print("<table border>");
+		out.print("<table border bgcolor="+color+">");
 		for(int i=n1;i<=n2;i++) {
 			out.print("<tr>");
 			for(int j=1;j<=9;j++) {
