@@ -1,3 +1,20 @@
 클래스 = 필드(변수, 속성) + 메소드
 클래스 -> 인스턴스화 -> 객체 -> 메모리
 
+data 전송방식(get / post)
+1. get
+    url 뒤에 사용자 data가 같이 따라감
+    data 길이가 제한되어 있음
+    data가 노출되어 보안상 위험
+    캐싱이 가능
+
+2. post
+    HTML 헤더 정보에 암호화되서 넘어감
+    url에 data 노출하지 않음
+
+<form action="url">
+	ID : <input type="" name="" value=""><br>
+	Password : <input type="" name=""><br>
+	<input type="submit" name="login">
+</form>
+    -> submit할 경우 action의 url로 요청이 됨(request)

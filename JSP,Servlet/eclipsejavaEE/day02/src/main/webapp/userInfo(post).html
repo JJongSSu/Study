@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="userinfopost" method="post">
+	이름
+	<input type="text" name="name"><br>
+	나이
+	<input type="text" name="age"><br>
+	<hr>
+	좋아하는 음식(복수 선택 가능)
+	<br>
+	<select name="food" multiple size=4>	<!-- multiple : 여러개 선택 가능 -->
+	<option value="김치찌개">김치찌개
+	<option>제육볶음
+	<option>순대국
+	<option>곱창
+	<option>삼겹살
+	<option>떡볶이
+	<option>파스타
+	</select>
+	<br>
+	<br>
+	성별
+	<br>
+	<input type="radio" name="gender" value="man">남자
+	<input type="radio" name="gender" value="woman">여자
+	<br>
+	<br>
+	관심분야
+	<br>
+	<input type="checkbox" name="interested" value="데이터분석">데이터분석
+	<input type="checkbox" name="interested" value="반도체">반도체
+	<input type="checkbox" name="interested" value="네트워크관리">네트워크관리
+	<input type="checkbox" name="interested" value="웹프로그램">웹프로그램
+	<input type="checkbox" name="interested" value="보안">보안
+	<input type="checkbox" name="interested" value="게임프로그램">게임프로그램
+	<br>
+	<br>
+	<input type="submit" value="제출">
+</form>
+</body>
+</html>
