@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="labjointable">
+<table border width=600 style="text-align: center;">
+<tr><td colspan="2" bgcolor="#fa8072">step1 : 아이디/비번 입력</td></tr>
+<tr><td>아이디 : </td><td><input type="text" name="id"></td></tr>
+<tr><td>비밀번호 : </td><td><input type="text" name="pwd"></td></tr>
+<tr><td>비밀번호 확인 : </td><td><input type="text" name="pwd2"></td></tr>
+
+<tr><td colspan="2" bgcolor="#fa8072">step2 : 개인정보</td></tr>
+<tr><td>성별 :</td><td><input type="radio" name="gender" value="man">남자
+<input type="radio" name="gender" value="woman">여자</td></tr>
+<tr><td>혈액형 :</td><td><select name="blood"> 
+	<option value="O">O
+	<option value="A">A
+	<option value="B">B
+	<option value="AB">AB
+	</select></td></tr>
+<tr><td>생일 : </td><td><input type="date" name="birthday"></td></tr>
+
+<tr><td colspan="2" bgcolor="#fa8072">step3 : 선호도</td></tr>
+<tr><td>취미 :</td><td><input type="checkbox" name="hobby" value="soccer">축구
+	<input type="checkbox" name="hobby" value="basketball">농구
+	<input type="checkbox" name="hobby" value="baseball">야구
+	<input type="checkbox" name="hobby" value="hiking">등산
+	<input type="checkbox" name="hobby" value="game">게임
+	<input type="checkbox" name="hobby" value="piano">피아노
+	<input type="checkbox" name="hobby" value="swimming">수영</td></tr>
+<tr><td>좋아하는 색깔 :</td><td><input type="color" name="firstcolor"></td></tr>
+
+<tr><td colspan="2" bgcolor="#fa8072">step4 : 적고 싶은 말</td></tr>
+<tr><td colspan="2"><textarea name="writers" row="5" cols="50"></textarea></td></tr>
+<tr><td colspan="2">
+<input type="submit" value="제출">
+<input type="reset" value="초기화">
+</td>
+</tr>
+</table>
+</form>
+</body>
+</html>
