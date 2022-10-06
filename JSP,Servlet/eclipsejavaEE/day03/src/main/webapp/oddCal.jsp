@@ -7,19 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%
-	int num1 = 10;
-	int num2 = 33;
-	int sum = num1 + num2;
-	boolean result = odd(sum);
-	
-	if(result){
-		out.print(num1+"+"+num2+" 결과는 홀수입니다.");
-	}
-	else{
-		out.print(num1+"+"+num2+" 결과는 짝수입니다.");
-	}	
-%>
 <h3>홀수, 짝수 판단하기</h3>
 <%!
 // 판단 메소드
@@ -31,6 +18,20 @@
 			return false;
 		}
 	}
+%>
+
+<%
+	int num1 = Integer.parseInt(request.getParameter("num1"));
+	int num2 = Integer.parseInt(request.getParameter("num2"));
+	int sum = num1 + num2;
+	boolean result = odd(sum);
+	
+	if(result){
+		out.print(num1+"+"+num2+" 결과는 홀수입니다.");
+	}
+	else{
+		out.print(num1+"+"+num2+" 결과는 짝수입니다.");
+	}	
 %>
 </body>
 </html>
