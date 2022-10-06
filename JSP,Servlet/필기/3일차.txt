@@ -1,0 +1,3 @@
+객체생성 -> init -> service -> destory
+client -> request -> service -> doget / dopost
+
