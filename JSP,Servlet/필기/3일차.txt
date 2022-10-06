@@ -1,3 +1,13 @@
 객체생성 -> init -> service -> destory
 client -> request -> service -> doget / dopost
 
+jsp 구조
+class {
+    _jspService(){
+        <% %>, <%= %>, logic
+    }
+}
+
+eclipse는 '파일명 = class이름'으로 설정되기 때문에 그대로 복붙하면 server가 꼬여서 오류 생김
+
+
