@@ -8,13 +8,15 @@
 </head>
 <body>
 <div style="width: 600px; height: 500px; border: 1px solid gray; text-align: center">
-<h2>두번째 페이지</h2>
+<h2>첫번째 페이지</h2>
 내용이 여기에 들어갑니다.
-<p><img src="./images/picture1.jpg" style="width:400px; height:300px;">
+<p><img src="./images/picture2.jpg" style="width:400px; height:300px;">
 <hr>
-<a href="firstpage.jsp">첫번째 페이지로 이동</a>
+<a href="secondpage.jsp">두번째 페이지로 이동</a>
 <hr>
-오늘 날짜 : <%@ include file="day.jsp" %>
+오늘 날짜 : <%@ include file="today.jsp" %>
+<hr>
+<a href="test03.html">로그아웃</a>
 </div>
 </body>
 </html>

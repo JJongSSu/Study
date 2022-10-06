@@ -14,7 +14,7 @@
 <hr>
 <a href="secondpage.jsp">두번째 페이지로 이동</a>
 <hr>
-오늘 날짜 : <%@ include file="today.jsp" %>
+오늘 날짜 : <%@ include file="day.jsp" %>
 </div>
 </body>
 </html>

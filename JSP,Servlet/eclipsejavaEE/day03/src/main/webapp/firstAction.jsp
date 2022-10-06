@@ -16,7 +16,7 @@
 <hr>
 <!-- 액션태그는 XML 표준 기준으로 작성된다.
 	시작태그와 종료태그는 반드시 있어야 함 -->
-오늘 날짜 : <jsp:include page="today.jsp"/>
+오늘 날짜 : <jsp:include page="day.jsp"/>
 </div>
 </body>
 </html>

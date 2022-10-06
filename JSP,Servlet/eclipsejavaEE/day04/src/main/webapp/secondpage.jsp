@@ -14,7 +14,9 @@
 <hr>
 <a href="firstpage.jsp">첫번째 페이지로 이동</a>
 <hr>
-오늘 날짜 : <%@ include file="day.jsp" %>
+오늘 날짜 : <%@ include file="today.jsp" %>
+<hr>
+<a href="test03.html">로그아웃</a>
 </div>
 </body>
 </html>

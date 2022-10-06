@@ -14,7 +14,7 @@
 <hr>
 <a href="firstAction.jsp">첫번째 액션 페이지로 이동</a>
 <hr>
-오늘 날짜 : <jsp:include page="today.jsp"/>
+오늘 날짜 : <jsp:include page="day.jsp"/>
 </div>
 </body>
 </html>
