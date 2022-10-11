@@ -10,11 +10,8 @@
 <body>
 <%
 	Calendar cal = Calendar.getInstance();
-	int year = cal.get(Calendar.YEAR);
-	int month = cal.get(Calendar.MONTH)+1;	//month는 0~11까지 있어서 +1 해줘야 됨
-	int day = cal.get(Calendar.DATE);
-	
-	out.print(year+"년 "+month+"월 "+day+"일");
+	//month는 0~11까지 있어서 +1 해줘야 됨
+	out.print(cal.get(Calendar.YEAR)+"년 "+cal.get(Calendar.MONTH)+1+"월 "+cal.get(Calendar.DATE)+"일");
 %>
 </body>
 </html>

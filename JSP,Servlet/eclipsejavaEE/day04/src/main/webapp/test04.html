@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css"> textarea{resize:none;}</style>
+</head>
+<body>
+<form action="test04.jsp" method="post">
+<table border width=500px style="text-align:center;">
+<!-- table border를 0으로 해놓고 배경을 깔끔한 것으로 구성 : table 선 안보이게 -->
+<tr><td colspan="2" height="40" bgcolor="#C8FFFF"><b>Step1 : 아이디/비번 입력</b></td></tr>
+<tr><td width=150px style="text-align:right">아이디 : </td><td><input type="text" name="id"></td></tr>
+<tr><td style="text-align:right">비밀번호 : </td><td><input type="text" name="pw"></td></tr>
+<tr><td style="text-align:right">비밀번호 확인 : </td><td><input type="text" name="pw2"></td></tr>
+
+<tr><td colspan="2" height="40" bgcolor="#C8FFFF"><b>Step2 : 개인정보</b></td></tr>
+<tr><td style="text-align:right">성별 : </td><td><input type="radio" name="gender" value="man">남자
+<input type="radio" name="gender" value="woman">여자</td></tr>
+<tr><td style="text-align:right">혈액형 : </td>
+<td>
+<select name="blood">
+<option value="O">O형
+<option value="A">A형
+<option value="B">B형
+<option value="AB">AB형
+</select>
+</td></tr>
+<tr><td style="text-align:right">생일 : </td><td><input type="date" name="brithday"></td></tr>
+
+<tr><td colspan="2" height="40" bgcolor="#C8FFFF"><b>Step3 : 선호도</b></td></tr>
+<tr><td style="text-align:right">취미 : </td>
+<td>
+<input type="checkbox" name="hobby" value="soccer">축구
+<input type="checkbox" name="hobby" value="basketball">농구
+<input type="checkbox" name="hobby" value="baseball">야구
+<input type="checkbox" name="hobby" value="swimming">수영
+<input type="checkbox" name="hobby" value="hiking">등산<br>
+<input type="checkbox" name="hobby" value="golf">골프
+<input type="checkbox" name="hobby" value="tennis">테니스
+<input type="checkbox" name="hobby" value="gaem">게임
+<input type="checkbox" name="hobby" value="movie">영화보기
+</td></tr>
+<tr><td style="text-align:right">좋아하는 색깔 : </td><td><input type="color" name="firstcolor"></td></tr>
+
+<tr><td colspan="2" height="40" bgcolor="#C8FFFF"><b>Step4 : 적고 싶은 말</b></td></tr>
+<tr><td colspan="2" height="70"><textarea name="write" style="width:95%; height:80%"></textarea></td></tr>
+<!-- DB 필드 = txt로 설정 : 크기 제한 없음 -->
+<tr><td colspan="2"><input type="submit" value="제출">
+<input type="reset" value="초기화"></td></tr>
+</table>
+</form>
+</body>
+</html>

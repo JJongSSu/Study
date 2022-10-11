@@ -12,6 +12,7 @@
 	String pw = request.getParameter("pw");
 	
 	if(id.equals("smart") && pw.equals("1234")){
+		session.setAttribute("id", id);
 		RequestDispatcher dispt = request.getRequestDispatcher("firstpage.jsp");
 		dispt.forward(request, response);
 	}

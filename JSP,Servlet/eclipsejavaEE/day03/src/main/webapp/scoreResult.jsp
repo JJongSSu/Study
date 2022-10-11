@@ -19,17 +19,20 @@
 
 	double avg = average(scorelist);
 	
+	// 나눠야하는 등급이 많을 때 이분법 사용(나눌 등급의 절반에서 먼저 if문 사용 -> up&down게임)
+	// 50점 이상,미만으로 먼저 if문 사용해주고 그 안에서 if문으로 세부등급 나누기
+	// 상한선,하한선 범위 주기
 	String grade = "";
 	if(95<=avg && avg<=100){
 		grade = "A+";
 	}
-	else if(90<=avg && avg<=94){
+	else if(avg>=90){
 		grade = "A";
 	}
-	else if(85<=avg && avg<=89){
+	else if(avg>=85){
 		grade = "B+";
 	}
-	else if(80<=avg && avg<=84){
+	else if(avg>=80){
 		grade = "B";
 	}
 	else{
@@ -38,11 +41,14 @@
 %>
 <%!
 	double average(int[] score){
+		// int sum = 0;
 		double avg = 0;
 		for(int i=0; i<score.length; i++){
 			avg += score[i];
+			// sum += score[i];
 		}
 		avg = avg/score.length;
+		// avg = sum/score.length*1.0;
 		return avg;
 	}
 %>
