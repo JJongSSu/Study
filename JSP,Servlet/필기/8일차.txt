@@ -1,0 +1,25 @@
+SQL사용하기 위해서는 Servers에 등록해줘야 됨
+
+server 등록
+<Resource name="jdbc/mysql" 
+auth="Container" 
+type="javax.sql.DataSource“
+maxWaitMillis="10000"
+username="root" 
+password="tbrs00002b" 
+driverClassName="com.mysql.jdbc.Driver"
+url="jdbc:mysql://localhost:3306/webdb"/>
+
+context 등록
+<Resource name="jdbc/mysql"
+auth = "Container"
+driverClassName = "com.mysql.cj.jdbc.Driver"
+url= "jdbc:mysql://127.0.0.1:3306/webdb?serverTimezone=UTC"
+username= "root"
+password= "tbrs00002b"
+type="javax.sql.DataSource"
+maxActive="20"
+maxWait="10000"
+/>
+
+web 등록
