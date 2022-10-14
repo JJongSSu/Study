@@ -23,3 +23,9 @@ maxWait="10000"
 />
 
 web 등록
+<resource-ref> 
+<description>web db</description> 
+<res-ref-name>jdbc/mysql</res-ref-name> 
+<res-type>javax.sql.DataSource</res-type> 
+<res-auth>Container</res-auth> 
+</resource-ref>
