@@ -17,10 +17,12 @@
 	
 	if(id.equals(userId) && pw.equals(userPw)){
 		session.setAttribute("userId", userId);	// 세션정보로 userId 값 저장
-		response.sendRedirect("page1.jsp");
+		long sessionStartTime = session.getCreationTime();	// 1970.1.1 기준으로 시작시점 계산(1/1000 초단위)
+		session.setAttribute("sst", sessionStartTime/1000);
+		response.sendRedirect("(bank)page1.jsp");
 	}
 	else{
-		response.sendRedirect("loginForm.jsp");
+		response.sendRedirect("(bank)loginForm.jsp");
 		out.print("잘못 입력하셨습니다.");
 	}
 %>

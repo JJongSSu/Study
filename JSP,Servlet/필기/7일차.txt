@@ -1,0 +1,7 @@
+회원가입 - jsp - db
+
+회원가입 - 서블릿 - memberDB
+			- DAO - member객체
+
+data
+리소스 -> 처리 -> 반환
