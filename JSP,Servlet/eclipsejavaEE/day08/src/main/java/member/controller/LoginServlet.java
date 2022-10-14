@@ -32,8 +32,7 @@ public class LoginServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
 	 *      response)
 	 */
-	protected void doGet(HttpServletRequest request,
-			HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String url = "login.jsp";
 		HttpSession session = request.getSession();
 		if (session.getAttribute("loginUser") != null) {// 이미 로그인 된 사용자이면
@@ -47,8 +46,7 @@ public class LoginServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
 	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request,
-			HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String url = "login.jsp";
 		String userid = request.getParameter("userid");
 		String pwd = request.getParameter("pwd");
@@ -61,9 +59,11 @@ public class LoginServlet extends HttpServlet {
 			session.setAttribute("loginUser", mVo);
 			request.setAttribute("message", "회원 가입에 성공했습니다.");
 			url = "main.jsp";
-		} else if (result == 0) {
+		} 
+		else if (result == 0) {
 			request.setAttribute("message", "비밀번호가 맞지 않습니다.");
-		} else if (result == -1) {
+		} 
+		else if (result == -1) {
 			request.setAttribute("message", "존재하지 않는 회원입니다.");
 		}
 		RequestDispatcher dispatcher = request.getRequestDispatcher(url);

@@ -3,6 +3,10 @@ package member.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -11,7 +15,12 @@ import javax.sql.DataSource;
 import member.dto.MemberVO;
 
 public class MemberDAO {
-	private MemberDAO() {
+	private Connection conn = null;
+	private Statement stmt = null;
+	private ResultSet rs = null;
+	private PreparedStatement pstmt = null;
+	
+	public MemberDAO() {
 	}
 
 	private static MemberDAO instance = new MemberDAO();
@@ -198,4 +207,55 @@ public class MemberDAO {
 		}
 		return result;
 	}
+	
+	public ResultSet allSelect() {
+		String sql = "select * from member";
+		try {
+			pstmt = conn.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return rs;
+		
+	}
+	
+	public List<MemberVO> allSelect2() {
+		String sql = "select * from member";
+		MemberVO result = null;
+		List<MemberVO> memberList = new ArrayList<>();
+		try {
+			pstmt = conn.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+			while(rs.next()){
+				String name = rs.getString("name");
+				String userid = rs.getString("userid");
+				String pwd = rs.getString("pwd");
+				String email = rs.getString("email");
+				String phone = rs.getString("phone");
+				int admin = rs.getInt("admin");
+				
+				result = new MemberVO(name, userid, pwd, email, phone, admin);
+				memberList.add(result);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return memberList;
+	}
+	
+	public void getClose() {
+			
+			try {
+				if (rs != null)
+					rs.close();
+				if (pstmt != null)
+					pstmt.close();
+				if (conn != null)
+					conn.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+			
+		}
 }

@@ -18,9 +18,9 @@
 			</tr>
 			<tr>
 				<td>아이디</td>
-				<td><input type="text" name="userid" size="20"  id="userid">* <input
-					type="hidden" name="reid" size="20"> <input type="button"
-					value="중복 체크" onclick="idCheck()"></td>
+				<td><input type="text" name="userid" size="20"  id="userid">*<input type="hidden" name="reid" size="20"> 
+					<input type="button" value="중복 체크" onclick="idCheck()">
+					</td>
 			</tr>
 			<tr>
 				<td>암 호</td>

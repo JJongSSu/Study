@@ -26,6 +26,7 @@
 					onclick="location.href='memberUpdate.do?userid=${loginUser.userid}'">
 				</td>
 			</tr>
+			<tr><td><a href="allSelect">회원 목록 보기</a></td></tr>
 		</table>
 	</form>
 </body>

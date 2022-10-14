@@ -7,6 +7,28 @@ public class MemberVO {
 	private String email;
 	private String phone;
 	private int admin;
+	
+	public MemberVO(String userid) {
+		this.userid = userid;
+	}
+	
+	public MemberVO(String userid, String pwd) {
+		this.userid = userid;
+		this.pwd = pwd;
+	}
+	// 모든 필드값을 받아서 초기화하는 생성자 정의
+	public MemberVO(String name, String userid, String pwd, String email, String phone, int admin) {
+		this.name = name;
+		this.userid = userid;
+		this.pwd = pwd;
+		this.email = email;
+		this.phone = phone;
+		this.admin = admin;
+	}
+	
+	public MemberVO() {
+	}
+
 	public String getName() {
 		return name;
 	}
