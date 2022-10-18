@@ -1,5 +1,7 @@
 지도학습 : 레이블이 있음 -> 의도한대로 학습시킬 수 있음, input을 주었을 때 할당된 레이블을 맞추도록 하는 방법
 비지도학습 : 레이블이 없음, 컴퓨터 스스로 유사정도를 기반으로 묶음을 나눔 -> 결과를 보고 판단해야 됨
+강화학습 : 레이블=보상
+오토인코더 : 레이블=input data
 
 data -> knowledge -> information -> insight -> wisdom -> understanding
 
