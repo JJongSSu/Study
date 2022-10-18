@@ -1,0 +1,8 @@
+단순 선형회귀(Simple Linear Regression)
+다중 선형회귀(Multiple Linear Regression)
+
+통계 선형회귀
+정규화 외 데이터 조작, 모델조작 허용X
+
+머신러닝 선형회귀
+예측을 잘해서 mse 줄인다면 조작해도 상관없음
