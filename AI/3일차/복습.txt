@@ -19,7 +19,7 @@
 과소적합(underfitting) : 학습을 많이 못한 상태
 
             train acc   test acc    Bias(예측값 - 측정값)    Variance(측정값 평균 - 측정값)
-과대적합        ↓           ↑               ↑                           ↓
+과대적합        ↑           ↓               ↑                           ↓
 과소적합        ↓           ↓               ↓                           ↑
 
 학습량 : 정해진 data를 반복학습한 횟수
