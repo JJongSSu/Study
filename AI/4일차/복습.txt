@@ -27,7 +27,7 @@ KNN : 분류, 기하, Hyper parameter = k
     선형회귀 단점 변수(Hyper parameter) 설정 X를 보완
     mse + 베타 -> 하나의 요인에 의해서 결정되는 것을 막아줌
     L2 Ridge : 회귀, 기하, Hyper parameter = alpha(규제강도 : 과적합 통제)
-    L1 Lasso : 회귀, 기하, Hyper parameter = alpha(규제강도)
+    L1 Lasso : 회귀, 기하, Hyper parameter = alpha(규제강도), 가중치 큰 요인 삭제
 
 로지스틱 회귀 : 분류, 기하, Hyper parameter = C(규제강도 : 과적합 통제, 결정 존재 조정), max_iter(최대반복횟수)
     sigmoid 함수사용 -> 0~1 사이 확률 % 확인 가능
@@ -38,3 +38,10 @@ KNN : 분류, 기하, Hyper parameter = k
     softmax : sigmoid 방식 사용
     OVO : 리그형식
     OVR : 여집합
+
+model 파이프라인
+    train_test_split
+    model = 사용하려는 모델
+    model.fit(X_train, y_train)
+    model.predict(X_test)
+    model.score(X_test, y_test)
