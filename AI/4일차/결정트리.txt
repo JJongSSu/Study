@@ -6,7 +6,7 @@ Decision Tree(결정 트리 모델)
     노드 + 엣지
     중요 노드를 위에 설정
 
-지니 불순도(gini impurity) => 손실함수
+지니 불순도(gini impurity) = 손실함수
     모델이 제대로 fitting 되었는지 평가하는 기준
     최적의 hyper parameter인지 판단
     낮을수록 최적화
@@ -26,6 +26,7 @@ hyper parameter
     직관적 -> 이해 쉬움
     hyper parameter가 많기 때문에 조절할 수 있는 변수가 많다
     트리 구성 시 특성의 중요도를 계산하기 때문에 특성 선택에 활용할 수 있음
+    계량 기법들이 많고 성능이 좋음(gradient boosting...) : kaggle 단위(개인 컴퓨터 내에서 돌릴 수 있는 범위)
 
 단점
     트리 깊이가 깊고 복잡해지면 과대적합 위험성 매우 높음
