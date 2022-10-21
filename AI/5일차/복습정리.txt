@@ -54,6 +54,8 @@
 
     과대적합 보완방법
         1) 보팅(voting) : 서로 다른 모델이 예측 후 투표
+            hard voting : 다수결
+            soft voting : 주주총회(확률)
         2) 배깅(bagging) : 하나의 모델에서 hyper parameter만 다른 모델들을 랜덤으로 만들고 예측 후 투표, 분산 줄임, 과대적합 대비
             랜덤 포레스트 : 의사결정 나무 개수를 정해서 각각 예측 후 투표
         3) 부스팅(boosting) : 경사하강법처럼 이전에 학습한 hyper parameter과 새로운 hyper parameter를 비교하며 최적의 hyper parameter를 찾아냄, 
