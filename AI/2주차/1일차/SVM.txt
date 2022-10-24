@@ -43,6 +43,6 @@ kernal SVM
     허용 O(소프트 margin) : margin 커짐 -> 너무 허용은 안되지만 일반적으로 허용하는 방향으로 만들어주기
     허용 X(하드 margin) : margin 작아짐
 
-    gamma(data의 영향범위) : 결정경계 곡률화
+    gamma(data의 영향범위) : 결정경계 곡률 결정
 
 
