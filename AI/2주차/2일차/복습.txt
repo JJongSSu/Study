@@ -1,0 +1,67 @@
+<SVM>
+    분류/회귀 -> 주로 분류에서 사용
+    목적 : margin(레이블 사이의 여백) 최대화
+    
+    Hiperplane -> N차원을 N-1차원으로 구분하는 subspace
+    support vector -> margin에 제일 가까운 vector
+    margin -> support vector와 hiperplane 사이의 거리
+
+    Hiperplane 분류 기준
+        치우치지 않도록 분류, 양쪽 data에 균등한 거리
+
+    SVM 분류방법
+        비확률적 선형분류 모델 만듬
+        이 중 가장 큰 폭의 경계를 찾음 -> margin이 제일 큰 모델
+
+    이상치 허용 hyper parameter = C
+        하드 margin : C값 높음 -> 이상치 허용 X, margin 줄어듬
+        소프트 margin : C값 낮음 -> 이상치 허용, margin 늘어남
+    
+    kernel -> 비선형 분류 방법
+        polynomial(다항식)
+            N+1 차원으로 data를 꺼내서 Hiperplane으로 분류
+        
+        RBF(가우시안)
+            다차원으로 data를 꺼내서 Hiperplane으로 분류
+        
+        data 영향 범위 조절 hyper parameter = gamma
+            커지면 결정경계가 data에 맞춰서 형성-> 과대적합
+            작아지면 선형 결정경계 형성
+            -> Hiperplane 곡률화 결정
+
+
+                        SVM
+분류/회귀               분류/회귀
+스케일링                scaler필요 -> standard scaler, MinMaxscaler
+선형/비선형             kernel = 'linear' : 선형 
+                        kernel ='poly', 'rbf' : 비선형
+하이퍼파라미터          kernel, C, gamma
+장점                    오류 data에 대한 영향이 적음
+                        과대적합 되는 경우가 적음
+                        신경망보다 사용하기 쉬움
+단점                    여러개의 파라미터조합 성능 테스트가 필요
+                        학습 속도 느림
+                        모델 해석이 어렵고 복잡한 블랙박스 형태
+
+
+<인공신경망>
+Hyper parameter
+    hidden_layer_sizes
+    activation
+        logistic, relu, tanh
+    alpha
+    max_iter
+
+단층 퍼셉트론
+    각 input data에 가중치를 곱한 값들을 sum해 활성화 함수에 대입하여 output 만듬
+    input data와 가중치 수는 1:1 관계
+    활성화 함수에 임계값이 있음 -> 넘었을 때 1, 아니면 -1
+
+다층 퍼셉트론
+    은닉층 사용
+    input data와 은닉층 유닛 수 m:n 관계
+
+역전파
+    예측값과 실제값의 오차를 다시 input data에 전파
+    학습할수록 오차를 줄임
+    MLP

@@ -1,0 +1,37 @@
+인공신경망(Artificial Neural Network)
+    data -> 패턴 변화 -> 한계점
+
+단층 퍼셉트론(Perceptron)
+    input - Weights(가중치) - Net input func(시그마) - Activation func(시그마 sum 값을 활성화 함수에 대입) - output
+    input data 수 = weights 수
+    input data 와 weights 1:1 적용
+
+    임계치(활성화되기 위한 최소값)보다 크면 1, 작으면 -1 출력
+
+다층 퍼셉트론
+    입력 -> 은닉층(h1) -> 은닉층2(h2) -> 출력 : 순방향
+    input data와 은닉층 m:n 연결
+    은닉층이 많으면 학습은 잘되지만 시간오래 걸리고 비용 많이 들어감
+
+    -> 역전파로 다층 퍼셉트론 한계 극복
+
+역전파        
+    순방향으로 학습한 output(실제값)과 예측값의 오차를 계산해 오차값을 다시 처음으로 보내주어 보정하고 다시 학습시키는 방법
+    학습할수록 오차가 줄어듬
+    오차는 파라미터 선정과 모델에 따라 양수, 음수, 절대값 등 기준이 달라질 수 있음
+
+    역전파 hyper parameter => 많음
+        hidden_layer_size = 은닉층 개수
+        activation = 활성화 함수 지정
+            logistic(시그모이드)
+            relu(default값)
+            tanh
+        alpha = L2규제(Ridge : 제곱값, mse에 더해주는 베타값 살림) 적용
+        batch_size = data size
+        max_iter = 학습 반복 횟수
+
+    신경망 복잡도 추정
+        매개변수 = 은닉층 개수와 은닉층 유닛 수
+        조정방법
+            1) 과대적합
+            2) 규제 강화를 위해 alhpa값을 증가시켜 일반화 성능을 향상시킴

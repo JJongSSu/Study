@@ -1,0 +1,124 @@
+지도학습 : 레이블이 있음 -> 의도한대로 학습시킬 수 있음, input을 주었을 때 할당된 레이블을 맞추도록 하는 방법
+비지도학습 : 레이블이 없음, 컴퓨터 스스로 유사정도를 기반으로 묶음을 나눔 -> 결과를 보고 판단해야 됨
+강화학습 : 레이블=보상
+오토인코더 : 레이블=input data
+
+data -> knowledge -> information -> insight -> wisdom -> understanding
+
+data수가 작으면 머신러닝, 많으면 딥러닝 알고리즘이 더 우수
+딥러닝은 직관성 낮음 -> 모델 내부 해석 불가능
+
+머신러닝
+    - 지도학습 : 분류, 회귀
+        categorical 분류 : 레이블 범주형, 셀 수 있는 경우의 수, 정확하게 결과를 맞춰야 함(true, false), 절대평가
+        continuous 회귀 : 레이블 연속형, 경우의 수가 무수히 많을 때, 실측값과 예측값의 차이로 평가, 상대평가, 
+                        분류보다 결과가 정확한 값이 나오기 때문에 예외성 판단에 좋음
+        -> 향수 추천
+    
+    - 비지도학습 : 기하, 확률
+        기하 : 좌표평면에 나타냈을 때 비슷한 data끼리 묶는 방법
+        확률 : 
+            1. data들 간의 거리를 측정해서 가장 긴 거리를 기준으로 data를 분류
+                n차원 -> n-1 차원의 기준을 가짐
+                단위 설정이 중요, 한 data가 너무 튀면 자르는 기준이 그 축 중심으로 달라질 수 있음
+            2. 등장 단어 빈도수로 분류
+        -> 뉴스, 고객관리(성향)
+        -> 클러스터링 : 비슷한 특성끼리 묶는 수학적 방법 -> 특정 고객층 공략 가능
+
+    - 강화학습
+        보상과 벌칙을 통해 스스로 방법을 찾도록하는 방법
+
+    - 오토인코더
+        GAN 알고리즘과 비슷한 학습 방법
+        파일 보안 -> 회사 내에서 usb로 파일 받아가서 집에서 열어보면 형식이 갈려있음.
+        옛날 영화에 PPL 넣고 재방영할 때 오토인코더 사용해서 숫자로 변환 후 PPL 제품을 넣어주면 영화 재생할 때 PPL 물건이 들어가있음 
+
+학습과정
+    : 문제정의 - data 수집 - 전처리 - EDA - 모델 선택 - 모델 학습 - 모델 평가
+    
+    1. 문제정의
+        비지니스 목적 정의
+            해결해야하는 문제가 어떤 것인가, 해결하여 얻고자 하는 것이 무엇인가
+
+    2. data 수집
+        크롤링, csv, 센서, 통계청, 설문조사
+
+    3. 전처리
+        결측치 및 이상치 처리, 불필요 data 제거
+        정규표현식, data 가공
+        특성공학(feature engineering)
+            1) 특성 선택(feature selection)
+            2) 특성 결합(feature combination)
+            3) 특성 추출(feature extraction)
+                다중공선성 해결하기 위해 사용, 직관성이 떨어짐, 두 개의 분산을 합친 하나의 분산을 만듬
+            4) scaling : 단위변환하여 단위 통일 
+            5) encoding : 문자형 data -> 수치형 data
+            6) binning : 수치형 data -> 문자형 data, 특정 구간을 나누는 방법
+                다시 숫자로 encoding하고 싶을 때 명목척도인지 서열척도인지 헷갈릴 수 있기 때문에 0과 1로 나타냄(설문조사)
+                young 경활일 old
+                1     0     0
+                0     1     0
+            7) normalization(정규분포화) : (x-평균)/표준편차 = (x-평균)/(분산)^2
+                min-max scaling : x-min/max-min (0~1 사이값)
+
+    4. EDA(탐색적 data 분석)
+        시각화
+        histogram(빈도수), boxplot(평균, 중간값, 사분위수(0~4분위 : 중위(2분위)), 이상치 등)
+        scatter plot(산점도), plot(선)
+
+    5. 모델 선택
+        목적에 맞는 모델 선택
+        hyper parameter
+
+    6. 모델 학습
+        train-test spilt
+        - model.fit(X_train(문제), y_train(답))
+            train data와 test data를 7:3으로 분리
+            train data로 학습
+        
+        - model.prdict(X_test)
+            test data를 넣고 정답 예측
+
+    7. 모델 평가 분류
+        pre = model.predict(X_test)
+        metrics.accuracy_score(pre,y_test)
+            test data를 넣어 예측한 정답(pre)과 실제 정답(y_test)를 비교 -> 0.94
+        분류 : 얼마나 많이 맞았는지
+        회귀 : 실제값과 예측값의 차이의 제곱을 확인
+            mes(x-m)제곱하는 이유
+                1) -값 보정
+                2) 큰차이(분산)에 패널티 주기 위해
+                3) 전구간 미분 가능하게 하기 위해
+                    절대값을 사용하면 미분할 수 없음
+        
+        mes는 모델에 따라 달라질 수 있음
+        정확도 -> 직관적
+
+        Accuracy(오차행렬) 한계
+            AI가 잔머리 써서 불균형 data를 한쪽으로 밀어버릴 때
+            틀려도 잘 틀려야 될 때
+                양성 -> 음성
+                음성 -> 양성
+        
+        Accuracy : (TP+TN) / (TP+TN+FP+FN) -> 변하지 않음
+        
+        confusion matrix
+            Accuracy 한계 보완하기 위해 만듬
+            
+            Precision(정밀도) : TP/(TP+FP) -> 양성인 것 중에서 몇 개나 맞췄는지
+            Recall(재현도) : TP/(TP+FN) -> 실제값이 양성인 것 중에서 몇 개나 맞췄는지
+            Precision과 Recall는 반비례(FP-FN 관계)
+
+            F1 accuracy_score   
+                recall과 precision의 조화평균을 사용
+                2*precision*recall / (precision + recall)
+            
+            specificity(특이도) : FP/(FP+TN)
+            sensitivity(민감도) : TP/(TP+FN)
+            -> trade off 관계
+            
+            ROC curve : 호의 가장 볼록한 부분에서 타겟(Y축 꼭지점)까지의 거리를 통해 설명
+            AUC : 호의 면적으로 설명, 최대값 1
+            점선과 같은 직선으로 나오면 머신러닝 알고리즘으로 사용할 수 없음
+
+        

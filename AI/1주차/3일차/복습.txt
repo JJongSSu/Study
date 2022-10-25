@@ -1,0 +1,73 @@
+<머신러닝 순서>
+1. 문제정의
+2. 데이터 준비
+3. 데이터 전처리 : EDA
+4. train-test split
+5. encoding
+6. model 선언 : model = KNeighborsClassifier(Hyper parameter)
+    어떤 모델 사용? 어떤 hyper parameter를 튜닝할 것 인가?
+    KNN -> 학습 빠르지만 예측이 느림, parameter 튜닝을 하지 않음
+            data들의 위치만 불러내고(학습) 새로운 data가 들어오면 예측단계에서 거리를 계산(예측)
+            직관적이기 때문에 이해하기 쉬움
+7. model 학습 : 머신러닝 model.fit(x_train,y_train) / 딥러닝 model.eval() 
+8. model 평가 : model.predict(x_test) -> y_test와 비교
+9. 최적화 : model 평가를 통해 나온 점수를 보고 개선
+        Hyper parameter, model을 변경하면서 test
+        과대적합, 과소적합 -> 최적화를 통해 Hyper parameter, model, 훈련횟수, data 양을 변경, 조작해서 개선
+
+과대적합(overfitting) : train set에서만 성능이 좋은 상태
+과소적합(underfitting) : 학습을 많이 못한 상태
+
+            train acc   test acc    Bias(예측값 - 측정값)    Variance(측정값 평균 - 측정값)
+과대적합        ↑           ↓               ↑                           ↓
+과소적합        ↓           ↓               ↓                           ↑
+
+학습량 : 정해진 data를 반복학습한 횟수
+
+Bias-Variance trade off
+    Bias : data가 모여있지만 target에서는 벗어난 상태
+            높을수록 target에서 멀어짐
+    Variance : data들이 퍼져있는 상태, 수렴하지 못한 상태
+            높을수록 target으로부터 data가 퍼져있음
+
+분류        회귀
+KNN     선형회귀, Ridge, Lasso
+
+KNN
+기하적 → 단위가 중요
+    scaling 방법 : 단위 통일하는 방법
+        Standard scaling : 평균, 분산
+            x-m / 시그마
+        min-max scaling : 최대값, 최소값
+            x-min / max-min
+Hyper parameter(k) 수만큼 최근접한 data들을 확인하여 새로운 data 분류
+k는 변수 개수의 배수, 2, 3은 되도록 피하는게 좋음
+기하적 모델에서 거리 기반 평가 -> 대부분 유클리디안 거리 사용
+
+통계회귀 : 종속변수, 독립변수 상관관계 확인하기 위해 사용
+            data 임의 조작 금지, 자연상태에서의 상관관계를 확인해야 되기 때문
+
+머신러닝 회귀 : 예측하기 위해 사용
+                예측만 잘한다면 조작 가능
+                Ridge, Lasso : mse 조작
+
+선형회귀
+    속도 빠름, 선형적 모델 -> data의 기하적 분포가 선형을 띄지 않으면 사용하기 힘듬
+    과대적합이 일어남 -> 보완하기 위해 Ridge, Lasso를 통해 손실함수 조작
+    mse가 최소가 되는 선형회귀가 최적화
+    mse가 최소인 것을 찾는 방법
+        미분 -> mse가 2차함수이기 때문에 미분해서 최솟값 찾기, data가 많아지면 힘듬
+        경사하강법 -> 귀납적으로 찾기 때문에 최선의 mse가 아닐 수도 있다
+                        학습률만큼 조정하면서 mse 최소값을 찾음
+                        (학습률 크면 대강대강, 작으면 섬세하게)
+
+다중 선형회귀 함수
+    규제
+        mse + 베타1
+        L1 Lasso : mse + |베타1|
+            베타1을 없애고 싶을 때 사용
+            편미분 했을 때 베타1이 사라짐
+        L2 Ridge : mse + (베타1)^2
+            베타1을 살려놓고 싶을 때 사용
+        Lasso, Ridge hyper parameter = alpha
+

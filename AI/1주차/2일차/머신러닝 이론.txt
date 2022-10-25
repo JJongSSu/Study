@@ -1,0 +1,50 @@
+지도학습 알고리즘
+기하적으로 선을 긋기위한 머신 => 서포트 벡터 머신
+
+과적합 -> 일반적으로 overfitting
+    overfitting(과대적합)
+        train data에 너무 과도하게 학습되어 train data에만 잘 동작하고 test에서는 예측성능이 저하되는 현상
+        Bias 증가
+
+    underfitting(과소적합)
+        train data를 충분히 반영하지 못해 train, test data 모두에서 예측성능이 저하되는 현상(학습을 제대로 하지 못한 것)
+        Variance 증가
+
+
+    Bias = 평균으로부터 멀어진 정도 = 예측값 - 측정값
+        -> 예측값에서 멀리 떨어져 있으면 bias 높다고 판단
+    Variance = 각 data간 떨어진 정도 = 측정값의 평균 - 측정값
+        -> 측정값들이 퍼져 있으면 vatiance 높다고 판단
+    => 머신러닝에서는 둘 다 줄여주는 것이 좋음
+
+    Bias-Variance trade-off
+    Bias는 학습량(동일 data)이 많아질수록 올라감
+    Variance 학습량(동일 data)이 많아질수록 내려감
+    두 개의 그래프가 만나는 점에서 학습을 종료시킴 => 일반화
+
+    mse =  (측정값-예측값)^2
+    mse 제곱하는 이유
+        1) -값 보정
+        2) 큰차이(분산)에 패널티 주기 위해 -> Bias, Variance를 고려하기 위해, 편향된 data를 만들지 않기 위해
+        3) 전구간 미분 가능하게 하기 위해
+            절대값을 사용하면 미분할 수 없음
+
+    해결방법
+    Generalization(일반화)
+        모델이 처음보는 data에 대해 정확하게 예측할 수 있는 상태
+
+    많은 다양한 data를 가지고 학습시킴
+
+    data가 추가되면 test / train set에 넣을지 뭘보고 결정??
+    고객 요구는 평가를 해주는거고 추가 data 입력은 7:3으로 나눠 train 시키고 test함. 기존 test set은 train에 추가해서 학습시켜도 됨
+    
+
+Ridge Lasso
+1. Regulation(규제)
+    가중치에 한계치를 설정
+
+2. Drop out -> 딥러닝에서 자주 사용
+    변수들을 하나씩 빼고 학습시킴. 의존도 감소시키기 위함
+    permutation importance
+        딥러닝은 중요 요소와 계산방법을 모름
+        permutation importance를 통해 어떤일이 발생하는지를 추론할 수 있음. 요인을 제거했을 때 학습기능이 급격하게 떨어지는 요인을 찾을 수 있음

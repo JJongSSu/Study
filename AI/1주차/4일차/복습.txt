@@ -1,0 +1,47 @@
+평가지표
+분류 : 정확도(높을수록 좋음) -> precision, recall, f1 score, ROC, AUC...
+회귀 : mse(낮을수록 좋음), R^2(높을수록 좋음)...
+
+기준        train acc   test acc    Bias(예측값 - 측정값)    Variance(측정값 평균 - 측정값)
+과대적합        ↑           ↓               ↑                           ↓
+과소적합        ↓           ↓               ↓                           ↑
+
+분류 : KNN, 로지스틱 회귀
+회귀 : 선형회귀, Ridge, Lasso
+
+KNN : 분류, 기하, Hyper parameter = k
+    장점 : 직관적, 학습 빠름
+    단점 : 예측 느림(실시간 알고리즘에는 사용 X)
+    -> 거리를 측정해서 회귀처럼 사용할 수는 있음
+
+선형회귀 : 회귀, 기하, Hyper parameter 없음
+    mse 최소화하는 기울기, y절편 찾는 방법
+        -> 미분(정석적인 방법), 경사하강법(data가 많을 때 사용)
+        -> 경사하강법
+            GD : 모든 data 대상, 학습률 높음
+            SGD : 일부 랜덤 data 대상, 복원 추출, 학습률 낮음
+            mini-batch : 일부 랜덤 data 대상, 비복원 추출
+    장점 : 직관적, 학습 빠름
+    단점 : 변수(Hyper parameter) 설정 X, 선형성 전제 요구
+
+    선형회귀 단점 변수(Hyper parameter) 설정 X를 보완
+    mse + 베타 -> 하나의 요인에 의해서 결정되는 것을 막아줌
+    L2 Ridge : 회귀, 기하, Hyper parameter = alpha(규제강도 : 과적합 통제)
+    L1 Lasso : 회귀, 기하, Hyper parameter = alpha(규제강도), 가중치 큰 요인 삭제
+
+로지스틱 회귀 : 분류, 기하, Hyper parameter = C(규제강도 : 과적합 통제, 결정 존재 조정), max_iter(최대반복횟수)
+    sigmoid 함수사용 -> 0~1 사이 확률 % 확인 가능
+    장점 : 회귀모델과 호환 가능, 직관적
+    단점 : 2진 분류에서만 사용 가능
+
+    다진분류
+    softmax : sigmoid 방식 사용
+    OVO : 리그형식
+    OVR : 여집합
+
+model 파이프라인
+    train_test_split
+    model = 사용하려는 모델
+    model.fit(X_train, y_train)
+    model.predict(X_test)
+    model.score(X_test, y_test)
