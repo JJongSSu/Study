@@ -9,7 +9,7 @@ holdout-cross-validation
     data를 학습, 검증, 평가 data로 나눔 -> 2번 검증
     학습    검증    평가
 
-k-fold cross-validation
+k-fold cross-validation : 회귀
     data를 k개로 나눈 후 1번째 세트를 제외하고 학습 -> 1번째 세트를 이용해서 평가(accuracy) -> 마지막 세트까지 반복 -> 각 세트에 대해 평가 
     -> 각 평과 결과의 평균을 구함
     hyper parameter cv = data를 몇 개로 나눌지 결정
