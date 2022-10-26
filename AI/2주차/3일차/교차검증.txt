@@ -26,5 +26,9 @@ k-fold cross-validation : 회귀
 코드
 cross_val_score(모델명, 문제, 정답, cv=나눌 개수)
 
+k-fold
+cross_validate
+cross_val_score
+stratified
 
 
