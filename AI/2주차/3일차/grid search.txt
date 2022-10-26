@@ -1,0 +1,5 @@
+grid search
+    hyper parameter를 대상으로 가능한 모든 조합을 시도하는 것
+    자동으로 최적의 hyper parameter를 찾아주는 모델
+    gridsearchCV(모델, 모델의 파라미터 목록(dict 형태), CV)
+    best_parameter : 
