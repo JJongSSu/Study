@@ -68,9 +68,21 @@
     python : to_array()
 
 collection
-    list, set, dictionary, map = 다른 타입의 data들
+    list, set, dictionary, map(java) = 다른 타입의 data들
+        map : 검색 키워드, key-value, key는 중복 x
+        set : 중복이 안되는 data, 순서가 없음(index 없음), for-each에 사용(처음부터 끝까지 돌릴 때만 사용 가능)
 
 기본형만 선언가능
 나머지는 생성해줘야함 → 생성자
 
 index를 가지고 있는 집합 → 중복값 허용
+
+CRUD
+    creat, read(select), update(insert, update, delete), delete(table)
+
+클라우드
+    아키텍쳐, 설계, 디자인 패턴
+    서버를 임대, 피크타임에만 끌어다 사용
+
+
+    
