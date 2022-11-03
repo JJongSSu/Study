@@ -1,0 +1,22 @@
+sklearn → GPU를 사용할 수 없음 → 대형 프로젝트에는 적합하지 않음
+
+Accuracy : (TP+TN) / (TP+TN+FP+FN) -> 변하지 않음
+        
+        confusion matrix
+            Accuracy 한계 보완하기 위해 만듬
+            
+            Precision(정밀도) : TP/(TP+FP) -> 양성인 것 중에서 몇 개나 맞췄는지
+            Recall(재현도) : TP/(TP+FN) -> 실제값이 양성인 것 중에서 몇 개나 맞췄는지
+            Precision과 Recall는 반비례(FP-FN 관계)
+
+            F1 accuracy_score   
+                recall과 precision의 조화평균을 사용
+                2*precision*recall / (precision + recall)
+            
+            specificity(특이도) : FP/(FP+TN)
+            sensitivity(민감도) : TP/(TP+FN)
+            -> trade off 관계
+            
+            ROC curve : 호의 가장 볼록한 부분에서 타겟(Y축 꼭지점)까지의 거리를 통해 설명
+            AUC : 호의 면적으로 설명, 최대값 1
+            점선과 같은 직선으로 나오면 머신러닝 알고리즘으로 사용할 수 없음
