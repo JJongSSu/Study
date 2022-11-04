@@ -1,9 +1,0 @@
-grid search
-    hyper parameter를 대상으로 가능한 모든 조합을 시도하는 것
-    자동으로 최적의 hyper parameter를 찾아주는 모델
-    gridsearchCV(모델, 모델의 파라미터 목록(dict 형태), CV)
-    
-    hyper parameter
-        best_param : grid search 후에 찾은 최고의 파라미터 값
-        best_score : 최고의 파라미터를사용한 교차 검증 점수
-        best_estimator_ : 최고 성능의 모델
