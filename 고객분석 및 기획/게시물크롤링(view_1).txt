@@ -1,0 +1,68 @@
+# 블로그 주소 수집
+
+blog_url_list = []
+
+#네이버에 키워드 검색
+for keyword in keyword_list:
+    url = 'https://search.naver.com/search.naver?sm=tab_hty.top&where=blog&query={}&oquery={}'.format(keyword, keyword)
+        
+    driver = webdriver.Chrome(executable_path=chrome_path, chrome_options=chrome_options)
+    driver.implicitly_wait(3)
+    
+    driver.get(url)
+    time.sleep(3)
+    
+    url_want = 990 #
+    
+    driver.find_element('xpath','//*[@id="snb"]/div[1]/div/div[2]/a').click() #검색 옵션 클릭
+
+    #날짜 지정
+    for k in range(len(first_days)):
+        try:
+            #시작과 끝의 년월일 설정
+            driver.find_element('xpath','//*[@id="snb"]/div[2]/ul/li[3]/div/div[1]/a[9]/i').click() #직접 입력
+            driver.find_element('xpath','//*[@id="snb"]/div[2]/ul/li[3]/div/div[2]/div[2]/div[1]/div/div/div/ul/li[{0}]'.format(first_days.year[k]-2002)).click()
+            driver.find_element('xpath','//*[@id="snb"]/div[2]/ul/li[3]/div/div[2]/div[2]/div[2]/div/div/div/ul/li[{0}]/a'.format(first_days.month[k])).click()
+            driver.find_element('xpath','//*[@id="snb"]/div[2]/ul/li[3]/div/div[2]/div[2]/div[3]/div/div/div/ul/li[{0}]/a'.format(first_days.day[k])).click()
+            driver.find_element('xpath','//*[@id="snb"]/div[2]/ul/li[3]/div/div[2]/div[1]/span[3]/a').click()
+            driver.find_element('xpath','//*[@id="snb"]/div[2]/ul/li[3]/div/div[2]/div[2]/div[1]/div/div/div/ul/li[{0}]'.format(last_days.year[k]-2002)).click()
+            driver.find_element('xpath','//*[@id="snb"]/div[2]/ul/li[3]/div/div[2]/div[2]/div[2]/div/div/div/ul/li[{0}]/a'.format(last_days.month[k])).click()
+            driver.find_element('xpath','//*[@id="snb"]/div[2]/ul/li[3]/div/div[2]/div[2]/div[3]/div/div/div/ul/li[{0}]/a'.format(last_days.day[k])).click()
+            driver.find_element('xpath','//*[@id="snb"]/div[2]/ul/li[3]/div/div[2]/div[3]/button').click()            
+            
+            
+            # 스크롤 조작
+            last_height = driver.execute_script('return document.body.scrollHeight')
+            
+            scroll = (url_want/30)-1 #한 페이지에 기본으로 30개 글이 나옴
+            
+            # 스크롤 다운
+            for i in range(int(scroll)):
+                driver.execute_script('window.scrollTo(0,document.body.scrollHeight)')
+                time.sleep(random.uniform(1,1.7))
+                
+                new_height = driver.execute_script('return document.body.scrollHeight')
+                
+                if new_height == last_height:
+                    break
+                    
+                last_height = new_height
+                
+                
+            soup = bs(driver.page_source, 'lxml')
+            blog_url = soup.find_all('a',class_='api_txt_lines total_tit')
+            
+            # url 주소 수집
+            for i in blog_url:
+                blog_url_list.append(i['href']) #주소 수집
+                
+            print('{0} 키워드 {1}년{2}월'.format(keyword, 
+                                            first_days.year[k], frist_days.month[k]), 
+                  len(blog_url),'개 블로그 url 주소 수집')
+            
+            
+            driver.execute_script('window.scrollTo(0,0)')
+            
+        except:
+            pass
+            
