@@ -209,15 +209,146 @@
           }
         ],
         "ui": {
-          "active": true,
-          "left": 15.2,
-          "top": 165.6,
-          "zIndex": 46,
+          "active": false,
+          "left": 21.6,
+          "top": 44.8,
+          "zIndex": 47,
           "widthName": 60,
           "widthComment": 60
         },
         "visible": true,
         "id": "5b65d662-9e89-4281-9d11-489a819410cd"
+      },
+      {
+        "name": "Ai data",
+        "comment": "Ai 스피커, app data",
+        "columns": [
+          {
+            "name": "학습 data",
+            "comment": "",
+            "dataType": "",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "073e1300-2df8-41c9-9f69-973b47a21fe6"
+          },
+          {
+            "name": "테스트 data",
+            "comment": "",
+            "dataType": "",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 71.39892578125,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "35b4a6e5-415f-43ce-98d1-5fc0b0c8fc07"
+          },
+          {
+            "name": "app에서 얻은 data",
+            "comment": "",
+            "dataType": "",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 111.3447265625,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "cb4a5110-295c-4ebb-a38b-5337fca4fd04"
+          },
+          {
+            "name": "음성 data",
+            "comment": "",
+            "dataType": "",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "e33070a6-f8c7-4711-8fc5-b9234d847ea4"
+          },
+          {
+            "name": "",
+            "comment": "",
+            "dataType": "",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "ef3653eb-2bd9-4ae2-996c-b7159026f11b"
+          }
+        ],
+        "ui": {
+          "active": true,
+          "left": 24,
+          "top": 296,
+          "zIndex": 76,
+          "widthName": 60,
+          "widthComment": 117.5146484375
+        },
+        "visible": true,
+        "id": "7c04f442-d6f6-41a7-83f2-e1b3bce7ef21"
       }
     ],
     "indexes": []
