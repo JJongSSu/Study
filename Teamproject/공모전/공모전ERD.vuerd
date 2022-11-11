@@ -3,8 +3,8 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": 0,
-    "scrollLeft": 0,
+    "scrollTop": -46.39999999999999,
+    "scrollLeft": -11.200000000000001,
     "zoomLevel": 1,
     "show": {
       "tableComment": true,
@@ -72,7 +72,7 @@
           {
             "name": "이름",
             "comment": "",
-            "dataType": "",
+            "dataType": "VARCHAR",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -95,7 +95,7 @@
           {
             "name": "성별",
             "comment": "",
-            "dataType": "",
+            "dataType": "VARCHAR",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -118,7 +118,7 @@
           {
             "name": "나이",
             "comment": "",
-            "dataType": "",
+            "dataType": "INTEGER",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -141,7 +141,7 @@
           {
             "name": "Ai 스피커 반응 여부",
             "comment": "",
-            "dataType": "",
+            "dataType": "INTEGER",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -164,7 +164,7 @@
           {
             "name": "사용하고 있는 데시벨(평균값)",
             "comment": "",
-            "dataType": "",
+            "dataType": "INTEGER",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -212,7 +212,7 @@
           "active": false,
           "left": 21.6,
           "top": 44.8,
-          "zIndex": 47,
+          "zIndex": 165,
           "widthName": 60,
           "widthComment": 60
         },
@@ -220,7 +220,7 @@
         "id": "5b65d662-9e89-4281-9d11-489a819410cd"
       },
       {
-        "name": "Ai data",
+        "name": "Test data",
         "comment": "Ai 스피커, app data",
         "columns": [
           {
@@ -316,6 +316,222 @@
             "id": "e33070a6-f8c7-4711-8fc5-b9234d847ea4"
           },
           {
+            "name": "텍스트 data",
+            "comment": "",
+            "dataType": "",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 71.39892578125,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "ef3653eb-2bd9-4ae2-996c-b7159026f11b"
+          },
+          {
+            "name": "나이대별 들어야하는 주파수 범위 data",
+            "comment": "난청 기준",
+            "dataType": "",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 228.10986328125,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "ecdaaa30-9e31-42b0-bd15-f4d14cfe6870"
+          },
+          {
+            "name": "ai 허브 청력역치 data",
+            "comment": "난청 기준",
+            "dataType": "",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 129.4990234375,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "0f650743-cb9f-471f-a33d-6b16f1b1c2cd"
+          },
+          {
+            "name": "데시별 테스트 data",
+            "comment": "",
+            "dataType": "",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 114.96923828125,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "34eedf33-61e8-4803-a2ec-1b98de874b98"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 30.4,
+          "top": 278.4,
+          "zIndex": 134,
+          "widthName": 60,
+          "widthComment": 117.5146484375
+        },
+        "visible": true,
+        "id": "7c04f442-d6f6-41a7-83f2-e1b3bce7ef21"
+      },
+      {
+        "name": " depression",
+        "comment": "",
+        "columns": [
+          {
+            "name": "난청 테스트 data",
+            "comment": "",
+            "dataType": "",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 101.96923828125,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "a2948ef6-e0dc-49f3-87b6-74512de25c8e"
+          },
+          {
+            "name": "특정 단어 지정 data",
+            "comment": "",
+            "dataType": "",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 119.53955078125,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "682fba14-c772-4b65-b747-73a1e36b85fb"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 29.6,
+          "top": 525.6,
+          "zIndex": 108,
+          "widthName": 70.29443359375,
+          "widthComment": 60
+        },
+        "visible": true,
+        "id": "5990c2fd-8325-4ed4-b14a-595d0dcafd49"
+      },
+      {
+        "name": "Hospital",
+        "comment": "지역 병원",
+        "columns": [
+          {
+            "name": "병원 이름",
+            "comment": "",
+            "dataType": "",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "0989c275-fe33-42e5-95c0-a1b8281ea4bc"
+          },
+          {
+            "name": "병원 위치",
+            "comment": "",
+            "dataType": "",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "a9c00114-8117-4aec-8b69-23a1e55f9057"
+          },
+          {
             "name": "",
             "comment": "",
             "dataType": "",
@@ -336,19 +552,65 @@
               "widthDataType": 60,
               "widthDefault": 60
             },
-            "id": "ef3653eb-2bd9-4ae2-996c-b7159026f11b"
+            "id": "9733b79d-5469-4a2f-bf1f-aa8251aca376"
+          },
+          {
+            "name": "",
+            "comment": "",
+            "dataType": "",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "e6b6e383-5bee-49d6-aa0b-e47b7766da60"
+          },
+          {
+            "name": "",
+            "comment": "",
+            "dataType": "",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "fcfe77bb-0f1c-4dbd-825a-7f3070165e91"
           }
         ],
         "ui": {
-          "active": true,
-          "left": 24,
-          "top": 296,
-          "zIndex": 76,
+          "active": false,
+          "left": 31.2,
+          "top": 643.2,
+          "zIndex": 127,
           "widthName": 60,
-          "widthComment": 117.5146484375
+          "widthComment": 60
         },
         "visible": true,
-        "id": "7c04f442-d6f6-41a7-83f2-e1b3bce7ef21"
+        "id": "982c1c4a-ad8c-469d-9ad1-db927d410845"
       }
     ],
     "indexes": []
