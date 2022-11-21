@@ -50,7 +50,7 @@ output layer
 
     ADAM -> momentum + 시계열
 
-CNN
+CNN -> 이미지
     entropy가 낮으면 max pooling은 효율이 낮음 -> avg pooling 사용
     filtering으로 차원을 낮춤
     과대적합을 방지하기 위해 같은 데이터를 여러번 학습시키는게 중요
@@ -63,7 +63,7 @@ CNN
     Conv2D(filters, kernel_size, padding, input_shape=(28,28,1), activation, strides)
         input_shape에서 1, 3으로 흑백, RGB 선택
 
-RNN
+RNN -> 단어
     시퀀스 모델 사용 -> 데이터 간 순서가 있을 때 사용
     다중공선성 방지를 위해 사용
     이전 hidden layer에서 예측했던 결과물과 현재 hidden layer에서 예측해야 되는 것을 합쳐서 같이 예측
