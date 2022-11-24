@@ -91,11 +91,34 @@ SWOT부터 분석 시작
                 Demographical(인구통계학적 특징)   Geographical(지리적)
                 physical(신체적)    Psychologic(심리적)
 
-            
+    시퀀스 - RNN - 행렬 - RNN - 시퀀스
+    행렬 임베딩 - Kmeans : 분류기준을 확인하고 해당 기준의 방향으로 문제를 정의하고 의사결정
 
+        마켓 포지셔닝 맵
+            각 축에 중요한 가치를 설정한 후 data를 기준에 맞게 위치시킴
+            특정 조건에 따라서 data의 위치가 달라지지 않을 때 이동장벽 그림
 
+        비지니스 모델 캔버스 -> 창업 시 IR 할 때 필수 작성 
+            새로운 제품, 아이디어를 설명할 때 사용하는 틀
+            value proposition부터 읽어나가야 함.
 
+        골든써클
+            why -> how -> what (미괄식)
 
+기타모형
+BCG Matrix
+    성장가능성-시장점유율 그래프
+    cash cow : 안정적인 돈벌이
+    question mark : 성장가능성 높음
 
+GE Matrix
+    산업매력도-산업 내 나의 위치 그래프
+    산업매력도 정의가 애매함
+    위치별 색깔로 나타냄
 
+Blue Ocean Grid
 
+Kano model
+    만족도-품질제공 그래프
+    상품 품질로 나눔
+    기본 품질, 성능 품질, 감동 품질
