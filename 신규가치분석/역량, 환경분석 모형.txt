@@ -1,0 +1,101 @@
+Value chain
+    제품을 조달 - 생산 - 공급 하는 선형적 과정
+    생산을 기준으로 후방/전방 요인으로 나눔
+
+Company, Competitor, Customer
+기준        후방        전방
+
+SWOT부터 분석 시작
+                    내부 역량           외부 환경
+
+긍정적 신호       Strength(강점)      Opportunity(기회)
+
+부정적 신호       Weakness(약점)      Threat(위협)
+
+-> SO, ST, WO, WT 전략
+-> data를 기반으로 SWOT 분석
+    문제점 : 긍정적/부정적 분류, 내부/외부 환경 구분
+        긍/부정 분류 -> 감성분석
+        내/외부 환경 -> tokenizing으로 애플만 나오면 내부, 애플+경쟁사 외부, 둘다 아니면 제외
+                        애플이 주어로 나오면 내부, 목적어로 나오면 외부
+                        검색량
+                            애플 interruption 내부, 애플 + 관련개념 외부
+                            -> 경쟁사에 대한 분석도 필요
+
+체계적 위험
+    예측가능한 위험
+    산업의 하락세, 경제 흐름
+
+비체계적 위험
+    예측불가능한 위험
+    내부 역량에 의해 발생하는 위험
+        -> 내부고발, 기밀 유출
+    외부에서는 관측할 수 없는 위험
+
+내부 역량
+    전방
+        R&C (Resource and Capability) - 자원과 역량
+            무엇을 가지고 있고 이것으로 무엇을 할 수 있는지
+            Resource : 어떤 가치를 창출할 수 있는가 
+            Capability : 어떤 차이점이 있는가 
+
+    후방
+        VRIO
+            valuable-imitable 그래프로 평가
+            valuable : 기술이 얼만큼 돈을 창출할 수 있는가
+                -> 가치창출
+            imitable : 다른 회사가 따라하기 쉬운가
+                -> 특허, 어려운 정도
+            Rare : 나만 가지고 있는 것인가
+                -> 접근성, 명품
+            Organization : 기업이 이러한 역량을 가지고 있는가
+                -> O, X
+
+        4P -> 제품의 입지를 만드는 기준
+            Price(가격), Place(장소), Product(품질), Promorion(홍보) 
+                (+ peaple(사람들), process(절차), physical evidence(신뢰))
+            가격과 나머지는 trade 관계
+
+외부 환경
+    후방
+        I/O (Industrial Organization) - 산업간의 관계
+            negotiation = win-win
+            bargain = win-lose
+            
+            공급자의 교섭력 : 갑/을
+            구매자의 교섭력 : 대체자가 많으면 떨어짐
+
+            LG생활건강 -> 우리나라에 코카콜라 공급
+            롯데 -> 우리나라에 펩시 공급
+        
+        특허
+            사상특허, 기술특허, ...
+            특허 원칙
+                발전성(공공의 이익에 영향을 주는가), 참신성(과거의 특허를 보고 쉽게 떠올릴 수 있는가)
+            특허는 권리를 지켜주는 대신에 공개
+            기술특허
+                원리를 자세하게 적어야 함 -> 다른 의견 분쟁이 발생하지 않도록 정확하게 작성
+            코카콜라 제조법 특허 아님 -> imitable을 주는 것이 valuable에 방해가 된다고 생각
+
+        PESTEL(페스텔)
+            Political(정치적 요인)   Economical(경제)  Social(사회)
+            Technological(기술)   Environmental(환경)   Legal(법률)
+
+    전방
+        STP
+            Segmenting : 분류
+            Targeting : 분류 중 하나를 골라 문제정의
+            Positioning : 문제정의를 만족시켜주기 위해 가치를 제공
+
+            **Kotler의 STP전략
+                Demographical(인구통계학적 특징)   Geographical(지리적)
+                physical(신체적)    Psychologic(심리적)
+
+            
+
+
+
+
+
+
+
