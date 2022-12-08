@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{{ tag.content }}</h1>
+    <hr>
+
+    <div>
+        {% for article in tag.articles.all %}
+            제목 : {{ article.title }}
+        {% endfor %}
+    </div>
+
+{% endblock  %}
