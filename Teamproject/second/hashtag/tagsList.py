@@ -1,9 +1,9 @@
 Tags = {
-	"common": [
-		'샴페인', '부모님', '가족', '지인', '친구', '청량감', '전', '고급스럽다', '인생', '특별하다'
+	"boksundoga": [
+		'샴페인', '청량감', '고급스럽다', '특별하다'
 	],
 
-	"android": [
+	"maeul": [
 		"android", "smartPhone", "androidStudio", "studio", "java", "mobile",
 		"mobileApplication", "mobileDeveloper", "google", "googleDevelopers", 
 		"androidDevelopent", "UX", "UI"

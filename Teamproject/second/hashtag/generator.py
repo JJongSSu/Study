@@ -1,7 +1,7 @@
 from tagsList import Tags
 
 def getTags(list_of_keywords):
-	tags = Tags['common']
+	tags = Tags['boksundoga']
 
 	for key in list_of_keywords:
 		for tag in Tags[key]:
