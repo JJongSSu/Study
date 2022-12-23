@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자바스크립트 예제01</title>
+<style>
+	/* input box 색깔 */
+	input {
+		background-color:#BDD7F3;
+	}
+</style>
+
+<script>
+	/* 자바스크립트 : 동적 효과, 객체기반언어(미리 객체를 만들어놓은 것을 사용) */
+	/* 자바는 객체지향언어 */
+	var msg = "4차 산업혁명이 온다. 인공지능, 빅테이터, IoT, 로봇공학, 나노기술, 양자컴퓨터";
+	
+	/* msg 문자열 앞에 공백 60개 붙이는 코드 */
+	for(i=0; i<60; i++){
+		msg = " " + msg;
+	}
+	
+	/* msg 문자열이 오른쪽에서 왼쪽으로 흘러가게 만드는 코드 */
+	/* 문자열 뒤로 공백이 하나씩 이동하면서 문자열이 움직이는 효과를 보여줌 */
+	/* 보여지는 문자열의 수를 60개로 고정 */
+	function scrollTrend(){
+		document.myForm.trend.value = msg.substring(0,60);
+		msg = msg.substring(1, msg.length) + msg.substring(0,1);
+		timevalue = setTimeout(scrollTrend, 100);
+		/* 시간 단위 밀리세컨트 */
+		/* 0.1초 후에 scrollTrend 함수를 호출 */
+		/* 함수안에 다시 함수를 호출 = 재귀적 호출 */
+	}
+	function stopTrend(){
+		clearTimeout(timevalue);
+	}
+</script>
+</head>
+<body onLoad="scrollTrend()">
+	<!-- onLoad : 문서가 브라우저에 읽혀지는 순간 함수를 실행할 때 사용하는 이벤트핸들러 -->
+	<!-- 이벤트핸들러 = 함수 or 명령어 -->
+	<form name="myForm">
+		<table>
+			<tr>
+				<td><h3>IT 트렌드</h3></td>
+				<td><input type="text" name="trend" size="70" onMouseOver="stopTrend()" onMouseOut="scrollTrend()"/></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
