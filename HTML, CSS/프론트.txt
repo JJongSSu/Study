@@ -27,3 +27,13 @@ td 속성 뒤에 / 왜 붙이는 거임??
     -> 시작과 닫기 태그 한번에 나타내는 것(웹표준을 지키는 코딩 방법)
         <td></td>
         <td />
+
+
+이클립스 젠코딩(zen coding) 설정 방법
+1. help - install new software
+2. work with에 http://emmet.io/eclipse/updates/ 입력 후 add
+3. name에 zencoding 입력
+4. emmet 체크하고 next
+5. 상단에 emmet 메뉴 생김
+
+    table>tr>th*5 Tab -> 코드 만들어짐
