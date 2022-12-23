@@ -1,0 +1,8 @@
+html5, css3, javascrapt, django, bootstrap, jquery
+총 일정 : 12/23 ~ 1/10
+12/23 ~ 12/30(6일) : html5, css3, javascrapt, bootstrap, jquery
+1/2 ~ 1/10(7일) : django
+django
+    인스타, 요기요
+    python 기반
+
