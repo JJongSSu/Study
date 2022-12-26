@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>table 게시판 구현 시 표 만들기</title>
+</head>
+<body>
+	<!-- table width = col width들의 합 -->
+	<table width="800" border="1" align="center" cellspacing="0">
+		<caption>게시글 목록(전체 게시글 수 : 20)</caption>
+		<colgroup>
+			<col width="50" />
+			<col width="350" />
+			<col width="100" />
+			<col width="140" />
+			<col width="60" />
+			<col width="100" />
+		</colgroup>
+		<!-- thead : 목차 -->
+		<thead>
+			<tr style="background-color:#83F7C3">
+			<!-- col tag와 th tag 수 일치시키기 -->
+			<!-- th : 항목 -->
+				<th>번호</th>
+				<th>제목</th>
+				<th>작성자</th>
+				<th>작성일</th>
+				<th>조회수</th>
+				<th>IP주소</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>HTML</td>
+				<td>이종수</td>
+				<td>2022.12.26</td>
+				<td>1</td>
+				<td>192.168.56.101</td>
+			</tr>
+		</thead>
+	</table>
+</body>
+</html>

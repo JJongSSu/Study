@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>number 객체, datalist 태그</title>
+</head>
+<body>
+	<form name="orderForm">
+		<fieldset>
+			<legend>상품 주문 내용</legend>
+			<ol>
+				<li>
+					<label for="product">상품명</label>
+					<input type="text" id="product" value="와이셔츠" readonly />
+				</li>
+				<li>
+					<label for="pcolor">색상</label>
+					<input type="text" list="mycolor" />
+					<!-- input list 속성 : 사용자가 text 필드에 내용을 입력할 때 몇 개의 입력 가능한 값들을 데이터 목록으로 보여줄 수 있다 -->
+					<!-- datalist 태그에서 데이터 목록을 정의하고 list 속성에서 datalist id를 알려준다 -->
+					<!-- input list 값과 datalist id 값 일치해야 함 -->
+					<datalist id="mycolor">
+						<option value="black" label="검정색">
+						<option value="white" label="하얀색">
+						<option value="skyblue" label="하늘색">
+						<option value="navy" label="네이비색">
+						<option value="kaki" label="카키색">
+					</datalist>
+				</li>
+				<li>
+					<label for="num">주문개수</label>
+					<input id="num" type="number" min="1" max="3" value="1"/>
+				</li>
+			</ol>
+		</fieldset>
+		<button type="submit">구매하기</button>
+	</form>
+</body>
+</html>

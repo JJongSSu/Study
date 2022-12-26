@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이미지 동적으로 교체</title>
+<style>
+	#img {width:500px; height:300px;}
+</style>
+<script>
+	var imgs = new Array();
+	imgs.push("./images/1.png")
+	imgs.push("./images/2.jpg")
+	imgs.push("./images/3.jpg")
+	imgs.push("./images/4.jpg")
+	
+	var index = 0;	//전역변수 선언 및 초기화
+	
+	window.onload = function(){
+		setInterval("imageChange()", 4000)	// 4초마다 이미지 변경(단위가 milisecond 기준이기 때문에)
+	}
+	function imageChange(){
+		var currentDate = new Date();
+		var img = document.getElementById("img");
+		img.src = imgs[index];
+		index++;
+		
+		if(index == imgs.length) index = 0;
+	}
+</script>
+</head>
+<body>
+	<center>
+		<h1>(주)휴먼 소프트웨어 이미지 동적 교체</h1>
+		<img id="img"/>
+	</center>
+</body>
+</html>

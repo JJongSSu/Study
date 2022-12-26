@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>주민번호 체크 공식 적용</title>
+<script>
+	function juminCheck(jumin1, jumin2){
+		var juminNum = jumin1 + jumin2;
+		var sum = 0;
+		var temp = 0;
+		var result = 0;
+		var weight = new Array(2,3,4,5,6,7,8,9,2,3,4,5);
+		
+		/*1. 각 자리에 가중치를 곱한다
+	    	sum = 2   3   4   5   6   7 - 8   9   2   3   4   5
+		2. temp = 11 - (sum%11)
+		3. result = temp%10
+		4. if(result==맨 뒷자리 수) 정상*/
+		
+		for(i=0;i<12;i++){
+			sum = sum + (juminNum.charAt(i))*weight[i];
+		}
+		//alert(sum); : 제대로 나오는지 test
+		
+		temp = 11 - (sum%11);
+		result = temp%10;
+		if(result != juminNum.charAt(12)){
+			alert("입력받은 주민번호는 틀린 주민번호입니다. 다시 확인해주세요");
+			document.juminForm.jumin_num1.focus();
+		}
+		else{
+			alert("정상 주민번호입니다.")
+		}
+	}
+</script>
+</head>
+<body>
+	<form name="juminForm">
+		주민등록번호
+		<input type="text" name="jumin_num1" size="6" onKeyUp="if(this.value.length == 6) juminForm.jumin_num2.focus();"/>-
+		<input type="text" name="jumin_num2" size="7" onKeyUp="if(this.value.length==7) juminForm.button.focus();"/>
+		<input type="button" name="button" onClick="juminCheck(jumin_num1.value, jumin_num2.value)" value="주민번호 체크 버튼">
+	</form>
+</body>
+</html>
