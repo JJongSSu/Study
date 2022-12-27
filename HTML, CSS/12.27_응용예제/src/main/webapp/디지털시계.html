@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>디지털시계 만들기 예제</title>
+<style>
+	#t1 {width:250px; background:lime; text-align:center; 
+			border-radius: 10%; display:inline-block;}
+</style>
+<script>	
+	function changeObj(){
+		var obj = document.getElementById('t1');
+		var d = new Date();
+		var h = d.getHours();
+		var m = d.getMinutes();
+		var s = d.getSeconds();
+		var ms = d.getMilliseconds();
+		
+		if(h<12) txt = 'AM';
+		else txt='PM';
+		obj.innerHTML = txt + " " + h + ":" + m + ":" + s + ":" + ms;
+	}
+	setInterval(changeObj, 1000);
+</script>
+</head>
+<body>
+	<h2>디지털 시계</h2>
+	<h1 id="t1"></h1>
+</body>
+</html>

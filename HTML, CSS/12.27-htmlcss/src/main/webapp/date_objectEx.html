@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HTML5에 추가된 date 객체</title>
+<style>
+	form {width:400px;}
+</style>
+</head>
+<body>
+	<form name="myForm">
+		<!-- fieldset : 테두리로 묶어주는 tag -->
+		<!-- legend : fieldset의 테두리 제목 -->
+		<!-- 어울리는 tag들을 잘봐야한다. fieldset>legend, ul>li, label+input -->
+		<fieldset>
+			<legend>레스토랑 예약</legend>
+			<ul>
+				<li>
+					<!-- label for와 input name 일치해야 함. 그래야 예약날짜를 클릭해도 커서가 빈칸에 들어감 -->
+					<label for="date">예약날짜</label>
+					<input type="date" name="date" />
+				</li>
+				<li>
+					<!-- submit : jsp로 넘기는 객체 -->
+					<input type="submit" value="전송" />
+				</li>
+			</ul>
+		</fieldset>
+	</form>
+</body>
+</html>

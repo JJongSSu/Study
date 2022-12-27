@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>디지털시계 만들기 예제</title>
+<style>
+	#t1 {width:250px; background:lime; text-align:center; 
+			border-radius: 10%; display:inline-block;}
+</style>
+<script>
+	function changeObj(){
+		var obj = document.getElementById('t1');
+		var currentTime = new Date();
+		obj.innerHTML = currentTime.toLocaleTimeString("ko-KR");
+	}
+	// window.setInterval(changeObj, 1000); : window 생략 가능
+	setInterval(changeObj, 1000);
+</script>
+</head>
+<body>
+	<h2>디지털 시계</h2>
+	<h1 id="t1"></h1>
+</body>
+</html>

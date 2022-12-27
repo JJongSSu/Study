@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS 상태선택자</title>
+<!-- solid : 테두리 --> 
+<style>
+	input:focus {border:2px; solid:blue;}
+	input:enabled {color:green;}
+	input:disabled {color:red;}
+</style>
+</head>
+<body>
+	<form name="memberForm">
+		아이디 : <input type="text" name="userid" /><br>
+		비밀번호 : <input type="password" name="userpwd" /><br>
+		닉네임 : <input type="text" name="dname" value="도라에몽" disabled="disabled"/><br>
+		<input type="submit" value="로그인" />
+	</form>
+</body>
+</html>

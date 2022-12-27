@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS 구조선택자</title>
+<style>
+	/* 태그 선택자 적용 */
+	li {list-style:none; float:left; padding:15px;}
+	/* 구조 선택자 적용 */
+	/* border-radius : 곡선 테두리를 둥글게(왼쪽 상단부터 시계방향으로 지정) */
+	li:first-child {border-radius:10px 0 0 10px;} 
+	li:last-child {border-radius:0 10px 10px 0;}
+	
+	/* nth : 몇 번째 지정가능 */
+	li:nth-child(2n) {background-color:greenyellow;}
+	li:nth-child(2n+1) {background-color:yellow;}
+	
+</style>
+</head>
+<body>
+	<ul>
+		<li>첫번째</li>
+		<li>두번째</li>
+		<li>세번째</li>
+		<li>네번째</li>
+		<li>다섯번째</li>
+		<li>여섯번쨰</li>
+		<li>일곱번째</li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>결제 금액에 천단위마다 , 넣기</title>
+<script>
+	var price = 1500000;
+	
+	function payment(){
+		var obj = document.getElementById('amount');
+		var numberObj = new Number(price);
+		obj.innerHTML = numberObj.toLocaleString('ko-KR') + '원';
+	}
+	setInterval(payment, 10);
+</script>
+</head>
+<body>
+	<h2>결제 금액에 천단위마다 , 넣기</h2>
+	<h3><b>결제금액 : <span id="amount"></span></b></h3>
+	
+</body>
+</html>
