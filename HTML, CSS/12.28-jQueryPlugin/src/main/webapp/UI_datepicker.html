@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery UI - datepicker</title>
+<link rel="stylesheet" href="css/ui-lightness/jquery-ui-1.8.16.custom.css">
+
+<!-- jQuery 인클루드 -->
+<script src="js/jquery.js"></script>
+
+<!-- jQuery 플러그인 인클루드 : javascript 라이브러리화-->
+<script src="js/jquery-ui-1.8.16.custom.min.js"></script>
+
+<script>
+	if(typeof $.datepicker.regional=='object'){
+		$.datepicker.regional['kr']={
+			monthNames:['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+			dayNamesShort:['일','월','화','수','목','금','토'],
+			dayNamesMin:['일','월','화','수','목','금','토']
+		};
+		$.datepicker.setDefaults($.datepicker.regional['kr']);
+	};
+</script>
+
+<script>
+	$(document).ready(function(){
+		$('#datepicker').datepicker({dateFormat:"yy-mm-dd(D)"});
+	});
+</script>
+
+</head>
+<body>
+	<div>
+		<h3><b>콘비노 레스토랑</b></h3>
+		<p></p>예약날짜: <input id="datepicker"/>
+	</div>
+</body>
+</html>

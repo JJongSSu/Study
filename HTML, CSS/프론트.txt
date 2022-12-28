@@ -66,3 +66,9 @@ head tag 안에 위치
 
 jQuery 플러그 인(plug in)
     웹 개발자가 jQuery 자체를 확장하여 사용할 수 있도록 제공해주는 라이브러리
+
+jQuery UI
+    인터랙티(interactive:상호작용)한 웹을 제공할 수 있도록 하는 인터페이스 개발 도구
+    jQuery는 사이트의 인터페이스의 개선을 위해 다양한 UI를 제공
+    (1) datepicker
+    (2) tabs

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>datepicker jQuery 플러그인을 결재 내역 보기에 활용</title>
+<style>
+	tr th {background:orange;}
+	tr th {text-align:center;}
+	tr th:nth-child(n+4):nth-child(-n+6) {text-align:right;}
+</style>
+
+<link rel="stylesheet" href="css/ui-lightness/jquery-ui-1.8.16.custom.css">
+
+<!-- jQuery 인클루드 -->
+<script src="js/jquery.js"></script>
+
+<!-- jQuery 플러그인 인클루드 : javascript 라이브러리화-->
+<script src="js/jquery-ui-1.8.16.custom.min.js"></script>
+
+<script>
+	if(typeof $.datepicker.regional=='object'){
+		$.datepicker.regional['kr']={
+			monthNames:['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+			dayNamesShort:['일','월','화','수','목','금','토'],
+			dayNamesMin:['일','월','화','수','목','금','토']
+		};
+		$.datepicker.setDefaults($.datepicker.regional['kr']);
+	};
+</script>
+
+<script>
+	$(document).ready(function(){
+		$('#datepicker01').datepicker({dateFormat:"yy-mm-dd(D)"});
+		$('#datepicker02').datepicker({dateFormat:"yy-mm-dd(D)"});
+	});
+</script>
+
+</head>
+<body>
+	<div>
+		<h2>고객 거래 내역</h2>
+		<p>조회기간<input id="datepicker01" name="search01"/>
+				<input id="datepicker02" name="search02"/>&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="submit" value="조회"/>
+		</p>
+	</div>
+	<form name="dealForm">
+		<table border="1" cellspacing="0" cellpadding="0">
+			<tr>
+				<th width="100">구매일자</th>
+				<th width="60">전표<br>번호</th>
+				<th width="80">구분</th>
+				<th width="90">제품코드</th>
+				<th width="120">제품명</th>
+				<th width="80">적립</th>
+			</tr>
+			<tr>
+				<td>2022-12-01</td>
+				<td>8</td>
+				<td>판매</td>
+				<td>11113575</td>
+				<td>아이폰14 프로</td>
+				<td>10%</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery 플러그인 - rotator</title>
+<style>
+	img {width:150px; height:200px;}
+	.divHeight {float:left;}
+	#movieselect {clear:both;} /*영화선택 밑으로 내리기 위해 작성*/
+</style>
+
+<!-- jQuery 인클루드 -->
+<script src="js/jquery.js"></script>
+
+<!-- jQuery 플러그인 인클루드 : javascript 라이브러리화-->
+<script src="js/jquery.rotator.js"></script>
+
+<script>
+	$(document).ready(function(){
+		$('#rotator01').rotator({ms:1000});
+	});
+</script>
+
+</head>
+<body>
+	<h2>CGV 현재상영작</h2>
+	<div id="rotator01">
+		<div class="divHeight">
+			<img src="images/아바타.jpg" hspace="20">
+			<br><center><b>아바타</b></center>
+		</div>
+		<div class="divHeight">
+			<img src="images/영웅.jpg" hspace="20">
+			<br><center><b>영웅</b></center>
+		</div>
+		<div class="divHeight">
+			<img src="images/젠틀맨.jpg" hspace="20">
+			<br><center><b>젠틀맨</b></center>
+		</div>
+	</div>
+	<br><br><br><br>
+	<div id="movieselect">
+		<b>영화선택</b>
+		<select name="movie">
+			<option selected>영화 선택</option>
+			<option value="아바타">아바타</option>
+			<option value="영웅">영웅</option>
+			<option value="젠틀맨">젠틀맨</option>
+		</select>
+	</div>
+</body>
+</html>
