@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>tabs jQuery  UI</title>
+<style>
+	img {width:500px; height:500px;}
+</style>
+
+<link rel="stylesheet" href="css/ui-lightness/jquery-ui-1.8.16.custom.css">
+
+<!-- jQuery 인클루드 -->
+<script src="js/jquery.js"></script>
+
+<!-- jQuery 플러그인 인클루드 : javascript 라이브러리화-->
+<script src="js/jquery-ui-1.8.16.custom.min.js"></script>
+
+<script>
+	$(document).ready(function(){
+		$('#example').tabs();
+	});
+</script>
+</head>
+<body>
+	<div id="example">
+		<ul>
+			<li><a href="#tab01">추천도서</a></li>
+			<li><a href="#tab02">베스트셀러</a></li>
+			<li><a href="#tab03">신간도서</a></li>
+		</ul>
+		<div id="tab01">
+			<img src="images/햄릿.jpg">
+		</div>
+		<div id="tab02">
+			<img src="images/여행지.jpg">
+			<img src="images/백년의기억.jpg">
+		</div>
+		<div id="tab03">
+			<img src="images/안녕자두야.jpg">
+			<img src="images/초한지.jpg">
+		</div>
+	</div>
+</body>
+</html>
