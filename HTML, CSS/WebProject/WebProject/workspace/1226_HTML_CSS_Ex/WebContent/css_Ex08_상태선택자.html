@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>CSS3 상태선택자 실습 예제</title>
+<!-- 
+	:focus => 포커스가 있는 input 태그를 선택
+	:enabled => 사용 가능한 input 태그에 데이터를 입력할 때 
+	:disabled => 사용 불가능한 input 태그를 선택
+ -->
+<style>
+	input:focus { border:2px; solid blue; }
+	input:enabled { color:green; }
+	input:disabled { color:red; }
+</style>
+</head>
+<body>
+	<form name="memberForm">
+		아이디 : <input type="text" name="userid"/><br />
+		비밀번호 : <input type="password" name="pwd"/><br />
+		닉네임 : <input type="text" name="name" value="반쪽사과"
+		              disabled="disabled"/>
+	</form>
+</body>
+</html>

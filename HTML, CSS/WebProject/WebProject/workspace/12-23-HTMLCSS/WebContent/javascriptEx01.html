@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>자바스크립트 예제01</title>
+<style>
+	input { background-color:yellow; }
+</style>
+
+<script>
+	var msg = "-4차 산업혁명의 태풍이 온다. 인공지능, 빅테이터, IoT, 로봇공학, 나노기술-";
+	
+	for(i=0; i<60; i++){
+		msg = " " + msg;
+	}
+	
+	function scrollTrend(){
+		document.myForm.trend.value = msg.substring(0,60);
+		msg = msg.substring(1, msg.length) + msg.substring(0,1);
+		timevalue = setTimeout(scrollTrend, 100);
+	}
+	function stopTrend(){
+		clearTimeout(timevalue);
+	}
+</script>
+</head>
+<body onLoad="scrollTrend()">
+	<form name="myForm">
+		<table>
+			<tr>
+				<td><h3>IT 트랜드</h3></td>
+				<td>
+					<input type="text" name="trend" size="70"
+					       onMouseOver="stopTrend()" 
+					       onMouseOut="scrollTrend()"/>
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

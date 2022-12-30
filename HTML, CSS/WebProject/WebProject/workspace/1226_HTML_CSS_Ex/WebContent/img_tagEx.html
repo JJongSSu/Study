@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>[중요] 기업 사이트의 중요 이미지 '동적'으로 교체하기</title>
+<style>
+	#img { width:500px; height:300px; }
+</style>
+<script>
+	var imgs = new Array();
+	
+	imgs.push("./images/img1.jpg");
+	imgs.push("./images/img2.jpg");
+	imgs.push("./images/img3.jpg");
+	imgs.push("./images/img4.jpg");
+	
+	var index = 0;  //전역변수 선언 및 초기화
+	
+	window.onload = function() {
+		setInterval("imageChange()", 2000);
+	}
+	function imageChange() {
+		var currentDate = new Date();
+		var img = document.getElementById("img");
+		img.src = imgs[index];
+		index++;
+		
+		if(index == imgs.length) index = 0;
+	}	
+</script>
+</head>
+<body>
+	<center>
+		<h1>(주)휴먼 소프트웨어 이미지 동적 교체</h1>
+		<img id="img"/>
+	</center>
+</body>
+</html>

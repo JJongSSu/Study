@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>tel 객체 예제 => 회원가입 시 핸드폰번호 유효성 검사</title>
+</head>
+<body>
+	<h1>핸드폰번호 유효성 체크</h1>
+	<form name="myForm">
+		<label for="phone">핸드폰번호</label>
+		<input type="tel" id="phone" name="phone"
+		       placeholder="010-4자리-4자리"
+		       pattern="010-[0-9]{4}-[0-9]{4}" required /><br><br>
+		       
+		<label for="email">이메일</label>  
+		<input type="email" id="email" placeholder="example@domain.com"
+		       required />     
+		<input type="submit" value="등록"/>       
+	</form>
+</body>
+</html>

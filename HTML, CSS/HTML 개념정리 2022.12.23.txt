@@ -1,0 +1,353 @@
+필요한 강의자료 내려받기
+==================
+blog.naver.com/king5901    접속
+
+이클립스 실행하기 전에
+ C:\dev 폴더에 WebProject 폴더 생성
+
+이클립스 실행 후  Browser 클릭 
+ 작업 디렉토리: C:\dev\WebProject\workspace   -  OK
+--------------------------------------------------------------------
+ HTML5 엘리먼트(요소) 구분
+===================
+(1) 블록 레벨 엘리먼트  => div, p, h1
+     특징: 브라우저에서 가로 100% 적용, 즉 사용 가능한 최대너비를 가진다.
+            줄 바꿈(o)
+
+(2) 인라인 레벨 엘리먼트  => span, em, strong
+     특징: 브라우저에서 내부 컨텐트 크기 만큼만 설정됨
+             여러개의 인라인 요소는 수평으로 나열됨
+              줄 바꿈(x)
+-------------------------------------------------------------------------------------
+  ※ 이클립스에서 젠 코딩(Zen Coding) 사용 설정 방법
+====================================
+work with:  http://emmet.io/eclipse/updates/   를 입력하고 Add 버튼 클릭
+
+div>ul>li#id-$*3>strong+p
+
+<abbr> 태그 => abbreviation의 약자 => 축약, 단축, 줄임, 생략 뜻
+    title 속성 => 줄임말에 대한 설명 혹은 형태를 사람이 읽을 수 잇는 형태를 값으로
+                      가져야 한다. 마우스 커서를 올렸을 때 툴팁으로 보여준다.
+
+<dl> 태그 => definition list의 약자로 정의 목록 
+                    용어를 설명하는 목록을 만들 때 사용
+<dt> 태그 => definition term의 약자로 정의되는 용어의 제목을 넣을 때 사용
+<dd> 태그 => definition description의 약자로 용어를 설명하는데 사용
+
+blog.naver.com/king5901   접속
+----------------------------------------------------------------------------------------
+※ 회원가입에서 주민번호를 입력받는 경우 => 주민번호 체크 공식 적용
+==============================================
+   html 파일 생성
+ 파일명:  jumin_checkEx
+
+주민번호 체크 공식 => 본인의 주민번호에 적용
+
+                         ○ ○ ○ ○ ○ ○ - ○ ○ ○ ○ ○ ○ ● -> 체크자리
+1단계:     sum =   2   3  4  5   6  7     8  9  2   3   4  5  => 가중치(weight)
+2단계:     temp = 11 - (sum%11)
+3단계:     result = temp%10
+
+            if(result == ●) 인 경우 => 주민번호 정상
+                                 같지 않으면 => 틀린 주민번호 
+------------------------------------------------------------------------------------------
+[참고]
+<input> 태그의 list 속성   => HTML5에서 추가된 속성이다.
+   => 사용자가 text 필드에 내용을 입력할 때 몇 개의 입력 가능한 값들을
+        '데이터 목록'으로 보여줄 수 있다.
+        <datalist> 태그에서 데이터 목록을 정의하고 list 속성에서
+         datalist id를 알려준다.
+        즉 <input> 태그의 list 속성값과 <datalist> 태그의 id 속성값은 일치해야 한다.
+--------------------------------------------------------------------------------------------
+  ● 웹 개발 시 => (1) 날짜와 시간 데이터
+                          (2) 결제금액에 천단위 마다 꼼마(,) 넣기
+                          (3) 디지털 시계 만들기
+---------------------------------------------------------------------------------------------
+프로젝트명: 1227_용용예제
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>디지털 시계 만들기 예제</title>
+<style>
+	#t1 { 
+		width:250px;
+		background:lime;
+		text-align:center;
+		border-radius: 10%;
+		display:inline-block;
+	}
+</style>
+<script>
+	var inter = 1000;
+	
+	function changeObj(){
+		var obj = document.getElementById('t1');
+		var d = new Date();
+		var h = d.getHours();   //현재 시스템의 시간을 얻어옴
+		var m = d.getMinutes(); //현재 시스템의 분을 얻어옴
+		var s = d.getSeconds(); //현재 시스템의 초을 얻어옴
+		
+		if(h < 12) txt = '오전';
+		else txt = '오후';
+		obj.innerHTML = txt + " " + h + ":" + m + ":" + s + " ";
+	}
+	setInterval(changeObj, inter);
+</script>
+</head>
+<body>
+	<h2>디지털 시계</h2>
+	<h1 id="t1"></h1>
+</body>
+</html>
+---------------------------------------------------------------
+[실습 사례]
+회원 이름과 전화번호를 입력받고 '등록' 버튼을 클릭하면
+회원 목록에 출력시키고자 한다.  
+그리고 '리셋' 버튼을 클릭하면 회원 목록을 Reset 시킨다.
+또한 '배경색변경' 버튼을 클릭하면 배경색을 바꾼다.
+
+html 파일명: memberListEx
+
+※ 웹 문서에 부트스트랩을 적용하고자 할 때 아래 소스를 활용하자!!
+==============================================
+[참고] 추가 시 <head> 태그 아래에 추가시킴!!
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+------------------------------------------------------------------------------------------------
+Content Delivery Network의 약자인 CDN은 지리적 제약 없이 전 세계 사용자에게 빠르고 안전하게 콘텐츠를 전송할 수 있는 콘텐츠 전송 기술을 의미합니다.
+
+CDN은 서버와 사용자 사이의 물리적인 거리를 줄여 콘텐츠 로딩에 소요되는 시간을 최소화합니다. CDN은 각 지역에 캐시 서버(PoP, Points of presence)를 분산 배치해, 근접한 사용자의 요청에 원본 서버가 아닌 캐시 서버가 콘텐츠를 전달합니다.
+      
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>자바스크립트 onChange() 함수</title>
+<script>
+	$(function(){
+		$("input[name='name']").change(function(){
+			$("#result").html("이름의 입력값이 변경되었습니다.");
+		});
+	
+	
+		$("input[name='hobby']").change(function(){
+			$("#result").html("취미가 변경되었습니다.");
+		});
+		
+		$("input[name='gender']").change(function(){
+			$("#result").html("성별이 변경되었습니다.");
+		});
+		
+		$("select[name='job']").change(function(){
+			$("#result").html("직업이 변경되었습니다.");
+		});
+	});	
+</script>
+</head>
+<body>
+	<div id="input">
+		<h3>이름</h3>
+		<input type="text" name="name"/>
+		
+		<h3>취미</h3>
+		<label><input type="checkbox" name="hobby" value="영화감상"/>영화감상</label>
+		<label><input type="checkbox" name="hobby" value="여행"/>여행</label>
+		<label><input type="checkbox" name="hobby" value="등산"/>등산</label>
+		
+		<h3>성별</h3>
+		<label><input type="radio" name="gender" value="남자"/>남자</label>
+		<label><input type="radio" name="gender" value="여자"/>여자</label>
+		
+		<h3>직업</h3>
+		<select name="job">
+			<option selected>직업선택</option>
+			<option value="웹프로그래머">웹프로그램머</option>
+			<option value="회사원">회사원</option>
+			<option value="공무원">공무원</option>
+			<option value="학생">학생</option>
+			<option value="기타">기타</option>
+		</select>
+	</div>	
+	<hr>
+	<h2>RESULT</h2>
+	<div id="result"></div>
+	<hr>
+</body>
+</html>
+-------------------------------------------------------------------------------
+● 웹 문서에 jQuery 적용시 필요
+=======================
+삽입 위치가  <head> 안에 추가
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+
+  jQuery 문법
+ =========
+        $(선택자1, 선택자2, . . . ).액션(즉 함수)
+  or   jQuery(선택자1, 선택자2, . . . ).액션(즉 함수)
+----------------------------------------------------------------------------------------------
+● jQuery 플러그 인(plug in) 이란?
+=======================
+  - 웹 개발자가 jQuery 자체를 확장하여 사용할 수 있도록 제공해주는 
+    jQuery 라이브러리의 한 형태를 말한다.
+
+프로젝트명: 1228_jQueryPluginEx
+    html 파일명: dataTablePluginEx
+                      rotatorPluginEx
+                      datepickerUIex
+                      datepickerUIex02
+                      tabsUIex
+--------------------------------------------------------------------------------
+● jQuery UI 란?
+============
+- 인터랙티(interactive; 상호작용을 하는)한 웹을 제공할 수 있도록 하는 인터페이스 
+  개발 도구이다.
+  jQuery는 사이트의 인터페이스의 개선을 위해 다양한 jQuery UI를 제공해준다.
+  (1) datepicker
+  (2) tabs
+-----------------------------------------------------------------------------------------
+      tr td:nth-child(7) { text-align: right; }
+	tr td:nth-child(8) { text-align: right; }
+	tr td:nth-child(9) { text-align: right; }
+	tr td:nth-child(10) { text-align: right; }
+	
+     위 소스를 한줄로 해결하는 방법
+      tr td:nth-child(n+7):nth-child(-n+10) { text-align: right; }
+----------------------------------------------------------------------------------------
+  프로젝트명: 1229_부트스트랩응용예제
+      html파일명: bootstrapEx01
+                       bootstrap응용실습예제
+
+<button type="button" class="btn btn-primary">Primary</button>
+                                       
+     class="btn btn-primary"
+    기본클래스  개별클래스
+
+   기본클래스는 => 버튼의 기본 스타일을 설정
+   개별클래스는 => 버튼의 모양을 지정한다.
+
+    btn-primary => '중요한' 의미의 버튼
+    btn-success => '긍정적' 의미의 버튼
+    btn-info => '정보'를 제공하는 버튼
+    btn-waring => '주의'를 알리는 버튼
+    btn-danger => '위험'을 나타내는 버튼
+-----------------------------------------------------------------------------------
+  각종 아이콘 제공해주는 사이트
+  http://bootstrapk.com/components   접속
+-----------------------------------------------------------------------------------
+  [과제]  회원가입 폼 만들기 => 5교시 끝날때까지 완성
+
+  파일명: memberForm 
+
+================================
+   ● 다음 카카오 우편번호 서비스 API 활용하기
+================================
+  ※ 회원가입 시 '주소' 우편번호 처리 
+     http://postcode.map.daum.net/guide   접속
+---------------------------------------------------------------
+  자바스크립트 연산자 중에  == 와 === 차이점
+  자바스크립트는 엄격한 비교와 유형변환 비교를 모두 지원하므로
+  어떤 연산자가 어떤 비교 조건에 사요되는지가 중요하다.
+  === 연산자는 변수 유형을 고려하는 반면, == 연산자는 변수값을 기반으로 유형을 수정한다. 
+
+  (예)
+   1 == true       => true
+   0 == false      => true
+
+   1 === true     => false
+   0 === false    => false
+--------------------------------------------------------
+● 오라클 데이터베이스 설치 
+    관리자 계정 암호: system
+                            system
+=======================
+< 계정 생성, 롤(role) 권한 부여 >
+=======================
+SQL> conn /as sysdba
+SQL> create user testdb identified by testdb1234;
+SQL> grant connect, resource to testdb;
+
+오라클 데이터베이스에 접속
+SQL> conn testdb/testdb1234
+연결되었습니다.
+-----------------------------------------------------------
+  아펙스(Apex)란?
+    => Application Express의 약자로
+        Oracle XE에서는 기본적으로 Apex를 제공한다.
+        웹으로 DB를 컨트롤 할 수 있는 웹 애플리케이션을 말한다.
+
+   ※ 아펙스의 포트번호 변경하기
+   SQL> conn /as sysdba
+   SQL> exec dbms_xdb.setHTTPPort(9000);
+            PL/SQL 처리가 정상적으로 완료되었습니다.
+
+웹 브라우저 띄운 후
+http://localhost:9000/apex
+---------------------------------------------------------------
+회원 테이블 생성
+create table member(
+mem_id varchar2(20) not null primary key,
+mem_passwd varchar2(20) not null,
+mem_name varchar2(20) not null,
+mem_nickname varchar2(20),
+mem_email varchar2(30) not null,
+mem_num1 char(6) not null,
+mem_num2 char(7) not null,
+mem_phone char(13) not null,
+mem_gender varchar2(20) not null,
+mem_birthday1 number(4) not null,
+mem_birthday2 number(2) not null,
+mem_birthday3 number(2) not null,
+mem_job varchar2(30) not null,
+zipcode char(5) not null,
+useraddr1 varchar2(100) not null,
+useraddr2 varchar2(100),
+useraddr3 varchar2(100) not null
+);
+----------------------------------------------------------------------
+※ 회원가입 폼에서 [ID중복확인] 처리를 테스트 하기 위해서
+한건의 데이터를 입력하자!!
+
+insert into member values('test','1234','김종호','하람','kim77@naver.com','961024','1027123','010-4621-7651','남성',1996,10,24,'프로그래머','06620','서울 서초구 강남대로','1003동 108동','서초동, 서초현대타워아파트');
+
+데이터가 잘 입력되었는지 확인
+select * from member;
+------------------------------------------------------------------------
+C:\oraclexe\app\oracle\product\10.2.0\server\jdbc\lib  에
+                                     접근하면 => ojdbc14.jar 파일을 복사하여
+
+   현재 프로젝트의
+    webapp
+       WEB-INF
+           lib 폴더에 붙여넣기함!!
+
+   String jdbc_driver = "oracle.jdbc.driver.OracleDriver";
+
+   ojdbc14.jar 파일을 압축풀기하면
+       oracle 폴더 밑에
+            jdbc
+                driver
+                      OracleDriver.class 파일이 있음!!
+---------------------------------------------------------------------
+ [실습 사례]
+ 쇼핑몰 운영 시 => 상품 이미지를 나열하고 사용자가 상품을 골라 장바구니 쪽으로 드래그하는 예제
+
+    html 파일명: shopping-basket
+
+
+
+
+
+
+
+
+
+
+

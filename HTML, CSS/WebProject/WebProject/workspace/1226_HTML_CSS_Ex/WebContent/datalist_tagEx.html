@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>number 객체, datalist 태그 예제</title>
+</head>
+<body>
+	<form name="orderForm">
+		<fieldset>
+			<legend>상품 주문 내용</legend>
+			<ol>
+				<li>
+					<label for="product">상품명</label>
+					<input id="product" type="text" value="와이셔츠" readonly/>
+				</li>
+				<li>
+					<label for="pcolor">색상</label>
+					<input id="pcolor" type="text" list="mycolor"/>
+					<datalist id="mycolor">
+						<option value="black" label="검정색">
+						<option value="white" label="흰색">
+						<option value="skyblue" label="하늘색">
+						<option value="red" label="빨간색">
+						<option value="gray" label="회색">
+					</datalist>
+				</li>
+				<li>
+					<label for="num">주문개수</label>
+					<input id="num" type="number" min="1" max="3"
+					       value="1"/>
+				</li>
+			</ol>
+		</fieldset>
+		<button type="submit">구매하기</button>
+	</form>
+</body>
+</html>
+
+

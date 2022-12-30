@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="1228_자바스크립트예제">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <property name="context-root" value="1228_자바스크립트예제"/>
+        <property name="java-output-path" value="/1228_자바스크립트예제/build/classes"/>
+    </wb-module>
+</project-modules>
