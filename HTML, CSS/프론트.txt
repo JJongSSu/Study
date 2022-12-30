@@ -77,8 +77,43 @@ dootstrap 사이트(아이콘 활용)
 http://bootstrapk.com/components
 
 
+오라클 계정생성 및 권한부여 방법
+    SQL> conn /as sysdba
+    연결되었습니다.
+    SQL> create user testdb identified by testdb1234;
+    사용자가 생성되었습니다.
+    SQL> grant connect, resource to testdb;
+    권한이 부여되었습니다.
+    SQL> conn testdb/testdb1234
+    연결되었습니다.
 
+아펙스(apex)
+    application express 약자
+    oracle xe에서 기본적으로 제공
+    웹으로 db 컨트롤 할 수 있는 웹 애플리케이션
 
+    * 아펙스 포트번호 변경
+    SQL> conn /as sysdba
+    SQL> exec dbms_xdb.setHTTPPort(9000);
 
+create table member(
+    mem_id varchar2(20) not null primary key,
+    mem_pwd varchar2(20) not null,
+    mem_name varchar2(20) not null,
+    mem_nickname varchar2(20),
+    mem_email varchar2(30) not null,
+    mem_num1 char(6) not null,
+    mem_num2 char(6) not null,
+    mem_phone char(13) not null,
+    mem_gender varchar2(20) not null,
+    mem_brith1 number(4) not null,
+    mem_brith2 number(2) not null,
+    mem_brith3 number(2) not null,
+    mem_job varchar2(30) not null,
+    zipcode char(5) not null,
+    useraddr1 varchar2(100) not null,
+    useraddr2 varchar2(100),
+    useraddr3 varchar2(100) not null
+);
 
-
+insert into member('test','1234','홍길동','하람','kim77@naver.com','961024','1027123','010-4621-7851','남성',1996,10,24,'프로그래머','06620','서울 서초구 강남대로','1003동 108호','서초동, 서초현대타워아파트');
