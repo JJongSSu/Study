@@ -1,4 +1,4 @@
 @echo off
-cd c:\STUDY\Django\2일차\projects\mysite
-c:\STUDY\Django\2일차\venvs\mysite\Scripts\activate
+cd C:\Study\Django\2일차\projects\mysite
+C:\Study\Django\2일차\venvs\mysite\Scripts\activate
 

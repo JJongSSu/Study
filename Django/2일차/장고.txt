@@ -54,11 +54,35 @@
     1. 질문/답변 게시판 구현 => CRUD 작업
         1) (mysite) C:\projects\mysite> django-admin startapp pybo
 
+    2. config/urls.py, pybo/views.py 파일에 코드추가
+        <urls.py>
+            from pybo import views
+            urlpatterns = [
+                path('pybo/', views.index),
+            ]
+            pybo/ => localhost:8000/pybo/   (localhost:8000/ 생략 가능)
+
+        <views.py>
+            from django.http import HttpResponse
+            def index(request):
+            return HttpResponse("환영합니다.")
+
+    3. 클라이언트(브라우저)에서 페이지 요청
+        http://localhost:8000/pybo
 
 
+웹 개발
+    - MVC : java 기반 spring 
+        디자인 패턴 : model - view - controller
+        view => jsp, html
 
-
+    - MTV : python 기반 django
+        디자인 패턴 : model - template - view
+        html의 head와 body 태그 사이에 template 태그({% %}, {{ }})가 들어감
         
+        model => ORM 방식
+        view - model => CRUD 방식
+
 
 
 

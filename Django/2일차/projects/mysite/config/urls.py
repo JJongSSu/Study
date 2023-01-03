@@ -15,7 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+# 추가
+from pybo import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    #추가
+    path('pybo/', views.index),
 ]
