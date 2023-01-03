@@ -47,9 +47,18 @@
 
 
 파이참으로 장고 프로젝트 실행
-1. 파일 불러오기
-2. 파일 - 설정 - python 인터프리터 설정 - C:\venvs\mysite\Scripts\python.exe
+    1. 파일 불러오기
+    2. 파일 - 설정 - python 인터프리터 설정 - C:\venvs\mysite\Scripts\python.exe
 
+필요한 앱 생성
+    1. 질문/답변 게시판 구현 => CRUD 작업
+        1) (mysite) C:\projects\mysite> django-admin startapp pybo
+
+
+
+
+
+        
 
 
 
