@@ -22,8 +22,22 @@
         5) C:\projects> cd mysite
         6) C:\projects\mysite> django-admin startproject config .  (장고 프로젝트 생성)
             . => 현재 디렉토리를 프로젝트 디렉토리로 설정
-        
+    9. 로컬 개발 서버 구동 및 웹 사이트 접속
+        1) C:\projects\mysite> python manage.py runserver
+        2) 크롬에서 http://127.0.0.1:8000/ 접속
 
+가상환경 배치파일 만들기
+    mysite 가상환경에 진입하는 번거로운 작업을 좀 더 효율적으로 해결하는 방법
+    메모장으로 만들기
+    위치 => 가상환경 디렉토리 (C:/venvs)
+
+    * 주의사항
+        저장할 때 파일형식(모든파일)로 설정
+        저장 시 파일명 => mysite.cmd
+
+    @echo off
+    cd c:\projects\mysite
+    c:\venvs\mysite\Scripts\activate
 
 
 
