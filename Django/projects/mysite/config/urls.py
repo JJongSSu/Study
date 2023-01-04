@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 # 추가
 from pybo import views
 
@@ -23,5 +23,7 @@ urlpatterns = [
     # 추가
     # localhost:8000/pybo/ URL과 views.index() 함수를 매핑
     # 장고는 URL과 뷰 함수를 매핑
-    path('pybo/', views.index),
+    # path('pybo/', views.index),
+    # include(module)
+    path('pybo/', include('pybo.urls')),
 ]

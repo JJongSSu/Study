@@ -93,4 +93,19 @@ URL conf
         route = 경로
         view = venvs view 함수
 
+URL 분리
+    1. config/urls.py 수정
+        from django.urls import path, include
+        urlpatterns = [
+            # include(module)
+            path('pybo/', include('pybo.urls')),
+        ]
 
+    2. pybo/urls.py 생성
+        from django.urls import path
+
+        from . import views
+
+        urlpatterns = [
+            path('',views.index),
+        ]
