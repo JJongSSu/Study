@@ -1,0 +1,96 @@
+파이썬 가상환경
+    프로젝트를 진행할 때 독립된 환경을 만들어 주는 도구
+
+파이썬 가상환경 만들기
+    1. cmd 창 띄우기
+    2. C:\venvs 디렉토리 생성
+    3. C:\> mkdir venvs
+    4. C:\> cd venvs
+    5. C:\venvs> python -m venv mysite      (가상환경 만들기)
+    6. C:\venvs\mysite\Scripts> activate    (가상환경 진입)
+    7. (mysite) C:\venvs\mysite\Scripts> pip install django==3.1.3  (장고 설치)
+        c:\venvs\mysite\scripts\python.exe -m pip install --upgrade pip
+    8. 장고 프로젝트 생성
+        장고 프로젝트 = 하나의 웹 사이트
+        프로젝트 안에는 여러 개의 앱이 있음
+        앱 = 로그인/로그아웃(인증 앱), 관리자 앱(권한), 게시판...
+        
+        1) C:\> mkdir projects  (프로젝트 루트 디렉토리 생성)
+        2) C:\> cd projects 
+        3) C:\venvs\mysite\scripts\activate (가상환경 진입)
+        4) (mysite) C:\projects> mkdir mysite   (장고 프로젝트 담을 디렉토리 생성하고 이동)
+        5) C:\projects> cd mysite
+        6) C:\projects\mysite> django-admin startproject config .  (장고 프로젝트 생성)
+            . => 현재 디렉토리를 프로젝트 디렉토리로 설정
+    9. 로컬 개발 서버 구동 및 웹 사이트 접속
+        1) C:\projects\mysite> python manage.py runserver
+        2) 크롬에서 http://127.0.0.1:8000/ 접속
+        3) ctrl + c(나가기)
+        4) exit(명령프롬프트 종료)
+
+가상환경 배치파일 만들기
+    mysite 가상환경에 진입하는 번거로운 작업을 좀 더 효율적으로 해결하는 방법
+    메모장으로 만들기
+    위치 => 가상환경 디렉토리 (C:/venvs)
+
+    * 주의사항
+        저장할 때 파일형식(모든파일)로 설정
+        저장 시 파일명 => mysite.cmd
+
+    <메모장>
+    @echo off
+    cd c:\projects\mysite
+    c:\venvs\mysite\Scripts\activate
+
+    배치파일 만든 후 배치파일 위치를 path 환경변수에 추가
+        윈도우키 + R -> sysdm.cpl 입력 -> 시스템 속성 - 고급 - 환경변수 - 사용자변수 - path 
+
+
+파이참으로 장고 프로젝트 실행
+    1. 파일 불러오기
+    2. 파일 - 설정 - python 인터프리터 설정 - C:\venvs\mysite\Scripts\python.exe
+
+필요한 앱 생성
+    1. 질문/답변 게시판 구현 => CRUD 작업
+        1) (mysite) C:\projects\mysite> django-admin startapp pybo
+
+    2. config/urls.py, pybo/views.py 파일에 코드추가
+        <urls.py>
+            from pybo import views
+            urlpatterns = [
+                path('pybo/', views.index),
+            ]
+            pybo/ => localhost:8000/pybo/   (localhost:8000/ 생략 가능)
+            localhost:8000/pybo로 요청하면 맨 뒤에 / 붙여줌
+            => views.index는 views.py 파일의 index() 함수와 매핑
+
+        <views.py>
+            from django.http import HttpResponse
+            def index(request):
+            return HttpResponse("환영합니다.")
+
+    3. 클라이언트(브라우저)에서 페이지 요청
+        http://localhost:8000/pybo
+
+
+웹 개발
+    - MVC : java 기반 spring 
+        디자인 패턴 : model - view - controller
+        view => jsp, html
+
+    - MTV : python 기반 django
+        디자인 패턴 : model - template - view
+        html의 head와 body 태그 사이에 template 태그({% %}, {{ }})가 들어감
+        
+        model => ORM 방식
+        view - model => CRUD 방식
+
+URL conf
+    사용자와 view 사이에는 URL conf(URL 설계) 단계가 있음
+    URL 패턴을 정의하여 URL과 view를 매핑 => path() 이용
+    
+    path(route, view)
+        route = 경로
+        view = venvs view 함수
+
+
