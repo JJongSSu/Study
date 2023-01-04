@@ -1,7 +1,7 @@
 파이썬 가상환경
     프로젝트를 진행할 때 독립된 환경을 만들어 주는 도구
 
-파이썬 가상환경 만들기
+<파이썬 가상환경 만들기>
     1. cmd 창 띄우기
     2. C:\venvs 디렉토리 생성
     3. C:\> mkdir venvs
@@ -28,7 +28,8 @@
         3) ctrl + c(나가기)
         4) exit(명령프롬프트 종료)
 
-가상환경 배치파일 만들기
+
+<가상환경 배치파일 만들기>
     mysite 가상환경에 진입하는 번거로운 작업을 좀 더 효율적으로 해결하는 방법
     메모장으로 만들기
     위치 => 가상환경 디렉토리 (C:/venvs)
@@ -46,11 +47,11 @@
         윈도우키 + R -> sysdm.cpl 입력 -> 시스템 속성 - 고급 - 환경변수 - 사용자변수 - path 
 
 
-파이참으로 장고 프로젝트 실행
+<파이참으로 장고 프로젝트 실행>
     1. 파일 불러오기
     2. 파일 - 설정 - python 인터프리터 설정 - C:\venvs\mysite\Scripts\python.exe
 
-필요한 앱 생성
+<필요한 앱 생성>
     1. 질문/답변 게시판 구현 => CRUD 작업
         1) (mysite) C:\projects\mysite> django-admin startapp pybo
 
@@ -73,7 +74,7 @@
         http://localhost:8000/pybo
 
 
-웹 개발
+<웹 개발>
     - MVC : java 기반 spring 
         디자인 패턴 : model - view - controller
         view => jsp, html
@@ -85,27 +86,172 @@
         model => ORM 방식
         view - model => CRUD 방식
 
-URL conf
-    사용자와 view 사이에는 URL conf(URL 설계) 단계가 있음
-    URL 패턴을 정의하여 URL과 view를 매핑 => path() 이용
+    URL conf
+        사용자와 view 사이에는 URL conf(URL 설계) 단계가 있음
+        URL 패턴을 정의하여 URL과 view를 매핑 => path() 이용
+        
+        path(route, view)
+            route = 경로
+            view = venvs view 함수
+
+    URL 분리
+        1. config/urls.py 수정
+            from django.urls import path, include
+            urlpatterns = [
+                # include(module)
+                path('pybo/', include('pybo.urls')),
+            ]
+
+        2. pybo/urls.py 생성
+            from django.urls import path
+
+            from . import views
+
+            urlpatterns = [
+                path('',views.index),
+            ]
+
+            config/urls.py   +   pybo/urls.py    =>    최종 URL
+                'pybo/'              ''                 'pybo/'
+
+
+    장고는 모델로 데이터를 관리
+        장점
+            create table users(자료형 필드, 자료형 필드...);으로 테이블을 생성안해도 
+            모델을 생성하면 자동으로 테이블을 생성한다
+
+        1. 장고 개발 서버 구동시 경고 메시지에 You have 18 unapplied migration(s). 확인
+            => 적용되지 않은 18개 migration 있음
+
+            setting.py 확인
+            DATABASES = {
+                'default': {
+                    'ENGINE': 'django.db.backends.sqlite3',
+                    'NAME': BASE_DIR / 'db.sqlite3',
+                }
+            }
+            BASE_DIR : C:/projects/mysite를 의미
+
+        2. migrate 명령으로 앱이 필요한 테이블 생성
+            (mysite) C:\Study\Django\projects\mysite> python manage.py migrate
+
+        3. DB Browser for SQLite로 생성된 테이블 확인
+            1) sqlitebrowser.org/dl 접속 -> DB Browser for SQLite - Standard installer for 64-bit Windows 받기
+            2) 설치 후 DB Browser for SQLite.exe 실행
+            3) 데이터베이스 열기 - C:\Study\Django\projects\mysite\db.sqlite3
+
+
+<질문/답변 게시판 구현>
+    1. 모델 생성 => DB설계
+        장고는 모델로 데이터를 관리
+
+        1) 개체(Entity) 발견 : 질문, 답변
+        2) 개체 속성 발견
+            질문 속성 : 제목, 내용, 작성일시
+            답변 속성 : 질문 제목, 답변내용, 답변 작성일시
+        3) 개체의 관계
+            1:다
+        4) pybo/models.py에 작성
+
+    2. config/settings.py에 pybo 앱 등록
+        INSTALLED_APPS = [
+            'pybo.apps.PyboConfig',
+        ]
+
+    3. pybo/apps.py 파일 확인
+        from django.apps import AppConfig
+
+        class PyboConfig(AppConfig):
+            name = 'pybo'
+
+    4. migrate 명령으로 테이블 생성
+        migration : 모델의 변경 내역을 DB 스키마에 적용시키는 방법
+        스키마 : DB 내에서 데이터가 저장되는 구조와 제약조건(PK,FK, not null...)을 정의한 것
+            내부 스키마, 외부 스키마, 물리 스키마
+
+        1) (mysite) C:\Study\Django\projects\mysite> python manage.py migrate
+            Run 'manage.py makemigrations' to make new migrations, and then re-run 'manage.py migrate' to apply them.
+            => 오류 발생
+            => manage.py makemigrations 명령 실행 후 manage.py migrate 명령 실행
+
+        2) (mysite) C:\Study\Django\projects\mysite> python manage.py makemigrations
+            pybo/migrations 폴더에 0001_initial.py 파일 자동 생성
+
+        3) migrate 실행
+            (mysite) C:\Study\Django\projects\mysite> python manage.py migrate
+
+    테이블 생성시 정규화 개념 필요
+
+    [정리]
+    1. 클래스 모델 만들고 makemigrations 명령어 입력
+    2. 데이터베이스에서 테이블을 생성할 수 있도록 migrate 명령어 입력
+
+
+<Question 모델 데이터 만들기>
+    1. 장고 셀(shell) 실행
+        (mysite) C:\Study\Django\projects\mysite> python manage.py shell
+
+    2. Question, Answer 모델 import
+        from pybo.models import Question, Answer
+
+    3. Question 데이터 생성
+        from django.utils import timezone
+        q = Question(subject='장고가 무엇인가?', content='장고에 대해 알고 싶어요.', create_date=timezone.now())
+        q = Question(subject='장고 모델 질문입니다.', content='id는 자동적으로 생성되나요?.', create_date=timezone.now())
+        q.save()
+
+    4. Question 모델 데이터의 id값 확인
+        q.id, q.subject, q.content, q.create_date
+
+    5. Question 모델 데이터 조회
+        Question.objects.all() : 데이터 유형만 출력
+        pybo/models.py에 추가 : 조회 결과(속성값)
+            def __str__(self):
+            return self.subject
+
+    6. 장고 셀 빠져나가기
+        quit()
+
+    7. 장고 셀 재실행 후 Question 모델 데이터 조회/확인
+        (mysite) C:\Study\Django\projects\mysite> python manage.py shell
+        from pybo.models import Question, Answer
+        Question.objects.all()
+
+    8. 조건으로 Question 모델 데이터 조회
+        Question.objects.filter(id=1)
+
+    9. 데이터 수정
+        q = Question.objects.get(id=2)  : 1개 변경
+        q.subject = '수정할 내용'
+        q.save()
+
+
+<Answer 모델 데이터 생성>
+    from pybo.models import Question, Answer
+    from django.utils import timezone
+    a = Answer(question=q, content='네 자동으로 생성됩니다.', create_date=timezone.now())
+    a.save()
+
+
+<장고 Admin>
+    1. 슈퍼 계정 생성
+        (mysite) C:\Study\Django\projects\mysite> python manage.py createsuperuser
+
+    2. 장고 Admin에 접속, 로그인
     
-    path(route, view)
-        route = 경로
-        view = venvs view 함수
+    3. 장고 Admin 모델 관리
+        pybo/admin.py 파일
 
-URL 분리
-    1. config/urls.py 수정
-        from django.urls import path, include
-        urlpatterns = [
-            # include(module)
-            path('pybo/', include('pybo.urls')),
-        ]
+        from .models import Question, Answer
+        admin.site.register(Question)   //Question 모델 등록
 
-    2. pybo/urls.py 생성
-        from django.urls import path
+    4. 장고 Admin에 데이터 [검색] 기능 추가
+        pybo/admin.py 파일
 
-        from . import views
+        from .models import Question, Answer
+        class QuestionAdmin(admin.ModelAdmin):
+            search_fields = ['subject']
+        admin.site.register(Question, QuestionAdmin)
 
-        urlpatterns = [
-            path('',views.index),
-        ]
+        get방식
+            http://localhost:8000/admin/pybo/question/?q=모델
