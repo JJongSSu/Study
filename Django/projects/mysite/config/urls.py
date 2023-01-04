@@ -20,6 +20,8 @@ from pybo import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    #추가
+    # 추가
+    # localhost:8000/pybo/ URL과 views.index() 함수를 매핑
+    # 장고는 URL과 뷰 함수를 매핑
     path('pybo/', views.index),
 ]
