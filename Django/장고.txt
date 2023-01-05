@@ -271,49 +271,133 @@
 
 
 <질문 목록과 상세 기능 구현>
-1. Question 모델 데이터 작성일시 역순(최근 순서)으로 조회
-    pybo/views.py
-        from .models import Question
-        def index(request):
-            # pybo 목록 출력
-            question_list = Question.objects.order_by('-create_date')   # 내림차순 정렬
-            context = {'question_list':question_list}
-            return render(request,'pybo/question_list.html', context)
+    질문 목록
+        1. Question 모델 데이터 작성일시 역순(최근 순서)으로 조회
+            pybo/views.py
+                from .models import Question
+                def index(request):
+                    # pybo 목록 출력
+                    question_list = Question.objects.order_by('-create_date')   # 내림차순 정렬
+                    context = {'question_list':question_list}
+                    return render(request,'pybo/question_list.html', context)
+                
+                - 코드설명
+                    render 함수는 context에 있는 Question 모델 데이터 question_list를 
+                    pybo/question_list.html 파일에 적용하여 HTML 코드로 변환
+                    
+                question_list.html = 템플릿
+                    장고의 태그를 추가로 사용할 수 있는 HTML 파일
 
-2. 템플릿 저장할 디렉토리 생성
-    (mysite) (base) C:\Study\Django\projects\mysite> mkdir templates
+        2. 템플릿 저장할 디렉토리 생성
+            (mysite) (base) C:\Study\Django\projects\mysite> mkdir templates
 
-3. 템플릿 디렉토리 위치 config/setting.py에 등록
-    TEMPLATES = [
-        {
-            'DIRS': [BASE_DIR/'templates'], # BASE_DIR = C:\projects\mysite\
-        },
-    ]
+        3. 템플릿 디렉토리 위치 config/setting.py에 등록
+            TEMPLATES = [
+                {
+                    'DIRS': [BASE_DIR/'templates'], # BASE_DIR = C:\projects\mysite\
+                },
+            ]
 
-    장고는 templates 디렉토리를 자동으로 템플릿 디렉토리로 인식
+            장고는 templates 디렉토리를 자동으로 템플릿 디렉토리로 인식
 
-4. 템플릿 파일 생성
-    pybo/question_list.html 파일 생성
-        <!DOCTYPE html>
-        <html>
-        <head>
-            <meta charset="UTF-8">
-            <title></title>
-        </head>
-        <body>
-            {% if question_list %}
-                {% for question in question_list %}
-                    <li><a href="/pybo/{{question.id}}/">{{ question.subject }}</a></li>
-            {% else %}
-                <p>질문이 없습니다.</p>
-            {% endif %}
-        </body>
-        </html>
+        4. 템플릿 파일 생성
+            pybo/question_list.html 파일 생성
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <meta charset="UTF-8">
+                    <title></title>
+                </head>
+                <body>
+                    {% if question_list %}
+                        {% for question in question_list %}
+                            <li><a href="/pybo/{{question.id}}/">{{ question.subject }}</a></li>
+                    {% else %}
+                        <p>질문이 없습니다.</p>
+                    {% endif %}
+                </body>
+                </html>
 
-5. 브라우저에서 질문 목록 확인
-    1) 개발서버 구동
-        (mysite) (base) C:\Study\Django\projects\mysite>python manage.py runserver
-    2) 브라우저에 요청
-        http://localhost:8000/pybo
+        5. 브라우저에서 질문 목록 확인
+            1) 개발서버 구동
+                (mysite) (base) C:\Study\Django\projects\mysite>python manage.py runserver
+            2) 브라우저에 요청
+                http://localhost:8000/pybo
+
+    질문 상세 기능 구현
+        1. pybo/urls.py 파일에 추가
+            urlpatterns = [
+                path('<int:question_id>/', views.detail), # question_id가 정수이기 때문에 int로 작성
+            ]
+
+        2. pybo/views.py 파일에 추가
+            def detail(request, question_id):
+                # pybo 내용 출력
+                question = Question.objects.get(id=question_id)
+                context = {'question':question}
+                return render(request, 'pybo/question_detail.html', context)
+        
+        3. 없는 게시글 창 except 처리
+            pybo/views.py 파일에 추가
+            from django.shortcuts import render, get_object_or_404
+            def detail(request, question_id):
+                # pybo 내용 출력
+                # question = Question.objects.get(id=question_id)
+                question = get_object_or_404(Question, pk=question_id)  # 있는 건 보여주고 없으면 오류 페이지 보여줌
+                context = {'question':question}
+                return render(request, 'pybo/question_detail.html', context)
+        
+        4. question_detail.html 파일 생성
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <meta charset="UTF-8">
+                <title>question_detail</title>
+            </head>
+            <body>
+            <!-- 객체 출력하는 템플릿 태그 {{}} -->
+                <h1>{{ question.subject }}</h1>
+                <div>
+                    {{ question.content }}
+                </div>
+            </body>
+            </html>
+
+        5. 템플릿에서 하드코딩 없애는 방법
+            question_list.html
+                <li><a href="/pybo/{{question.id}}/">{{ question.subject }}</a></li>
+            => 하드코딩
+
+            1) URL 별칭으로 URL 하드코딩 문제 해결하기
+                pybo/urls.py 파일 수정하여 URL 별칭 사용
+                    urlpatterns = [
+                        path('',views.index, name='index'),
+                        path('<int:question_id>/', views.detail, name='detail'), # question_id가 정수이기 때문에 int로 작성
+                    ]
+
+                name 별칭을 삽입하면 
+                실제 주소 /pybo/는 index라는 URL 별칭이 생김
+                /pybo/2/는 detail이라는 URL 별칭이 생김
+            
+            2) pybo/question_list.html 템플릿에서 URL 별칭 사용
+                <li><a href="{% url 'detail' question.id %}/">{{ question.subject }}</a></li>
+                => 하드코딩 해결
+
+
+<URL 네임스페이스 적용>
+    여러 개의 앱을 만들 때 사용
+    다른 앱에서 같은 URL 별칭을 사용하면 중복 문제 발생
+    pybo/urls.py에서 네임스페이스(namespace)를 적용
+    
+    - 네임스페이스
+        각각의 앱이 관리하는 독립된 이름공간
+
+    1. pybo/urls.py에 네임스페이스 추가
+        app_name = 'pybo'
+
+    2. pybo/question_list.html 수정, 네임스페이스 사용
+        <li><a href='{% url 'pybo:detail' question.id %}/'>{{ question.subject }}</a></li>
+
+
 
 
