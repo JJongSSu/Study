@@ -1,0 +1,17 @@
+oracle
+oracle1234
+
+설치
+https://erlka.tistory.com/m/326
+삭제
+https://hpark3.tistory.com/32
+https://moonge.tistory.com/125
+
+URL
+https://DESKTOP-F9BCAL8:5500/em
+아이디 : sys
+비밀번호 : oracle1234
+
+사용자 계정
+admin
+admin1234
