@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+
+<div style="background-color:#F5F5F5;">
+  <div id="breadcrumb" class="hoc clear">
+    <ul>
+      <li><a href="#" style="font-size:1.3em;">전체</a></li>
+      <li><a href="#" style="font-size:1.3em;" >막걸리</a></li>
+      <li><a href="#" style="font-size:1.3em;">과실주</a></li>
+      <li><a href="#" style="font-size:1.3em;">증류주</a></li>
+      <li><a href="#" style="font-size:1.3em;">청주</a></li>
+      <li><a href="#" style="font-size:1.3em;">탁주</a></li>
+    </ul>
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<style>
+  h6{ font-family: 'Yeon Sung', cursive;}
+</style>
+<div class="wrapper row3">
+  <main class="hoc container clear">
+    <!-- main body -->
+    <div class="content">
+      <div id="gallery">
+        <figure>
+          <header class="heading">우리술 구매</header>
+          <section>
+      <ul class="nospace group overview">
+        <li class="one_third">
+          <figure><a href="{% url 'main:buy2' %}"><img src="/static/images/서울의 밤.jpg" alt=""></a>
+            <figcaption>
+              <p style="font-size:15px">서울의밤 25도 375ml</p>
+              <p>7100원</p>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="one_third">
+          <figure><a href="{% url 'main:buy2' %}"><img src="/static/images/산머루주.jpg" alt=""></a>
+            <figcaption>
+               <p style="font-size:15px">덕유양조 산머루주 16도 350ml</p>
+              <p>5700원</p>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="one_third">
+          <figure><a href="{% url 'main:buy2' %}"><img src="/static/images/죽향도가.jpg" alt=""></a>
+            <figcaption>
+               <p style="font-size:15px">죽향도가 6도 600ml</p>
+              <p>3800원</p>
+            </figcaption>
+          </figure>
+        </li>
+         <li class="one_third">
+          <figure><a href="{% url 'main:buy2' %}"><img src="/static/images/빙탄복.jpg" alt=""></a>
+            <figcaption>
+               <p style="font-size:15px">배상면주가 빙탄복 7도 370ml</p>
+              <p>4000원</p>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="one_third">
+          <figure><a href="{% url 'main:buy2' %}"><img src="/static/images/안동소주.jpg" alt=""></a>
+            <figcaption>
+              <p style="font-size:15px">박재서명인 안동소주 35도 360ml</p>
+              <p>7500원</p>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="one_third">
+          <figure><a href="{% url 'main:buy2' %}"><img src="/static/images/산내들.jpg" alt=""></a>
+            <figcaption>
+               <p style="font-size:15px">산내들 소백산 스위트와인 12도 750ml</p>
+              <p>15500원</p>
+            </figcaption>
+          </figure>
+        </li>
+
+      </ul>
+    </section>
+        </figure>
+      </div>
+    </div>
+     <nav class="pagination">
+        <ul>
+          <li><a href="#">&laquo; Previous</a></li>
+          <li><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">Next &raquo;</a></li>
+        </ul>
+      </nav>
+  </main>
+<!-- ################################################################################################ -->
+<!-- Footer Background Image Wrapper -->
+<div class="bgded overlay" style="background-image:url('images/demo/backgrounds/03.png');">
+  <div class="wrapper row4">
+    <footer id="footer" class="hoc clear" style="text-align:center;">
+      <p> (주)기승전술 대표 : 팝핀종수</p><tr>
+      <p> 기태시 세화동 명훈빌딩 / 전화번호 : 02-222-3333</p></tr>
+    </footer>
+  </div>
+<!-- ################################################################################################ -->
+    <div class="wrapper row5">
+      <div id="copyright" class="hoc clear">
+          <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">Domain Name</a></p>
+          <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+      </div>
+    </div>
+</div>
+<!-- End Footer Background Image Wrapper -->
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="../layout/scripts/jquery.min.js"></script>
+<script src="../layout/scripts/jquery.backtotop.js"></script>
+<script src="../layout/scripts/jquery.mobilemenu.js"></script>
+</body>
+</html>
+  {% endblock %}

@@ -1,0 +1,129 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Yeon+Sung&display=swap" rel="stylesheet">
+
+
+<div class="wrapper bgded overlay"  style="background-image: url('/static/images/전통주.jpg');">
+  <div id="pageintro" class="hoc clear">
+    <article>
+      <p>Welcome to Giseunggunsul</p>
+      <p style="font-size:50px;font-family: 'Yeon Sung', cursive;">2023년 계묘년</p><br>
+       <p style="font-size:43px; font-family: 'Yeon Sung', cursive;">기승전술에서 다양한 전통주를 경험해보세요</p>
+      <footer>
+        <ul class="nospace inline pushright">
+          <li><a class="btn" href="#">전통주 소개</a></li>
+          <li><a class="btn inverse" href="#">전통주 추천</a></li>
+        </ul>
+      </footer>
+    </article>
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<div class="wrapper row3"  style="background-color:#EDE6DD;">
+  <main class="hoc container clear">
+    <!-- main body -->
+    <section id="introblocks"  >
+      <div class="sectiontitle"  >
+        <h6 class="heading">이달의 전통주</h6>
+        <p>추운 1월 몸을 따뜻하게 녹여줄 전통주</p>
+      </div>
+      <ul class="nospace btmspace-80 group">
+        <li class="one_third first">
+          <article><i class="fa fa-diamond"></i>
+            <img src="/static/images/서울의 밤.jpg" alt="">
+            <p style="font-size:20px"><a href="#">서울의 밤</a></p>
+            <p>매실의 풍미가 돋보이는 술&hellip;</p>
+          </article>
+        </li>
+        <li class="one_third">
+          <article><i class="fa fa-fort-awesome"></i>
+            <img src="/static/images/산내들.jpg" alt="">
+             <p style="font-size:18px"><a href="#">산내들 소백산스위트와인</a></p>
+            <p>바디감이 좋은 레드 와인 </p>
+          </article>
+        </li>
+          <li class="one_third">
+          <article><i class="fa fa-forumbee"></i>
+            <img src="/static/images/빙탄복.jpg" alt="">
+             <p style="font-size:20px"><a href="#">배상면주가 빙탄복</a></h6>
+            <p> 스파클링 가벼운 복분자 주</p>
+          </article>
+        </li>
+      </ul>
+      <p class="center"><a class="btn" href="#">전통주 더보기</a></p>
+    </section>
+    <hr class="btmspace-80">
+    <!-- ################################################################################################ -->
+    <section>
+      <div class="sectiontitle">
+        <h6 class="heading">오늘 내가 마시고 싶은 술은? </h6>
+        <p>기분에 따른 술을 추천받아 보세요</p>
+      </div>
+      <ul class="nospace group overview">
+        <li class="one_third">
+          <figure><a href="{% url 'main:prod' %}"><img src="/static/images/서울의 밤.jpg" alt=""></a>
+            <figcaption>
+              <p style="font-size:17px">기분이 꿀꿀한 날, 친구들과 함께 </p>
+              <p style="font-size:20px">서울의 밤</p>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="one_third">
+          <figure><a href="{% url 'main:prod' %}"><img src="/static/images/산머루주.jpg" alt=""></a>
+            <figcaption>
+              <p style="font-size:17px">분위기 내고 싶은 날, 연인과 함께</p>
+              <p  style="font-size:20px">덕유양조 산머루주</p>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="one_third">
+          <figure><a href="{% url 'main:prod' %}"><img src="/static/images/죽향도가.jpg" alt=""></a>
+            <figcaption>
+                <p style="font-size:17px">추적추적 비 내리는 날, 가족과 함께</p>
+              <p  style="font-size:20px">죽향도가</p>
+            </figcaption>
+          </figure>
+        </li>
+      </ul>
+    </section>
+    <!-- / main body -->
+    <div class="clear"></div>
+  </main>
+</div>
+<!-- ################################################################################################ -->
+<div style="background-image:url('/static/images/img3.jpg');">
+  <article class="hoc cta clear">
+    <h6 class="three_quarter first">함께 줄겨요 우리 술 모임</h6>
+    <footer class="one_quarter"><a class="btn" href="#">커뮤니티 바로가기 &raquo;</a></footer>
+  </article>
+</div>
+<!-- ################################################################################################ -->
+<!-- Footer Background Image Wrapper -->
+<div class="bgded overlay" style="background-image:url('images/demo/backgrounds/03.png');">
+  <div class="wrapper row4">
+    <footer id="footer" class="hoc clear" style="text-align:center;">
+      <p> (주)기승전술 대표 : 팝핀종수</p><tr>
+      <p> 기태시 세화동 명훈빌딩 / 전화번호 : 02-222-3333</p></tr>
+    </footer>
+  </div>
+<!-- ################################################################################################ -->
+    <div class="wrapper row5">
+      <div id="copyright" class="hoc clear">
+          <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">Domain Name</a></p>
+          <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+      </div>
+    </div>
+</div>
+<!-- End Footer Background Image Wrapper -->
+
+<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="layout/scripts/jquery.min.js"></script>
+<script src="layout/scripts/jquery.backtotop.js"></script>
+<script src="layout/scripts/jquery.mobilemenu.js"></script>
+</body>
+</html>
+{% endblock %}

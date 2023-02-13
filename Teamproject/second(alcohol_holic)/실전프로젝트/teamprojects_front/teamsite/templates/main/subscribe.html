@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+
+<style>
+ul {
+    text-align: center;
+   }
+li {
+    display : inline-block;
+     margin: 30px 60px;
+   }
+img {
+    align: center;
+    }
+
+</style>
+  <body>
+
+      <div class="sectiontitle"   style="font-family: 'Yeon Sung', cursive; " >
+        <h6 class="heading" style="font-size:45px; padding: 60px 0px 5px 0px;">매달 새로운 술을 경험해보고 싶다면? </h6>
+        <p style="font-size:25px; ">기승전술의 구독패키지를 이용해보세요</p>
+      </div>
+      <ul class="nospace group overview"  style=" padding: 0px 0px 60px 0px;">
+        <li sytle="width: 1000px;">
+          <figure><a href="{% url 'main:prod' %}"><img src="/static/images/구독1.jpg" alt=""></a>
+            <figcaption>
+              <h6 class="heading">랜덤박스 구독 </h6>
+              <p>매달 새로운 술이 랜덤으로 배송되는 랜덤 패키지</p>
+            <button type="submit">구독하기</button>
+            </figcaption>
+          </figure>
+        </li>
+        <li >
+          <figure ><a href="{% url 'main:prod' %}"><img src="/static/images/구독2.jpg"  alt=""></a>
+            <figcaption>
+              <h6 class="heading">선택박스 구독</h6>
+              <p>원하는 술을 선택해서 받아 볼 수 있는 선택 패키지</p>
+               <button type="submit">구독하기</button>
+            </figcaption>
+          </figure>
+        </li>
+      </ul>
+</body>
+<div style="background-image:url('/static/images/img4.jpg');" >
+  <article class="hoc cta clear">
+    <p style="font-size:21px; text-align:center;">정기구독을 하시는 분들께 술잔세트를 보내드립니다.
+  </article>
+</div>
+
+<!-- Footer Background Image Wrapper -->
+<div class="bgded overlay" style="background-image:url('images/demo/backgrounds/03.png');">
+  <div class="wrapper row4">
+    <footer id="footer" class="hoc clear" style="text-align:center;">
+      <p> (주)기승전술 대표 : 팝핀종수</p><tr>
+      <p> 기태시 세화동 명훈빌딩 / 전화번호 : 02-222-3333</p></tr>
+    </footer>
+  </div>
+<!-- ################################################################################################ -->
+    <div class="wrapper row5">
+      <div id="copyright" class="hoc clear">
+          <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">Domain Name</a></p>
+          <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+      </div>
+    </div>
+</div>
+<!-- End Footer Background Image Wrapper -->
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="../layout/scripts/jquery.min.js"></script>
+<script src="../layout/scripts/jquery.backtotop.js"></script>
+<script src="../layout/scripts/jquery.mobilemenu.js"></script>
+</html>
+  {% endblock %}

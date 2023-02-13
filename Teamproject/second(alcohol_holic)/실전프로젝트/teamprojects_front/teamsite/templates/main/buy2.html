@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>상품주문</title>
+<link href="style.css" type="text/css" rel="stylesheet" />
+</head>
+<script type="text/javascript">
+function check_form(f) {
+var name_chk = document.getElementById("name_chk");
+var tel_chk = document.getElementById("tel_chk");
+var count_chk = document.getElementById("count_chk");
+name_chk.innerHTML = "";
+tel_chk.innerHTML = "";
+count_chk.innerHTML = "";
+if (f.name.value == "" || f.name.value.length == 0) {
+name_chk.innerHTML = "* 이름을 입력해주세요";
+}
+if (f.tel.value == "" || f.tel.value.length == 0){
+tel_chk.innerHTML = "* 전화번호를 입력해주세요";
+}
+if(f.count.value ==0){
+count_chk.innerHTML="* 수량을 선택해주세요";
+}
+if(f.name.value != "" && f.tel.value != "" && f.count.value !=0 ){
+var result =confirm("상품을 주문 하시겠습니까?");
+if(result) return true;
+}
+return false;
+}
+function reset_ok(f) {
+var result = confirm("주문을 취소하시겠습니까?");
+if (!result) {
+return false;
+}
+}
+function total_chk(f){
+var total_price = document.getElementById("total_price");
+if(f.count.value!=0){
+var count_chk = document.getElementById("count_chk");
+count_chk.innerHTML = "";
+}
+var count = parseInt(f.count.value)*5000;
+total_price.innerHTML=count;
+}
+function name_focus(f){
+var name_chk = document.getElementById("name_chk");
+if(f.name.value=="" && name_chk.value!="" ){
+name_chk.innerHTML = "";
+}
+}
+function tel_focus(f){
+var tel_chk = document.getElementById("tel_chk");
+if(f.tel.value=="" && tel_chk.value!=""){
+tel_chk.innerHTML = "";
+}
+}
+</script>
+<body>
+<div id="container" align="center">
+<h2>상품 구매 </h2>
+<p style="color: red; font-size: 10px">모든 항목을 모두 채워주세요.</p>
+<hr>
+<form action="Lab1_result.jsp" name="form" method="post"
+onsubmit="return check_form(this)" onreset="return reset_ok(this)">
+<p>주문자 이름</p>
+<input type="text" id="name" name="name" onfocus="name_focus(this.form)" autofocus>
+<span id="name_chk"> </span>
+<p>전화번호</p>
+<input type="text" id="tel" name="tel" placeholder="-제외하고 입력"
+onfocus="tel_focus(this.form)"><span id="tel_chk"> </span>
+</label>
+<p>수량</p>
+<select name="count" onclick="total_chk(this.form)">
+<option value="0" selected>선택하세요</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+</select> <span id="count_chk"> </span>
+<hr>
+<div class="total">
+금액 : <span id="total_price" style="font-size: 25px"> 0 </span>
+</div>
+<p><input type="submit" value="구매하기">
+</form>
+</div>
+</body>
+</html>
+<!-- ################################################################################################ -->
+<!-- Footer Background Image Wrapper -->
+<div class="bgded overlay" style="background-image:url('images/demo/backgrounds/03.png');">
+  <div class="wrapper row4">
+    <footer id="footer" class="hoc clear" style="text-align:center;">
+      <p> (주)기승전술 대표 : 팝핀종수</p><tr>
+      <p> 기태시 세화동 명훈빌딩 / 전화번호 : 02-222-3333</p></tr>
+    </footer>
+  </div>
+<!-- ################################################################################################ -->
+    <div class="wrapper row5">
+      <div id="copyright" class="hoc clear">
+          <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">Domain Name</a></p>
+          <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+      </div>
+    </div>
+</div>
+<!-- End Footer Background Image Wrapper -->
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="../layout/scripts/jquery.min.js"></script>
+<script src="../layout/scripts/jquery.backtotop.js"></script>
+<script src="../layout/scripts/jquery.mobilemenu.js"></script>
+</body>
+</html>
+  {% endblock %}

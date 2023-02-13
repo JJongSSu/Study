@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4dfe3c9c-2f40-4dda-a4bd-0fa55ccc999d" name="변경" comment="23020111210">
+      <change afterPath="$PROJECT_DIR$/teamsite/static/images/img3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/teamsite/static/images/img4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/teamsite/static/images/구독1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/teamsite/static/images/구독2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/teamsite/static/images/느린마을.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/teamsite/static/images/로고최종.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/teamsite/static/images/복순도가.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/teamsite/static/images/빙탄복.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/teamsite/static/images/산내들.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/teamsite/static/images/술잔.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/teamsite/static/images/안동소주.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/teamsite/static/images/양조장.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/teamsite/static/images/탄산_당도.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/teamsite/templates/common/change_email.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/teamsite/templates/common/js/idCheck.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/teamsite/templates/common/js/pwdCheck.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/teamsite/templates/common/juminCheck.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/teamsite/templates/main/buy2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/teamsite/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/teamsite/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/teamsite/main/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/teamsite/main/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/teamsite/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/teamsite/main/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/teamsite/static/framework.css" beforeDir="false" afterPath="$PROJECT_DIR$/teamsite/static/framework.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/teamsite/static/images/img2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/teamsite/static/images/산머루주.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/teamsite/static/images/산머루주.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/teamsite/static/layout.css" beforeDir="false" afterPath="$PROJECT_DIR$/teamsite/static/layout.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/teamsite/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/teamsite/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/teamsite/templates/common/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/teamsite/templates/common/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/teamsite/templates/main/buy.html" beforeDir="false" afterPath="$PROJECT_DIR$/teamsite/templates/main/buy.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/teamsite/templates/main/info.html" beforeDir="false" afterPath="$PROJECT_DIR$/teamsite/templates/main/info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/teamsite/templates/main/main_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/teamsite/templates/main/main_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/teamsite/templates/main/prod.html" beforeDir="false" afterPath="$PROJECT_DIR$/teamsite/templates/main/prod.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/teamsite/templates/main/subscribe.html" beforeDir="false" afterPath="$PROJECT_DIR$/teamsite/templates/main/subscribe.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/teamsite/templates/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/teamsite/templates/navbar.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2KTnQsoJcdQB2tzsWCQPY1nEp5Y" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/teamprojects/teamsite/static/images&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\teamprojects\teamsite\static\images" />
+      <recent name="C:\teamprojects\teamsite\templates\common\js" />
+      <recent name="C:\teamprojects\teamsite\templates\main" />
+      <recent name="C:\teamprojects\teamsite\images" />
+      <recent name="C:\teamprojects\teamsite\image" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\teamprojects\teamsite\static\images" />
+      <recent name="C:\teamprojects\teamsite\static" />
+      <recent name="C:\teamprojects\teamsite\templates\common" />
+      <recent name="C:\teamprojects\teamsite\templates\common\js" />
+      <recent name="C:\teamprojects\teamsite\templates\main" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name=" DBconn" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="teamprojects" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/teamsite" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/teamsite/ DBconn.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python. DBconn" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="디폴트 작업">
+      <changelist id="4dfe3c9c-2f40-4dda-a4bd-0fa55ccc999d" name="변경" comment="" />
+      <created>1674007427488</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1674007427488</updated>
+    </task>
+    <task id="LOCAL-00001" summary="2302011154">
+      <created>1675220093894</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1675220093894</updated>
+    </task>
+    <task id="LOCAL-00002" summary="23020111210">
+      <created>1675221030158</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1675221030158</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="2302011154" />
+    <MESSAGE value="23020111210" />
+    <option name="LAST_COMMIT_MESSAGE" value="23020111210" />
+  </component>
+</project>
