@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<pdf2xml pages="9">
+  <title>test</title>
+  <page width="594" height="841">
+    <text x="0" y="0" width="0" height="0" />
+    <img x="0" y="13.08" width="595" height="841.854" src="test_pic1.jpg" />
+    <text x="0" y="0" width="0" height="0" />
+    <img x="42.018" y="755.892" width="510.214" height="57.024" src="test_pic2.jpg" />
+    <text x="0" y="0" width="0" height="0" />
+    <img x="504.212" y="38.591" width="62.276" height="62.276" src="test_pic3.jpg" />
+  </page>
+  <page width="594" height="841">
+    <text x="0" y="0" width="0" height="0" />
+    <img x="0" y="13.08" width="595" height="841.854" src="test_pic4.jpg" />
+    <text x="0" y="0" width="0" height="0" />
+    <img x="42.018" y="755.892" width="510.214" height="57.024" src="test_pic5.jpg" />
+    <text x="0" y="0" width="0" height="0" />
+    <img x="504.212" y="38.591" width="62.276" height="62.276" src="test_pic6.jpg" />
+  </page>
+  <page width="594" height="841">
+    <text x="0" y="0" width="0" height="0" />
+    <img x="0" y="13.08" width="595" height="841.854" src="test_pic7.jpg" />
+    <text x="0" y="0" width="0" height="0" />
+    <img x="42.018" y="755.892" width="510.214" height="57.024" src="test_pic8.jpg" />
+    <text x="0" y="0" width="0" height="0" />
+    <img x="504.212" y="38.591" width="62.276" height="62.276" src="test_pic9.jpg" />
+  </page>
+  <page width="594" height="841">
+    <text x="0" y="0" width="0" height="0" />
+    <img x="0" y="13.08" width="595" height="841.854" src="test_pic10.jpg" />
+    <text x="0" y="0" width="0" height="0" />
+    <img x="42.018" y="755.892" width="510.214" height="57.024" src="test_pic11.jpg" />
+    <text x="0" y="0" width="0" height="0" />
+    <img x="504.212" y="38.59" width="62.276" height="62.276" src="test_pic12.jpg" />
+  </page>
+  <page width="594" height="841">
+    <text x="0" y="0" width="0" height="0" />
+    <img x="0" y="13.08" width="595" height="841.854" src="test_pic13.jpg" />
+    <text x="0" y="0" width="0" height="0" />
+    <img x="42.018" y="755.892" width="510.214" height="57.024" src="test_pic14.jpg" />
+    <text x="0" y="0" width="0" height="0" />
+    <img x="504.212" y="38.59" width="62.276" height="62.276" src="test_pic15.jpg" />
+  </page>
+  <page width="594" height="841">
+    <text x="0" y="0" width="0" height="0" />
+    <img x="0" y="13.08" width="595" height="841.854" src="test_pic16.jpg" />
+    <text x="0" y="0" width="0" height="0" />
+    <img x="42.018" y="755.892" width="510.214" height="57.024" src="test_pic17.jpg" />
+    <text x="0" y="0" width="0" height="0" />
+    <img x="504.212" y="38.59" width="62.276" height="62.276" src="test_pic18.jpg" />
+  </page>
+  <page width="594" height="841">
+    <text x="0" y="0" width="0" height="0" />
+    <img x="0" y="13.08" width="595" height="841.854" src="test_pic19.jpg" />
+    <text x="0" y="0" width="0" height="0" />
+    <img x="42.018" y="755.892" width="510.214" height="57.024" src="test_pic20.jpg" />
+    <text x="0" y="0" width="0" height="0" />
+    <img x="504.212" y="38.59" width="62.276" height="62.276" src="test_pic21.jpg" />
+  </page>
+  <page width="594" height="841">
+    <text x="0" y="0" width="0" height="0" />
+    <img x="0" y="13.08" width="595" height="841.854" src="test_pic22.jpg" />
+    <text x="0" y="0" width="0" height="0" />
+    <img x="42.018" y="755.892" width="510.214" height="57.024" src="test_pic23.jpg" />
+    <text x="0" y="0" width="0" height="0" />
+    <img x="504.212" y="38.59" width="62.276" height="62.276" src="test_pic24.jpg" />
+  </page>
+  <page width="594" height="841">
+    <text x="0" y="0" width="0" height="0" />
+    <img x="0" y="13.081" width="595" height="841.854" src="test_pic25.jpg" />
+    <text x="0" y="0" width="0" height="0" />
+    <img x="42.018" y="755.892" width="510.214" height="57.024" src="test_pic26.jpg" />
+    <text x="0" y="0" width="0" height="0" />
+    <img x="504.212" y="38.592" width="62.276" height="62.276" src="test_pic27.jpg" />
+  </page>
+</pdf2xml>
