@@ -12,7 +12,9 @@ pom.xml.asc
 .lein-failures
 .nrepl-port
 .cpcache/
-CrewAI/env/
+env/
+node_modules/
+build/
 
 ### macOS ###
 # General
